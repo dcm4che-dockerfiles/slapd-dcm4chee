@@ -6,7 +6,7 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive.ldif
 
 cd /etc/ldap/data
 for f in init-config.ldif default-config.ldif add-vendor-data.ldif; do
-	sed -e "s/dc=example,dc=com/${LDAP_BASE_DN}/" \
+	sed -e "s/dc=dcm4che,dc=org/${LDAP_BASE_DN}/" \
 		-e "s/dcm4chee-arc/${DEVICE_NAME}/" \
 		-e "s/DCM4CHEE/${AE_TITLE}/" \
 		-e "s|/var/local/dcm4chee-arc/fs1/|${STORAGE_DIR}|" \
