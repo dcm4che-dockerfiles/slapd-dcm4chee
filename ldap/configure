@@ -9,6 +9,7 @@ for f in init-config.ldif default-config.ldif add-vendor-data.ldif; do
 	sed -e "s/dc=dcm4che,dc=org/${LDAP_BASE_DN}/" \
 		-e "s/dcm4chee-arc/${DEVICE_NAME}/" \
 		-e "s/DCM4CHEE/${AE_TITLE}/" \
+		-e "s/localhost/${HOST}/" \
 		-e "s|/var/local/dcm4chee-arc/fs1/|${STORAGE_DIR}|" \
 		$f | ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN}
 done
