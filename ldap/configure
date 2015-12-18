@@ -19,5 +19,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 fi
 
 if [ -n "$IMPORT_LDIF" ]; then
-    ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN} < $IMPORT_LDIF
+    for f in $IMPORT_LDIF; do
+        ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN} $f
+    done
 fi
