@@ -7,19 +7,19 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive.ldif
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
     cd /etc/ldap/data
     for f in init-config.ldif default-config.ldif add-vendor-data.ldif; do
-        sed -e "s/dc=dcm4che,dc=org/${LDAP_BASE_DN}/" \
-            -e "s/dcm4chee-arc/${DEVICE_NAME}/" \
-            -e "s/DCM4CHEE/${AE_TITLE}/" \
-            -e "s/localhost/${DICOM_HOST}/" \
-            -e "s/11112/${DICOM_PORT}/" \
-            -e "s/2575/${HL7_PORT}/" \
-            -e "s|/var/local/dcm4chee-arc/fs1/|${STORAGE_DIR}|" \
+        sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+            -e "s%dcm4chee-arc%${DEVICE_NAME}%" \
+            -e "s%DCM4CHEE%${AE_TITLE}%" \
+            -e "s%localhost%${DICOM_HOST}%" \
+            -e "s%11112%${DICOM_PORT}%" \
+            -e "s%2575%${HL7_PORT}%" \
+            -e "s%/var/local/dcm4chee-arc/fs1/%${STORAGE_DIR}%" \
             $f | ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN}
     done
 fi
 
 if [ -n "$IMPORT_LDIF" ]; then
     for f in $IMPORT_LDIF; do
-        ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN} $f
+        ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN} -f $f
     done
 fi
