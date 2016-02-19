@@ -16,6 +16,8 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%localhost%${DICOM_HOST}%" \
             -e "s%11112%${DICOM_PORT}%" \
             -e "s%2575%${HL7_PORT}%" \
+            -e "s%syslog-host%${SYSLOG_HOST}%" \
+            -e "s%514%${SYSLOG_PORT}%" \
             -e "s%/var/local/dcm4chee-arc/fs1/%${STORAGE_DIR}%" \
             $f | ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN}
     done
