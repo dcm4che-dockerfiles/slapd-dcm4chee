@@ -18,6 +18,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%2575%${HL7_PORT}%" \
 			-e "s%syslog-host%${SYSLOG_HOST}%" \
 			-e "s%514%${SYSLOG_PORT}%" \
+			-e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
 			-e "s%/opt/wildfly/standalone/data/fs1/%${STORAGE_DIR}%" \
 			$f | ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN}
 	done
