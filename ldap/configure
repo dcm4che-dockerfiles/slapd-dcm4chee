@@ -19,13 +19,13 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%syslog-host%${SYSLOG_HOST}%" \
 			-e "s%514%${SYSLOG_PORT}%" \
 			-e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
-			-e "s%/opt/wildfly/standalone/data/fs1/%${STORAGE_DIR}%" \
+			-e "s%\${jboss.server.data.url}/fs1%file:///${STORAGE_DIR}%" \
 			$f | ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN}
 	done
 fi
 
 if [ -n "$IMPORT_LDIF" ]; then
 	for f in $IMPORT_LDIF; do
-		ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN} -f $f
+		ldapadd -Y EXTERNAL -H ldapi:/// -f $f
 	done
 fi
