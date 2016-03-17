@@ -20,7 +20,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%514%${SYSLOG_PORT}%" \
 			-e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
 			-e "s%\${jboss.server.data.url}/fs1%file:///${STORAGE_DIR}%" \
-			$f | ldapadd -xw ${LDAP_ROOTPASS} -Dcn=admin,${LDAP_BASE_DN}
+			$f | ldapadd -Y EXTERNAL -H ldapi:///
 	done
 fi
 
