@@ -57,6 +57,7 @@ olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.11 NAME 'dcmInstanceAvailability'
   SINGLE-VALUE )
 olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.12 NAME 'dcmQueryMatchUnknown'
   DESC 'Indicates if missing Attributes or zero-length Attribute values in stored entities shall considered unknown and all matching against it shall be considered a successful match; enabled if absent'
+  OBSOLETE
   EQUALITY booleanMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
   SINGLE-VALUE )
@@ -308,7 +309,7 @@ olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.61 NAME 'dcmStoreAccessControlID'
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
   SINGLE-VALUE )
 olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.62 NAME 'dcmAccessControlID'
-  DESC 'AccessContolIDs assigned to Query/Retrieve requests received by this AE'
+  DESC 'AccessControlIDs assigned to Query/Retrieve requests received by this AE'
   EQUALITY caseExactIA5Match
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.26)
 olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.63 NAME 'dcmAuditSpoolDirectory'
@@ -370,6 +371,26 @@ olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.74 NAME 'dcmIanTaskFetchSize'
   EQUALITY integerMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
   SINGLE-VALUE )
+olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.75 NAME 'dcmPurgeQueueMessageCompletedDelay'
+  DESC 'Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  SINGLE-VALUE)
+olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.76 NAME 'dcmPurgeQueueMessagePollingInterval'
+  DESC 'Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMn.nS. If absent, there is no deletion'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  SINGLE-VALUE)
+olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.77 NAME 'dcmPurgeQueueMessageFetchSize'
+  DESC 'Number of queue messages to be purged; 100 if absent'
+  EQUALITY integerMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE)
+olcAttributeTypes: ( 1.2.40.0.13.1.15.110.3.78 NAME 'dcmAttributeUpdate'
+  DESC 'Specifies update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. Enumerated values: SUPPLEMENT, OVERWRITE. If absent, the attributes will not be updated'
+  EQUALITY caseExactIA5Match
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+  SINGLE-VALUE)
 olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.4 NAME 'dcmArchiveDevice'
   DESC 'DICOM Archive Device related information'
   SUP top AUXILIARY
@@ -414,7 +435,9 @@ olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.4 NAME 'dcmArchiveDevice'
     dcmAuditAggregateDuration $
     dcmStowSpoolDirectory $
     hl7PatientUpdateTemplateURI $
-    dcmUnzipVendorDataToURI ) )
+    dcmUnzipVendorDataToURI $
+    dcmPurgeQueueMessagePollingInterval $
+    dcmPurgeQueueMessageFetchSize) )
 olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.5 NAME 'dcmArchiveNetworkAE'
   DESC 'DICOM Archive Network AE related information'
   SUP top AUXILIARY
@@ -451,7 +474,8 @@ olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.10 NAME 'dcmAttributeFilter'
   MAY (
     dcmCustomAttribute1 $
     dcmCustomAttribute2 $
-    dcmCustomAttribute3 ) )
+    dcmCustomAttribute3 $
+    dcmAttributeUpdate) )
 olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.11 NAME 'dcmArchiveHL7Application'
   DESC 'DICOM Archive HL7 Application related information'
   SUP top AUXILIARY
@@ -490,7 +514,8 @@ olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.14 NAME 'dcmQueue'
     dcmMaxRetries $
     dcmRetryDelay $
     dcmMaxRetryDelay $
-    dcmRetryDelayMultiplier ) )
+    dcmRetryDelayMultiplier $
+    dcmPurgeQueueMessageCompletedDelay) )
 olcObjectClasses: ( 1.2.40.0.13.1.15.110.4.15 NAME 'dcmExporter'
   DESC 'Exporter Descriptor'
   SUP top STRUCTURAL
