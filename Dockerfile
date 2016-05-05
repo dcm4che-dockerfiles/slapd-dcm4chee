@@ -14,3 +14,4 @@ ENV DEVICE_NAME=dcm4chee-arc \
     IMPORT_LDIF=
 
 COPY ldap /etc/ldap
+COPY bin /usr/bin
