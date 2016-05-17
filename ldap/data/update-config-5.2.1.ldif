@@ -8,6 +8,12 @@ dicomSoftwareVersion: 5.2.1
 add: dcmImportReportTemplateURI
 hl7ImportReportTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-oru2dsr.xsl
 -
+add: dcmLeadingCFindSCPQueryCacheStaleTimeout
+dcmLeadingCFindSCPQueryCacheStaleTimeout: PT5M
+-
+add: dcmAECacheStaleTimeout
+dcmAECacheStaleTimeout: PT5M
+-
 delete: dicomVendorData
 -
 add: dicomVendorData
