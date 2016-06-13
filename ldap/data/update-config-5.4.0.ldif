@@ -8,10 +8,31 @@ dicomSoftwareVersion: 5.4.0
 add: hl7ScheduleProcedureTemplateURI
 hl7ScheduleProcedureTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-order2dcm.xsl
 -
+add: dcmHideSPSWithStatusFromMWL
+dcmHideSPSWithStatusFromMWL: STARTED
+dcmHideSPSWithStatusFromMWL: DEPARTED
+dcmHideSPSWithStatusFromMWL: CANCELLED
+dcmHideSPSWithStatusFromMWL: DISCONTINUED
+dcmHideSPSWithStatusFromMWL: COMPLETED
+-
 delete: dicomVendorData
 -
 add: dicomVendorData
 dicomVendorData:< file:vendor-data.zip
+-
+
+dn: cn=Modality Worklist Information Model - FIND SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: add
+dcmFuzzySemanticMatching: TRUE
+dicomSOPClass: 1.2.840.10008.5.1.4.31
+dcmTimezoneQueryAdjustment: TRUE
+dicomTransferRole: SCP
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+dcmCombinedDateTimeMatching: TRUE
+dcmRelationalQueries: TRUE
+cn: Modality Worklist Information Model - FIND SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
 -
 
 dn: dcmEntity=MWL,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
