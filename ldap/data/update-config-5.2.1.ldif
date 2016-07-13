@@ -5,7 +5,7 @@ changetype: modify
 replace: dicomSoftwareVersion
 dicomSoftwareVersion: 5.2.1
 -
-add: dcmImportReportTemplateURI
+add: hl7ImportReportTemplateURI
 hl7ImportReportTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-oru2dsr.xsl
 -
 add: dcmLeadingCFindSCPQueryCacheStaleTimeout
