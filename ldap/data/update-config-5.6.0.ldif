@@ -37,3 +37,15 @@ dcmMaxRetryDelay: PT10M
 dcmPurgeQueueMessageCompletedDelay: P1D
 dcmJndiName: jms/queue/HL7Send
 -
+
+dn: dicomAETitle=DCM4CHEE_ADMIN,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: add
+objectClass: dicomUniqueAETitle
+dicomAETitle: DCM4CHEE_ADMIN
+-
+
+dn: dicomAETitle=DCM4CHEE_TRASH,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: add
+objectClass: dicomUniqueAETitle
+dicomAETitle: DCM4CHEE_TRASH
+-
