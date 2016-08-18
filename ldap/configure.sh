@@ -15,6 +15,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%dcmRetrieveAET: DCM4CHEE%dcmRetrieveAET: ${AE_TITLE}%" \
 			-e "s%dcmRejectExpiredStudiesAETitle: DCM4CHEE%dcmRejectExpiredStudiesAETitle: ${AE_TITLE}%" \
 			-e "s%archive-host%${ARCHIVE_HOST}%" \
+			-e "s%keycloak-host%${KEYCLOAK_HOST}%" \
 			-e "s%11112%${DICOM_PORT}%" \
 			-e "s%2575%${HL7_PORT}%" \
 			-e "s%syslog-host%${SYSLOG_HOST}%" \
