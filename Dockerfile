@@ -1,7 +1,7 @@
 FROM dcm4che/slapd:2.4.40
 
 # Default configuration: can be overridden at the docker command line
-ENV DEVICE_NAME=dcm4chee-arc \
+ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     AE_TITLE=DCM4CHEE \
     ARCHIVE_HOST=127.0.0.1 \
     KEYCLOAK_HOST=127.0.0.1 \

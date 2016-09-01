@@ -2,8 +2,8 @@
 
 cd /etc/ldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
-    -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${DEVICE_NAME}%" \
-    -e "s%dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${DEVICE_NAME}%" \
+    -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
+    -e "s%dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
     -e "s%dicomAETitle=DCM4CHEE%dicomAETitle=${AE_TITLE}%" \
     -e "s%dicomAETitle: DCM4CHEE%dicomAETitle: ${AE_TITLE}%" \
     -e "s%dcmRetrieveAET: DCM4CHEE%dcmRetrieveAET: ${AE_TITLE}%" \
