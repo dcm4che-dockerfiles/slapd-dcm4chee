@@ -21,7 +21,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%syslog-host%${SYSLOG_HOST}%" \
 			-e "s%514%${SYSLOG_PORT}%" \
 			-e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
-			-e "s%\${jboss.server.data.url}/fs1%file:///${STORAGE_DIR}%" \
+			-e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
 			$f | ldapadd -Y EXTERNAL -H ldapi:///
 	done
 fi
