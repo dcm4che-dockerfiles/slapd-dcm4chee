@@ -50,3 +50,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Storage Commitment Push Model SOP Class SCU
 -
+
+dn: dcmQueueName=Export1,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: modify
+replace: dicomDescription
+dicomDescription: Dicom Export Tasks
+-
+
+dn: dcmQueueName=Export2,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: modify
+replace: dicomDescription
+dicomDescription: WADO Export Tasks
+-
