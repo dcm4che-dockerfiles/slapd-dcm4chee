@@ -11,6 +11,11 @@ dcmPurgeStgCmtPollingInterval: PT1H
 add: dcmPurgeStgCmtCompletedDelay
 dcmPurgeStgCmtCompletedDelay: P1D
 -
+delete: dicomVendorData
+-
+add: dicomVendorData
+dicomVendorData:< file:vendor-data.zip
+-
 
 dn: dcmEntity=Study,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
@@ -67,4 +72,9 @@ dn: dcmQueueName=Export2,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Config
 changetype: modify
 replace: dicomDescription
 dicomDescription: WADO Export Tasks
+-
+
+dn: dcmStorageID=fs1,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: modify
+delete: dcmRetrieveAET
 -
