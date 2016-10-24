@@ -14,7 +14,7 @@ dcmPurgeStgCmtCompletedDelay: P1D
 delete: dicomVendorData
 -
 add: dicomVendorData
-dicomVendorData:< file:vendor-data.zip
+dicomVendorData: < file:vendor-data.zip
 -
 
 dn: dcmEntity=Study,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
