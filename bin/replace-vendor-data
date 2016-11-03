@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -f /etc/ldap/data/replace-vendor-data.ldif
