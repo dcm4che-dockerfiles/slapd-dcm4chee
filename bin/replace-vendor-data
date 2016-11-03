@@ -1,3 +1,6 @@
 #!/bin/sh
 
-ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -f /etc/ldap/data/replace-vendor-data.ldif
+cd /etc/ldap/data/
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
+    replace-vendor-data.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}
