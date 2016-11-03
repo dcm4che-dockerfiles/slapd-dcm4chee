@@ -10,7 +10,3 @@ delete: dicomVendorData
 add: dicomVendorData
 dicomVendorData:< file:vendor-data.zip
 -
-add: dcmRetrieveAET
-dcmRetrieveAET: DCM4CHEE
-dcmRetrieveAET: DCM4CHEE_ADMIN
--
