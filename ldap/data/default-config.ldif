@@ -472,7 +472,7 @@ dcmPurgeQueueMessageCompletedDelay: P1D
 dcmJndiName: jms/queue/Export3
 
 dn: dcmQueueName=HL7Send,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomDescription: Forward HL7 Tasks
+dicomDescription: HL7 Forward Tasks
 dcmQueueName: HL7Send
 dcmMaxRetries: 10
 dcmRetryDelayMultiplier: 200
@@ -483,7 +483,7 @@ dcmPurgeQueueMessageCompletedDelay: P1D
 dcmJndiName: jms/queue/HL7Send
 
 dn: dcmQueueName=MPPSSCU,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomDescription: Forward MPPS Tasks
+dicomDescription: MPPS Forward Tasks
 dcmQueueName: MPPSSCU
 dcmMaxRetries: 10
 dcmRetryDelayMultiplier: 200
@@ -512,6 +512,17 @@ hl7AcceptedMessageType: OMI^O23
 hl7AcceptedMessageType: OMG^O19
 hl7AcceptedMessageType: ORU^R01
 hl7ApplicationName: *
+
+dn: dcmQueueName=RSClient,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomDescription: RESTful Forward Tasks
+dcmQueueName: RSClient
+dcmMaxRetries: 10
+dcmRetryDelayMultiplier: 200
+dcmRetryDelay: PT30S
+objectClass: dcmQueue
+dcmMaxRetryDelay: PT10M
+dcmPurgeQueueMessageCompletedDelay: P1D
+dcmJndiName: jms/queue/RSClient
 
 dn: dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
