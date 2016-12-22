@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ldapsearch -LL -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -b ou=realm-management,$LDAP_BASE_DN | unldif.sed
