@@ -5,3 +5,5 @@ changetype: modify
 replace: dicomSoftwareVersion
 dicomSoftwareVersion: 5.9.1
 -
+add: dcmXDSiImagingDocumentSourceAETitle
+dcmXDSiImagingDocumentSourceAETitle: DCM4CHEE

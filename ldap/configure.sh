@@ -13,6 +13,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%dicomAETitle=DCM4CHEE%dicomAETitle=${AE_TITLE}%" \
 			-e "s%dicomAETitle: DCM4CHEE%dicomAETitle: ${AE_TITLE}%" \
 			-e "s%dcmRetrieveAET: DCM4CHEE%dcmRetrieveAET: ${AE_TITLE}%" \
+			-e "s%dcmXDSiImagingDocumentSourceAETitle: DCM4CHEE%dcmXDSiImagingDocumentSourceAETitle: ${AE_TITLE}%" \
 			-e "s%dcmRejectExpiredStudiesAETitle: DCM4CHEE%dcmRejectExpiredStudiesAETitle: ${AE_TITLE}%" \
 			-e "s%archive-host%${ARCHIVE_HOST}%" \
 			-e "s%keycloak-host%${KEYCLOAK_HOST}%" \
