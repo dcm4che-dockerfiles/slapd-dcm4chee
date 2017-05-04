@@ -5,3 +5,11 @@ changetype: modify
 replace: dicomSoftwareVersion
 dicomSoftwareVersion: 5.10.2
 -
+delete: dcmStorageID
+-
+
+dn: dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: modify
+add: dcmObjectStorageID
+dcmObjectStorageID: fs1
+-
