@@ -7,6 +7,11 @@ dicomSoftwareVersion: 5.10.2
 -
 delete: dcmStorageID
 -
+delete: dicomVendorData
+-
+add: dicomVendorData
+dicomVendorData:< file:vendor-data.zip
+-
 
 dn: dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
