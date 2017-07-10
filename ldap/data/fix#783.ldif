@@ -1,0 +1,4 @@
+version: 1
+
+dn: cn=cn,cn=Audit Logger,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: delete
