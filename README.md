@@ -20,7 +20,7 @@ $ docker run --name slapd \
              -e HL7_PORT=2575 \
              -e SYSLOG_DEVICE_NAME=logstash \
              -e SYSLOG_HOST=127.0.0.1 \
-             -e SYSLOG_PORT=514 \
+             -e SYSLOG_PORT=8514 \
              -e SYSLOG_PROTOCOL=UDP \
              -e KEYCLOAK_DEVICE_NAME=keycloak \
              -e UNKNOWN_DEVICE_NAME=unknown \
@@ -28,12 +28,7 @@ $ docker run --name slapd \
              -e STORAGE_DIR=/storage/fs1 \
              -v /var/local/dcm4chee-arc/ldap:/var/lib/ldap \
              -v /var/local/dcm4chee-arc/slapd.d:/etc/ldap/slapd.d \
-             -d dcm4che/slapd-dcm4chee:2.4.40-10.0
-```
-## connect to it from the DICOM Archive application
-
-```console
-$ docker run --link slapd:ldap ... -d dcm4che/dcm4chee-arc-psql
+             -d dcm4che/slapd-dcm4chee:2.4.40-10.5
 ```
 
 ## Environment Variables
@@ -95,7 +90,7 @@ audit logging is enabled. In the above example, it is being set to "127.0.0.1". 
 ### `SYSLOG_PORT`
 
 This is the port number of device used as audit record repository. Archive device emits audit messages to this device if 
-audit logging is enabled. In the above example, it is being set to "514". The value can be set per one's application.
+audit logging is enabled. In the above example, it is being set to "8514". The value can be set per one's application.
 
 ### `SYSLOG_PROTOCOL`
 
@@ -105,7 +100,7 @@ audit logging is enabled. In the above example, it is being set to "UDP". The va
 ### `KEYCLOAK_DEVICE_NAME`
 
 This is the name of keycloak device used in conjunction with the emission of audit messages for authentication events of 
-archive UI. In the above example, it is being set to "keycloak". The value can be set per one's application.
+secured version of archive. In the above example, it is being set to "keycloak". The value can be set per one's application.
 
 ### `UNKNOWN_DEVICE_NAME`
 
@@ -119,8 +114,8 @@ This is the Application Entity title of the device referenced in default schedul
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. In the above example, it is being set to "UNKNOWN". The value can be set as per one's application.
 
-
 ### `STORAGE_DIR`
 
 This is the URI of the storage location where the objects of a study will be stored when studies are sent to the archive.
 In the above example, it is being set to "/storage/fs1". The value can be set per one's application.
+
