@@ -23,8 +23,8 @@ $ docker run --name slapd \
              -e SYSLOG_PORT=8514 \
              -e SYSLOG_PROTOCOL=UDP \
              -e KEYCLOAK_DEVICE_NAME=keycloak \
-             -e UNKNOWN_DEVICE_NAME=unknown \
-             -e UNKNOWN_AE_TITLE=UNKNOWN \
+             -e SCHEDULED_STATION_DEVICE_NAME=scheduledstation \
+             -e SCHEDULED_STATION_AE_TITLE=SCHEDULEDSTATION \
              -e STORAGE_DIR=/storage/fs1 \
              -v /var/local/dcm4chee-arc/ldap:/var/lib/ldap \
              -v /var/local/dcm4chee-arc/slapd.d:/etc/ldap/slapd.d \
@@ -102,17 +102,17 @@ audit logging is enabled. In the above example, it is being set to "UDP". The va
 This is the name of keycloak device used in conjunction with the emission of audit messages for authentication events of 
 secured version of archive. In the above example, it is being set to "keycloak". The value can be set per one's application.
 
-### `UNKNOWN_DEVICE_NAME`
+### `SCHEDULED_STATION_DEVICE_NAME`
 
 This is the name of the device referenced in default scheduled station configured in the archive device which is used  as 
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
-are received by the archive. In the above example, it is being set to "unknown". The value can be set as per one's application.
+are received by the archive. In the above example, it is being set to "scheduledstation". The value can be set as per one's application.
 
-### `UNKNOWN_AE_TITLE`
+### `SCHEDULED_STATION_AE_TITLE`
 
 This is the Application Entity title of the device referenced in default scheduled station configured in the archive device which is used  as 
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
-are received by the archive. In the above example, it is being set to "UNKNOWN". The value can be set as per one's application.
+are received by the archive. In the above example, it is being set to "SCHEDULEDSTATION". The value can be set as per one's application.
 
 ### `STORAGE_DIR`
 
