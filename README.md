@@ -32,11 +32,12 @@ This environment variable sets the organisation name for LDAP. Default value is 
 
 ### `LDAP_ROOTPASS`
 
-This environment variable sets the root password for LDAP. Default value is `secret`.
+This environment variable sets the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`.
+Default value is `secret`.
 
 ### `LDAP_CONFIGPASS`
 
-This environment variable sets the password for users who wish to change the schema configuration in LDAP. 
+This environment variable sets the password for accessing the slapd configuration with bind DN `cn=config`. 
 Default value is `secret`.
 
 ### `ARCHIVE_DEVICE_NAME`
@@ -45,47 +46,52 @@ This is the name of archive device. Default value is `dcm4chee-arc`.
 
 ### `AE_TITLE`
 
-This is the name of Application Entity title of archive device. Default value is `DCM4CHEE`.
+This is the name of the primary Application Entity title of archive device. Default value is `DCM4CHEE`.
 
-### `DICOM_HOST`
+### `ARCHIVE_HOST`
 
-This is the hostname of DICOM connection in archive device. The DICOM connection is referenced by the application entities 
-of the archive. Default value is `dockerhost`.
+This is the hostname of the archive device. You have to specify the hostname of the docker host on which the Archive
+container is deployed, if the LDAP configuration is used by other applications to determine the hostname and DICOM and/or
+HL7 port to initiate TCP connections to the Archive. Default value is `127.0.0.1`.
 
 ### `DICOM_PORT`
 
-This is the port number of DICOM connection in archive device. The DICOM connection is referenced by the application entities 
-of the archive. Default value is `11112`.
+This is the port number on which the Archive is listening for DICOM connections. Default value is `11112`.
 
 ### `HL7_PORT`
 
-This is the port number of HL7 connection in archive device. The HL7 connection is referenced by the hl7Application of 
-archive device. Default value is `2575`.
+This is the port number on which the HL7 receiver of the Archive is listening. Default value is `2575`.
+
+### `STORAGE_DIR`
+
+This is the path to the directory - inside of the Archive container - where the Archive stores received DICOM objects.
+Default value is `/opt/wildfly/standalone/data/fs1`. 
 
 ### `SYSLOG_DEVICE_NAME`
 
-This is the name of device used as audit record repository. Archive device emits audit messages to this device if 
+This is the device name of the audit record repository. The archive device emits audit messages to this device if 
 audit logging is enabled. Default value is `logstash`. 
 
 ### `SYSLOG_HOST`
 
-This is the hostname of device used as audit record repository. Archive device emits audit messages to this device if 
-audit logging is enabled. Default value is `127.0.0.1`. 
+This is the hostname of the audit record repository. You have to specify either the hostname of the docker host on which
+the Logstash container is deployed or - if the Archive container and the Logstash container are attached to the same
+network - the container name of the Logstash container. With default value `127.0.0.1`, audit logging is effectively
+disabled.
 
 ### `SYSLOG_PORT`
 
-This is the port number of device used as audit record repository. Archive device emits audit messages to this device if 
-audit logging is enabled. Default value is `8514`. 
+This is the port number on which the audit record repository is listening. Default value is `8514`. 
 
 ### `SYSLOG_PROTOCOL`
 
-This is the protocol set to device used as audit record repository. Archive device emits audit messages to this device if 
-audit logging is enabled. Default value is `UDP`. 
+This is the protocol used to emit audit messages to the audit record repository. Enumerated values: `UDP` or `TCP`.
+Default value is `UDP`. 
 
 ### `KEYCLOAK_DEVICE_NAME`
 
-This is the name of keycloak device used in conjunction with the emission of audit messages for authentication events of 
-secured version of archive. Default value is `keycloak`. 
+This is the device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
+authentication events. Default value is `keycloak`. 
 
 ### `SCHEDULED_STATION_DEVICE_NAME`
 
@@ -98,10 +104,3 @@ are received by the archive. Default value is `scheduledstation`.
 This is the Application Entity title of the device referenced in default scheduled station configured in the archive device which is used  as 
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `SCHEDULEDSTATION`. 
-
-### `STORAGE_DIR`
-
-This is the URI of the storage location where the objects of a study will be stored when studies are sent to the archive.
-Default value is `/storage/fs1`. 
-
-
