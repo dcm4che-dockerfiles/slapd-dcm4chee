@@ -6,7 +6,7 @@ It extends the [dcm4che slapd image](https://hub.docker.com/r/dcm4che/slapd/).
 
 ## start a slapd instance
 
-```console
+```
 $ docker run --name slapd \
              -p 389:389 \
              -v /var/local/dcm4chee-arc/ldap:/var/lib/ldap \
