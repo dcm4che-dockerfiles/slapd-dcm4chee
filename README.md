@@ -93,6 +93,11 @@ Default value is `UDP`.
 This is the device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
 authentication events. Default value is `keycloak`. 
 
+### `KEYCLOAK_HOST`
+
+This is the device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
+authentication events. Default value is `127.0.0.1`. 
+
 ### `SCHEDULED_STATION_DEVICE_NAME`
 
 This is the name of the device referenced in default scheduled station configured in the archive device which is used  as 
@@ -104,3 +109,12 @@ are received by the archive. Default value is `scheduledstation`.
 This is the Application Entity title of the device referenced in default scheduled station configured in the archive device which is used  as 
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `SCHEDULEDSTATION`. 
+
+### `SKIP_INIT_CONFIG`
+
+This allows the user to skip the default initial configuration (required by archive device) in LDAP startup. Default value is set to `false`.
+
+### `IMPORT_LDIF`
+
+This allows user to specify space separated customized ldif files, should the user wish to set the above environment variable 
+SKIP_INIT_CONFIG to true. No default value is set. 
