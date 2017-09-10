@@ -5,7 +5,7 @@ objectClass: groupOfNames
 cn: query-users
 member: uid=admin,ou=users,dc=dcm4che,dc=org
 
-ddn: cn=query-groups,ou=realm-management,dc=dcm4che,dc=org
+dn: cn=query-groups,ou=realm-management,dc=dcm4che,dc=org
 objectClass: groupOfNames
 cn: query-groups
 member: uid=admin,ou=users,dc=dcm4che,dc=org
