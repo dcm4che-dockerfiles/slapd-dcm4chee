@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ldapsearch -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} \
+  -b "cn=DICOM Configuration,$LDAP_BASE_DN" \
+  "(&(objectClass=dicomTransferCapability)(dicomTransferSyntax=1.2.840.10008.1.2.4.90))" | \
+unldif.sed | del-jpeg2000.awk | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}
