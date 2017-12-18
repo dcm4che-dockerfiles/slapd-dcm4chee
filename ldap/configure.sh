@@ -3,6 +3,7 @@
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dicom.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4che.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive.ldif
+ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive-ui.ldif
 
 cd /etc/ldap/data
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
