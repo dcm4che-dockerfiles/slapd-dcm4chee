@@ -3,3 +3,4 @@
 ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/schema/dicom-modify.ldif
 ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/schema/dcm4che-modify.ldif
 ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/schema/dcm4chee-archive-modify.ldif
+ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/schema/dcm4chee-archive-ui-modify.ldif
