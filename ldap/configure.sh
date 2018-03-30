@@ -7,7 +7,7 @@ ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive-ui.ldif
 
 cd /etc/ldap/data
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
-	for f in default-config.ldif add-vendor-data.ldif default-users.ldif; do
+	for f in default-config.ldif add-vendor-data.ldif default-ui-permissions.ldif default-users.ldif; do
 		sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
 			-e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
 			-e "s%dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
