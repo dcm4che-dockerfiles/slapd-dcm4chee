@@ -1,4 +1,5 @@
 #!/bin/sh
+VERSION=$1; shift
 
 cd /etc/ldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
@@ -26,4 +27,4 @@ sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%514%${SYSLOG_PORT}%" \
     -e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
     -e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
-    update-config-${1}.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}
+    update-config-${VERSION}.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} $@
