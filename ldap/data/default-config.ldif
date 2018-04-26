@@ -514,6 +514,28 @@ dcmMaxRetryDelay: PT10M
 dcmPurgeQueueMessageCompletedDelay: P1D
 dcmJndiName: jms/queue/Export3
 
+dn: dcmQueueName=Export4,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomDescription: Calculate Query Attributes and Study size Export Tasks
+dcmQueueName: Export4
+dcmMaxRetries: 10
+dcmRetryDelayMultiplier: 200
+dcmRetryDelay: PT30S
+objectClass: dcmQueue
+dcmMaxRetryDelay: PT10M
+dcmPurgeQueueMessageCompletedDelay: P1D
+dcmJndiName: jms/queue/Export4
+
+dn: dcmQueueName=Export5,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomDescription: Nearline Storage Export Tasks
+dcmQueueName: Export5
+dcmMaxRetries: 10
+dcmRetryDelayMultiplier: 200
+dcmRetryDelay: PT30S
+objectClass: dcmQueue
+dcmMaxRetryDelay: PT10M
+dcmPurgeQueueMessageCompletedDelay: P1D
+dcmJndiName: jms/queue/Export5
+
 dn: dcmQueueName=HL7Send,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomDescription: HL7 Forward Tasks
 dcmQueueName: HL7Send
@@ -652,6 +674,13 @@ hl7OrderControlStatus: NW_IP
 hl7OrderControlStatus: XO_SC
 objectClass: hl7OrderSPSStatus
 
+dn: cn=Calculate Study Size,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmExporterID: StudySizeExporter
+dcmDuration: PT5M
+dcmEntity: Study
+objectClass: dcmExportRule
+cn: Calculate Study Size
+
 dn: cn=Image Reader Factory,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 objectClass: dcmImageReaderFactory
 cn: Image Reader Factory
@@ -725,6 +754,14 @@ dcmRejectionNoteType: REJECTED_FOR_QUALITY_REASONS
 dcmRejectionNoteCode: (113001, DCM, "Rejected for Quality Reasons")
 dcmAcceptPreviousRejectedInstance: IGNORE
 objectClass: dcmRejectionNote
+
+dn: dcmExporterID=StudySizeExporter,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmExporterID: StudySizeExporter
+dicomDescription: Exporter to calculate study size
+dcmQueueName: Export4
+objectClass: dcmExporter
+dicomAETitle: DCM4CHEE
+dcmURI: study-size:dummyPath
 
 dn: dcmWebAppName=DCM4CHEE_ADMIN-RS,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomDescription: Show instances rejected for Quality Reasons
@@ -830,10 +867,25 @@ objectClass: dcmRejectionNote
 dcmOverwritePreviousRejection: (113001, DCM, "Rejected for Quality Reasons")
 dcmOverwritePreviousRejection: (113037, DCM, "Rejected for Patient Safety Reasons")
 
+dn: cn=Calculate Study Series Query Attributes,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmExporterID: StudySeriesQueryAttributesExporter
+dcmDuration: PT5M
+dcmEntity: Study
+objectClass: dcmExportRule
+cn: Calculate Study Series Query Attributes
+
 dn: dcmIDGeneratorName=ScheduledProcedureStepID,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmIDGeneratorName: ScheduledProcedureStepID
 dcmIDGeneratorFormat: SPS-%08d
 objectClass: dcmIDGenerator
+
+dn: dcmExporterID=StudySeriesQueryAttributesExporter,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmExporterID: StudySeriesQueryAttributesExporter
+dicomDescription: Exporter to calculate study size
+dcmQueueName: Export4
+objectClass: dcmExporter
+dicomAETitle: DCM4CHEE
+dcmURI: query-attrs:hideRejected
 
 dn: dcmAttributeSetID=all+dcmAttributeSetType=DIFF_RS,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmAttributeSetTitle: Patient and Study attributes
