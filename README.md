@@ -112,9 +112,34 @@ are received by the archive. Default value is `SCHEDULEDSTATION`.
 
 ### `SKIP_INIT_CONFIG`
 
-This allows the user to skip the default initial configuration (required by archive device) in LDAP startup. Default value is set to `false`.
+Skip the default initial configuration (required by archive device) at first LDAP startup. Default value is set to `false`.
+
+### `EXT_INIT_CONFIG`
+
+Space separated LDIF files to be imported additionally at first LDAP startup
+
+replacing | by
+-- | --
+`dc=dcm4che,dc=org` | `${LDAP_BASE_DN}`
+`dcm4chee-arc` | `${ARCHIVE_DEVICE_NAME}`
+`DCM4CHEE` | `${AE_TITLE}`
+`archive-host` | `${ARCHIVE_HOST}`
+`scheduledstation` | `${SCHEDULED_STATION_DEVICE_NAME}`
+`SCHEDULEDSTATION` | `${SCHEDULED_STATION_AE_TITLE}`
+`keycloak` | `${KEYCLOAK_DEVICE_NAME}`
+`keycloak-host` | `${KEYCLOAK_HOST}`
+`11112` | `${DICOM_PORT}`
+`2575` | `${HL7_PORT}`
+`logstash` | `${SYSLOG_DEVICE_NAME}`
+`syslog-host` | `${SYSLOG_HOST}`
+`514` | `${SYSLOG_PORT}`
+`SYSLOG_UDP` | `SYSLOG_${SYSLOG_PROTOCOL}`
+`${jboss.server.data.url}/fs1` | `file://${STORAGE_DIR}`
+
+Only effective if `SKIP_INIT_CONFIG=false`. Not set by default.
 
 ### `IMPORT_LDIF`
 
-This allows user to specify space separated customized ldif files, should the user wish to set the above environment variable 
-SKIP_INIT_CONFIG to true. No default value is set. 
+Space separated LDIF files to be imported verbatim at first LDAP startup. May be used together with
+`SKIP_INIT_CONFIG=true` to initialize LDAP from customized or backed-up LDIF file(s) instead of using
+the default initial configuration.

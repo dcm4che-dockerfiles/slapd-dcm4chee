@@ -16,6 +16,7 @@ ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     SYSLOG_PROTOCOL=UDP \
     STORAGE_DIR=/opt/wildfly/standalone/data/fs1 \
     SKIP_INIT_CONFIG=false \
+    EXT_INIT_CONFIG= \
     IMPORT_LDIF=
 
 COPY ldap /etc/ldap
