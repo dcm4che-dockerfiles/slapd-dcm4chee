@@ -5,3 +5,6 @@ changetype: modify
 replace: dicomSoftwareVersion
 dicomSoftwareVersion: 5.13.3
 -
+replace: dicomVendorData
+dicomVendorData:< file:vendor-data.zip
+-
