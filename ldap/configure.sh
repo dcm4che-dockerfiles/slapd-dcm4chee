@@ -15,6 +15,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
 			-e "s%dicomAETitle: DCM4CHEE%dicomAETitle: ${AE_TITLE}%" \
 			-e "s%dcmRetrieveAET: DCM4CHEE%dcmRetrieveAET: ${AE_TITLE}%" \
 			-e "s%dcmStorageVerificationAETitle: DCM4CHEE%dcmStorageVerificationAETitle: ${AE_TITLE}%" \
+			-e "s%dcmCompressionAETitle: DCM4CHEE%dcmCompressionAETitle: ${AE_TITLE}%" \
 			-e "s%dcmXDSiImagingDocumentSourceAETitle: DCM4CHEE%dcmXDSiImagingDocumentSourceAETitle: ${AE_TITLE}%" \
 			-e "s%dcmRejectExpiredStudiesAETitle: DCM4CHEE%dcmRejectExpiredStudiesAETitle: ${AE_TITLE}%" \
 			-e "s%dcmRejectionNoteStorageAET: DCM4CHEE%dcmRejectionNoteStorageAET: ${AE_TITLE}%" \
