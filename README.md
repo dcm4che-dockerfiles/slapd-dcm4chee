@@ -35,10 +35,91 @@ This environment variable sets the organisation name for LDAP. Default value is 
 This environment variable sets the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`.
 Default value is `secret`.
 
+### `LDAP_ROOTPASS_FILE`
+
+Path to file containing the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`. 
+Overwrites password set by `LDAP_ROOTPASS`.
+
 ### `LDAP_CONFIGPASS`
 
 This environment variable sets the password for accessing the slapd configuration with bind DN `cn=config`. 
 Default value is `secret`.
+
+### `LDAP_CONFIGPASS_FILE`
+
+Path to file containing the password for accessing the slapd configuration with bind DN `cn=config`. 
+Overwrites password set by `LDAP_CONFIGPASS`.
+
+### `LDAP_TLS_CACERT`
+
+This environment variable specifies the PEM-format file containing certificates for the CA's that slapd will trust.
+The certificate for the CA that signed the server certificate must be included among these certificates. If the
+signing CA was not a top-level (root) CA, certificates for the entire sequence of CA's from the signing CA to the
+top-level CA should be present. Multiple certificates are simply appended to the file; the order is not significant.
+Default value is `/etc/certs/cacert.pem`.
+
+### `LDAP_TLS_CERT`
+
+This environment variable specifies the file that contains the slapd server certificate. The DN of a server certificate
+shall use the CN attribute to name the server, and the CN shall carry the server's fully qualified domain name.
+Additional alias names and wildcards may be present in the subjectAltName certificate extension. Default value is
+`/etc/certs/cert.pem`.
+
+### `LDAP_TLS_KEY`
+
+This environment variable specifies the file that contains the private key that matches the certificate stored in the
+`LDAP_TLS_CERT` file. Default value is `/etc/certs/key.pem`.
+
+### `LDAP_TLS_VERIFY`
+
+This environment variable specifies what checks to perform on client certificates in an incoming TLS session, if any.
+This option is set to `never` by default, in which case the server never asks the client for a certificate. With a
+setting of `allow` the server will ask for a client certificate; if none is provided the session proceeds normally.
+If a certificate is provided but the server is unable to verify it, the certificate is ignored and the session proceeds
+normally, as if no certificate had been provided. With a setting of `try` the certificate is requested, and if none is
+provided, the session proceeds normally. If a certificate is provided and it cannot be verified, the session is
+immediately terminated. With a setting of `demand` the certificate is requested and a valid certificate must be
+provided, otherwise the session is immediately terminated.
+
+### `LDAP_TLS_REQCERT`
+
+This environment variable specifies what checks to perform on server certificates. Only effective with LDAP
+replication over TLS (e.g. `LDAP_REPLICATION_HOSTS=ldaps://ldap1/ ldaps://ldap2/`). Default value is `never`.
+
+### `LDAP_REPLICATION_HOSTS`
+
+This environment variable specifies a space separated list of LDAP URLs to activate
+[N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication).
+The list must contain the own container host name. Other host names of other servers must be resolvable by the container.
+After startup you have to invoke
+```
+docker exec <ldap-container-name> prepare-replication
+```
+on each container, before actual activating the replication by
+```
+docker exec <ldap-container-name> enable-replication
+```
+on each container.
+
+### `LDAP_REPLICATION_DB_SYNCPROV`
+
+This environment variable specifies parameters used for
+[N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication)
+activated by `LDAP_REPLICATION_HOSTS`. Default value is
+```
+binddn="cn=admin,$LDAP_BASE_DN" \
+bindmethod=simple \
+credentials=$LDAP_ROOTPASS \
+searchbase="$LDAP_BASE_DN" \
+tls_cert=$LDAP_TLS_CERT \
+tls_key=$LDAP_TLS_KEY \
+tls_cacert=$LDAP_TLS_CACERT \
+tls_reqcert=$LDAP_TLS_REQCERT \
+type=refreshOnly \
+interval=00:00:00:10 \
+retry="5 5 300 +" \
+timeout=1
+```
 
 ### `ARCHIVE_DEVICE_NAME`
 
