@@ -52,6 +52,12 @@ Path to file containing the password for accessing the slapd configuration with 
 If the file does not exist, it will be created containing the password specified by `LDAP_CONFIGPASS`. 
 Default value is `/tmp/ldap_configpass`.
 
+### `LDAP_URLS`
+
+Space separated list of LDAP URLs to serve.
+Set to `"ldap:///"` by default (LDAP over TCP on all interfaces on default LDAP port).
+The default `ldap://` port is `389` and the default `ldaps://` port is `636`.
+
 ### `LDAP_TLS_CACERT`
 
 This environment variable specifies the PEM-format file containing certificates for the CA's that slapd will trust.
