@@ -1,4 +1,7 @@
 #!/bin/sh
 
+LDAP_CONFIGPASS=`cat $LDAP_CONFIGPASS_FILE`
+LDAP_ROOTPASS=`cat $LDAP_ROOTPASS_FILE`
+
 ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/data/fix-access-control.ldif
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" /etc/ldap/data/default-users.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}

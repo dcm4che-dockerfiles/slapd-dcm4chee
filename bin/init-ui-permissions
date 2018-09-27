@@ -1,5 +1,7 @@
 #!/bin/sh
 
+LDAP_ROOTPASS=`cat $LDAP_ROOTPASS_FILE`
+
 cd /etc/ldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \

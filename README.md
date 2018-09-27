@@ -33,22 +33,24 @@ This environment variable sets the organisation name for LDAP. Default value is 
 ### `LDAP_ROOTPASS`
 
 This environment variable sets the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`.
-Default value is `secret`.
+Only effective if the file specified by `LDAP_ROOTPASS_FILE` does not exist. Default value is `secret`.
 
 ### `LDAP_ROOTPASS_FILE`
 
 Path to file containing the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`. 
-Overwrites password set by `LDAP_ROOTPASS`.
+If the file does not exist, it will be created containing the password specified by `LDAP_ROOTPASS`. 
+Default value is `/tmp/ldap_rootpass`.
 
 ### `LDAP_CONFIGPASS`
 
 This environment variable sets the password for accessing the slapd configuration with bind DN `cn=config`. 
-Default value is `secret`.
+Only effective if the file specified by `LDAP_CONFIGPASS_FILE` does not exist. Default value is `secret`.
 
 ### `LDAP_CONFIGPASS_FILE`
 
 Path to file containing the password for accessing the slapd configuration with bind DN `cn=config`. 
-Overwrites password set by `LDAP_CONFIGPASS`.
+If the file does not exist, it will be created containing the password specified by `LDAP_CONFIGPASS`. 
+Default value is `/tmp/ldap_configpass`.
 
 ### `LDAP_TLS_CACERT`
 
@@ -84,7 +86,9 @@ provided, otherwise the session is immediately terminated.
 ### `LDAP_TLS_REQCERT`
 
 This environment variable specifies what checks to perform on server certificates. Only effective with LDAP
-replication over TLS (e.g. `LDAP_REPLICATION_HOSTS=ldaps://ldap1/ ldaps://ldap2/`). Default value is `never`.
+replication over TLS (e.g. `LDAP_REPLICATION_HOSTS=ldaps://ldap1/ ldaps://ldap2/`). This option is set to `never`
+by default, to disable the verification that the CN of the received server certificate match its host name - otherwise
+replication over TLS with the provided default server certificate will not work.
 
 ### `LDAP_REPLICATION_HOSTS`
 
@@ -111,10 +115,6 @@ binddn="cn=admin,$LDAP_BASE_DN" \
 bindmethod=simple \
 credentials=$LDAP_ROOTPASS \
 searchbase="$LDAP_BASE_DN" \
-tls_cert=$LDAP_TLS_CERT \
-tls_key=$LDAP_TLS_KEY \
-tls_cacert=$LDAP_TLS_CACERT \
-tls_reqcert=$LDAP_TLS_REQCERT \
 type=refreshOnly \
 interval=00:00:00:10 \
 retry="5 5 300 +" \
