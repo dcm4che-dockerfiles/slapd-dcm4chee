@@ -197,6 +197,11 @@ This is the Application Entity title of the device referenced in default schedul
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `SCHEDULEDSTATION`. 
 
+### `ELASTICSEARCH_URL`
+
+Base URL of Elasticsearch used by [dcm4che-pro](http://web.j4care.com/dcm4chepro) version of the UI. Default value
+is `http://localhost:9200`. 
+
 ### `SKIP_INIT_CONFIG`
 
 Skip the default initial configuration (required by archive device) at first LDAP startup. Default value is set to `false`.

@@ -1,3 +1,15 @@
+version: 1
+
+dn: dcmuiElasticsearchConfigName=elasticsearch,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmuiElasticsearchConfig
+dcmuiElasticsearchConfigName: elasticsearch
+
+dn: dcmuiElasticsearchURLName=elasticsearch,dcmuiElasticsearchConfigName=elasticsearch,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmuiElasticsearchURLObjects
+dcmuiElasticsearchURL: http://localhost:9200
+dcmuiElasticsearchURLName: elasticsearch
+dcmuiElasticsearchIsDefault: TRUE
+
 dn: dcmuiPermissionName=Menu - Lifecycle Management,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmuiPermissionName: Menu - Lifecycle Management
 dcmuiActionParam: accessible
