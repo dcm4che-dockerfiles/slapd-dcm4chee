@@ -227,6 +227,7 @@ replacing | by
 `514` | `${SYSLOG_PORT}`
 `SYSLOG_UDP` | `SYSLOG_${SYSLOG_PROTOCOL}`
 `${jboss.server.data.url}/fs1` | `file://${STORAGE_DIR}`
+`http://localhost:9200` | `${ELASTICSEARCH_URL}`
 
 Only effective if `SKIP_INIT_CONFIG=false`. Not set by default.
 
