@@ -10,6 +10,11 @@ dcmuiElasticsearchURL: http://localhost:9200
 dcmuiElasticsearchURLName: elasticsearch
 dcmuiElasticsearchIsDefault: TRUE
 
+dn: dcmuiDashboardConfigName=default,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmuiDashboardConfig
+dcmuiDashboardConfigName: default
+dcmuiCountAET: DCM4CHEE
+
 dn: dcmuiPermissionName=Menu - Lifecycle Management,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmuiPermissionName: Menu - Lifecycle Management
 dcmuiActionParam: accessible
