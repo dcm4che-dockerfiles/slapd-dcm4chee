@@ -14,10 +14,17 @@ cn: Unique AE Titles Registry
 
 dn: dicomDeviceName=keycloak,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomInstalled: TRUE
+dcmKeyStoreKeyPin: ${env.KEY_PASSWORD}
 dicomDeviceName: keycloak
+dcmTrustStoreType: JKS
+dcmKeyStorePin: ${env.KEYSTORE_PASSWORD}
+dcmKeyStoreType: ${env.KEYSTORE_TYPE}
+dcmKeyStoreURL: file://${env.KEYSTORE}
 objectClass: dicomDevice
 objectClass: dcmDevice
 dicomPrimaryDeviceType: AUTH
+dcmTrustStorePin: ${env.TRUSTSTORE_PASSWORD}
+dcmTrustStoreURL: file://${env.TRUSTSTORE}
 
 dn: dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomInstalled: TRUE
@@ -30,14 +37,16 @@ dn: dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc
 dcmSendPendingCMoveInterval: PT5S
 dcmQidoMaxNumberOfResults: 1000
 dcmIanTaskPollingInterval: PT1M
+dcmTrustStoreType: JKS
 dcmAECacheStaleTimeout: PT5M
 dcmFuzzyAlgorithmClass: org.dcm4che3.soundex.ESoundex
 dcmWadoCDA2HtmlTemplateURI: /dcm4chee-arc/xsl/cda.xsl
 dcmAudit2XmlFhirTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/audit2xml+fhir.xsl
 dcmExportTaskPollingInterval: PT1M
-dcmKeyStoreType: JKS
+dcmKeyStoreType: ${env.KEYSTORE_TYPE}
+dcmTrustStoreURL: file://${env.TRUSTSTORE}
 dcmRejectExpiredStudiesAETitle: DCM4CHEE
-dcmKeyStoreURL: ${jboss.server.config.url}/dcm4chee-arc/key.jks
+dcmKeyStoreURL: file://${env.KEYSTORE}
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.74
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.40
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.73
@@ -62,8 +71,8 @@ dcmAuditSpoolDirectory: ${jboss.server.data.dir}/audit-spool
 objectClass: dicomDevice
 objectClass: dcmDevice
 objectClass: dcmArchiveDevice
-objectClass: pkiUser
 hl7PatientUpdateTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl
+dcmKeyStoreKeyPin: ${env.KEY_PASSWORD}
 dcmStorageVerificationAETitle: DCM4CHEE
 dcmWadoSR2HtmlTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/dsr2html.xsl
 dcmLinkMWLEntryUpdatePolicy: MERGE
@@ -78,16 +87,16 @@ dcmPurgeStgCmtPollingInterval: PT1H
 dcmRejectExpiredStudiesFetchSize: 10
 dicomPrimaryDeviceType: ARCHIVE
 hl7ImportReportTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-oru2dsr.xsl
-dicomAuthorizedNodeCertificateReference: dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeStgCmtCompletedDelay: P1D
 dicomManufacturer: dcm4che.org
 dcmExternalRetrieveAEDestination: DCM4CHEE
 hl7ScheduleProcedureTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-order2dcm.xsl
+dcmTrustStorePin: ${env.TRUSTSTORE_PASSWORD}
 dcmAuditRecordRepositoryURL: http://kibana:5601
 dcmXDSiImagingDocumentSourceAETitle: DCM4CHEE
 dcmWadoSR2TextTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/dsr2text.xsl
 dcmPurgeQueueMessagePollingInterval: PT1H
-dcmKeyStorePin: secret
+dcmKeyStorePin: ${env.KEYSTORE_PASSWORD}
 dicomInstalled: TRUE
 dcmCompressionAETitle: DCM4CHEE
 dicomSoftwareVersion: 5.15.1
@@ -98,15 +107,14 @@ dcmRejectExpiredStudiesPollingInterval: P1D
 dcmDeleteRejectedPollingInterval: PT5M
 dcmRejectExpiredStudiesPollingStartTime: 00:00
 dcmLeadingCFindSCPQueryCacheStaleTimeout: PT5M
-dcmUnzipVendorDataToURI: ${jboss.server.temp.url}/dcm4chee-arc
 dcmAuditPollingInterval: PT1M
+dcmUnzipVendorDataToURI: ${jboss.server.temp.url}/dcm4chee-arc
 dcmHideSPSWithStatusFromMWL: STARTED
 dcmHideSPSWithStatusFromMWL: DEPARTED
 dcmHideSPSWithStatusFromMWL: CANCELLED
 dcmHideSPSWithStatusFromMWL: DISCONTINUED
 dcmHideSPSWithStatusFromMWL: COMPLETED
 dcmAuditAggregateDuration: PT1M
-userCertificate;binary:: MIIDHTCCAoagAwIBAgIBATANBgkqhkiG9w0BAQ0FADA6MQswCQYDVQQGEwJGUjETMBEGA1UECgwKSUhFIEV1cm9wZTEWMBQGA1UEAwwNSUhFIEV1cm9wZSBDQTAeFw0xMjA5MjgxMTE5MjlaFw0yMjA5MjgxMTE5MjlaMDoxCzAJBgNVBAYTAkZSMRMwEQYDVQQKDApJSEUgRXVyb3BlMRYwFAYDVQQDDA1JSEUgRXVyb3BlIENBMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuLWUWgF2L5igJIQ1pWFw/Yk5ZcMG4JPw13GLxn+7nufHHq/xgzxJxFLoY/kL8WUgg+QiCBv6yecXy3qJeb6DjuQJ+k2KHSKQxyN4fpfZdeNVc6w5qNOmMFKixS0ntax/4RXNBgP7IbKq2+fr1QscFZo0X6qWdO9OvL9RgSmGMNQIDAQABo4IBMTCCAS0wPQYDVR0fBDYwNDAyoDCgLoYsaHR0cDovL2dhemVsbGUuaWhlLm5ldC9wa2kvY3JsLzY0My9jYWNybC5jcmwwOwYJYIZIAYb4QgEEBC4WLGh0dHA6Ly9nYXplbGxlLmloZS5uZXQvcGtpL2NybC82NDMvY2FjcmwuY3JsMDsGCWCGSAGG+EIBAwQuFixodHRwOi8vZ2F6ZWxsZS5paGUubmV0L3BraS9jcmwvNjQzL2NhY3JsLmNybDAOBgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU7DMOE8giXqLha69De3pd0ndzHX4wHwYDVR0jBBgwFoAU7DMOE8giXqLha69De3pd0ndzHX4wEQYJYIZIAYb4QgEBBAQDAgAHMA0GCSqGSIb3DQEBDQUAA4GBAFfPfr/Cjk/ZBsDI9SdHGYqlHAJaJaJX/fpXIu3akEZxCPzMJkTeDDHvUOGaaP7bAHGnTBsS8rR9CD6gyUVJmrC/fk6/QoYFVaPNOGG2M1KnA14bwhriYLXV1INsUwj/jUTdSSvrPgV8XddgM8VgBLAX59VH94jufDPOPqwV1++P
 
 dn: dicomDeviceName=scheduledstation,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomInstalled: TRUE

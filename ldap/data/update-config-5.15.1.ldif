@@ -25,3 +25,56 @@ dcmTag: 00201208
 dcmAttributeSetType: QIDO_RS
 dcmAttributeSetID: study
 objectClass: dcmAttributeSet
+
+dn: dicomDeviceName=keycloak,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+changetype: modify
+add: dcmTrustStoreURL
+dcmTrustStoreURL: file://${env.TRUSTSTORE}
+-
+add: dcmTrustStoreType
+dcmTrustStoreType: JKS
+-
+add: dcmTrustStorePin
+dcmTrustStorePin: ${env.TRUSTSTORE_PASSWORD}
+-
+add: dcmKeyStoreURL
+dcmKeyStoreURL: file://${env.KEYSTORE}
+-
+add: dcmKeyStoreType
+dcmKeyStoreType: ${env.KEYSTORE_TYPE}
+-
+add: dcmKeyStorePin
+dcmKeyStorePin: ${env.KEYSTORE_PASSWORD}
+-
+add: dcmKeyStoreKeyPin
+dcmKeyStoreKeyPin: ${env.KEY_PASSWORD}
+
+dn: dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dcm4che,dc=org
+changetype: modify
+add: dcmTrustStoreURL
+dcmTrustStoreURL: file://${env.TRUSTSTORE}
+-
+add: dcmTrustStoreType
+dcmTrustStoreType: JKS
+-
+add: dcmTrustStorePin
+dcmTrustStorePin: ${env.TRUSTSTORE_PASSWORD}
+-
+replace: dcmKeyStoreURL
+dcmKeyStoreURL: file://${env.KEYSTORE}
+-
+replace: dcmKeyStoreType
+dcmKeyStoreType: ${env.KEYSTORE_TYPE}
+-
+replace: dcmKeyStorePin
+dcmKeyStorePin: ${env.KEYSTORE_PASSWORD}
+-
+replace: dcmKeyStoreKeyPin
+dcmKeyStoreKeyPin: ${env.KEY_PASSWORD}
+-
+remove: dicomAuthorizedNodeCertificateReference
+-
+remove: userCertificate;binary
+-
+remove: objectClass
+objectClass: pkiUser
