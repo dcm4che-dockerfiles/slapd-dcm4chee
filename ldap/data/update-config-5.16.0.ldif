@@ -8,7 +8,7 @@ dicomSoftwareVersion: 5.16.0
 replace: dicomVendorData
 dicomVendorData:< file:vendor-data.zip
 -
-delete: dcmRejectExpiredStudiesPollingStartTime
+replace: dcmRejectExpiredStudiesPollingStartTime
 
 dn: dcmQueueName=Rejection,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: add
