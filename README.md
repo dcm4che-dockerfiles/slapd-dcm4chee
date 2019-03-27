@@ -143,22 +143,22 @@ Default value is `IOCM_REGULAR_USE`.
 
 ### `AE_TITLE_IOCM_QUALITY`
 
-Name of the Application Entity title configured to .
+Name of the Application Entity title configured to only show instances rejected for Quality Reasons.
 Default value is `IOCM_QUALITY`.
 
 ### `AE_TITLE_IOCM_PAT_SAFETY`
 
-Name of the Application Entity title configured to .
+Name of the Application Entity title configured to only show instances rejected for Patient Safety Reasons.
 Default value is `IOCM_PAT_SAFETY`.
 
 ### `AE_TITLE_IOCM_WRONG_MWL`
 
-Name of the Application Entity title configured to .
+Name of the Application Entity title configured to only show instances rejected for Incorrect Modality Worklist Entry.
 Default value is `IOCM_WRONG_MWL`.
 
 ### `AE_TITLE_IOCM_EXPIRED`
 
-Name of the Application Entity title configured to .
+Name of the Application Entity title configured to only show instances rejected for Data Retention Expired.
 Default value is `IOCM_EXPIRED`.
 
 ### `AE_TITLE_AS_RECEIVED`
