@@ -12,7 +12,7 @@ $ docker run --name slapd \
              -v /etc/localtime:/etc/localtime \
              -v /var/local/dcm4chee-arc/ldap:/var/lib/ldap \
              -v /var/local/dcm4chee-arc/slapd.d:/etc/ldap/slapd.d \
-             -d dcm4che/slapd-dcm4chee:2.4.44-14.1
+             -d dcm4che/slapd-dcm4chee:2.4.44-16.1
 ```
 
 ## Environment Variables
@@ -129,71 +129,102 @@ timeout=1
 
 ### `ARCHIVE_DEVICE_NAME`
 
-This is the name of archive device. Default value is `dcm4chee-arc`.
+Name of archive device. Default value is `dcm4chee-arc`.
 
 ### `AE_TITLE`
 
-This is the name of the primary Application Entity title of archive device. Default value is `DCM4CHEE`.
+Name of the primary Application Entity title configured to hide instances rejected for Quality Reasons.
+Default value is `DCM4CHEE`.
+
+### `AE_TITLE_IOCM_REGULAR_USE`
+
+Name of the Application Entity title configured to show instances rejected for Quality Reasons.
+Default value is `IOCM_REGULAR_USE`.
+
+### `AE_TITLE_IOCM_QUALITY`
+
+Name of the Application Entity title configured to .
+Default value is `IOCM_QUALITY`.
+
+### `AE_TITLE_IOCM_PAT_SAFETY`
+
+Name of the Application Entity title configured to .
+Default value is `IOCM_PAT_SAFETY`.
+
+### `AE_TITLE_IOCM_WRONG_MWL`
+
+Name of the Application Entity title configured to .
+Default value is `IOCM_WRONG_MWL`.
+
+### `AE_TITLE_IOCM_EXPIRED`
+
+Name of the Application Entity title configured to .
+Default value is `IOCM_EXPIRED`.
+
+### `AE_TITLE_AS_RECEIVED`
+
+Name of the Application Entity title configured to retrieve instances as received.
+Default value is `AS_RECEIVED`.
 
 ### `ARCHIVE_HOST`
 
-This is the hostname of the archive device. You have to specify the hostname of the docker host on which the Archive
+Hostname of the archive device. You have to specify the hostname of the docker host on which the Archive
 container is deployed, if the LDAP configuration is used by other applications to determine the hostname and DICOM and/or
 HL7 port to initiate TCP connections to the Archive. Default value is `127.0.0.1`.
 
 ### `DICOM_PORT`
 
-This is the port number on which the Archive is listening for DICOM connections. Default value is `11112`.
+Port number on which the Archive is listening for DICOM connections. Default value is `11112`.
 
 ### `HL7_PORT`
 
-This is the port number on which the HL7 receiver of the Archive is listening. Default value is `2575`.
+Port number on which the HL7 receiver of the Archive is listening. Default value is `2575`.
 
 ### `STORAGE_DIR`
 
-This is the path to the directory - inside of the Archive container - where the Archive stores received DICOM objects.
+Path to the directory - inside of the Archive container - where the Archive stores received DICOM objects.
 Default value is `/opt/wildfly/standalone/data/fs1`. 
 
 ### `SYSLOG_DEVICE_NAME`
 
-This is the device name of the audit record repository. The archive device emits audit messages to this device if 
+Device name of the audit record repository. The archive device emits audit messages to this device if 
 audit logging is enabled. Default value is `logstash`. 
 
 ### `SYSLOG_HOST`
 
-This is the hostname of the audit record repository. You have to specify either the hostname of the docker host on which
+Hostname of the audit record repository. You have to specify either the hostname of the docker host on which
 the Logstash container is deployed or - if the Archive container and the Logstash container are attached to the same
 network - the container name of the Logstash container. With default value `127.0.0.1`, audit logging is effectively
 disabled.
 
 ### `SYSLOG_PORT`
 
-This is the port number on which the audit record repository is listening. Default value is `8514`. 
+Port number on which the audit record repository is listening. Default value is `8514`. 
 
 ### `SYSLOG_PROTOCOL`
 
-This is the protocol used to emit audit messages to the audit record repository. Enumerated values: `UDP` or `TCP`.
+Protocol used to emit audit messages to the audit record repository. Enumerated values: `UDP` or `TCP`.
 Default value is `UDP`. 
 
 ### `KEYCLOAK_DEVICE_NAME`
 
-This is the device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
+Device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
 authentication events. Default value is `keycloak`. 
 
 ### `KEYCLOAK_HOST`
 
-This is the device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
+Device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
 authentication events. Default value is `127.0.0.1`. 
 
 ### `SCHEDULED_STATION_DEVICE_NAME`
 
-This is the name of the device referenced in default scheduled station configured in the archive device which is used  as 
+Name of the device referenced in default scheduled station configured in the archive device which is used  as 
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `scheduledstation`. 
 
 ### `SCHEDULED_STATION_AE_TITLE`
 
-This is the Application Entity title of the device referenced in default scheduled station configured in the archive device which is used  as 
+Application Entity title of the device referenced in default scheduled station configured in the archive device which is used  as 
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `SCHEDULEDSTATION`. 
 
@@ -215,6 +246,12 @@ replacing | by
 `dc=dcm4che,dc=org` | `${LDAP_BASE_DN}`
 `dcm4chee-arc` | `${ARCHIVE_DEVICE_NAME}`
 `DCM4CHEE` | `${AE_TITLE}`
+`IOCM_REGULAR_USE` | `${AE_TITLE_IOCM_REGULAR_USE}`
+`IOCM_QUALITY` | `${AE_TITLE_IOCM_QUALITY}`
+`IOCM_PAT_SAFETY` | `${AE_TITLE_IOCM_PAT_SAFETY}`
+`IOCM_WRONG_MWL` | `${AE_TITLE_IOCM_WRONG_MWL}`
+`IOCM_EXPIRED` | `${AE_TITLE_IOCM_EXPIRED}`
+`AS_RECEIVED` | `${AE_TITLE_AS_RECEIVED}`
 `archive-host` | `${ARCHIVE_HOST}`
 `scheduledstation` | `${SCHEDULED_STATION_DEVICE_NAME}`
 `SCHEDULEDSTATION` | `${SCHEDULED_STATION_AE_TITLE}`

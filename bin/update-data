@@ -16,6 +16,18 @@ sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%^dcmRejectExpiredStudiesAETitle: DCM4CHEE%dcmRejectExpiredStudiesAETitle: ${AE_TITLE}%" \
     -e "s%^dcmRejectionNoteStorageAET: DCM4CHEE%dcmRejectionNoteStorageAET: ${AE_TITLE}%" \
     -e "s%^dcmuiCountAET: DCM4CHEE%dcmuiCountAET: ${AE_TITLE}%" \
+    -e "s%dicomAETitle=IOCM_REGULAR_USE%dicomAETitle=${AE_TITLE_IOCM_REGULAR_USE}%" \
+    -e "s%^dicomAETitle: IOCM_REGULAR_USE%dicomAETitle: ${AE_TITLE_IOCM_REGULAR_USE}%" \
+    -e "s%dicomAETitle=IOCM_QUALITY%dicomAETitle=${AE_TITLE_IOCM_QUALITY}%" \
+    -e "s%^dicomAETitle: IOCM_QUALITY%dicomAETitle: ${AE_TITLE_IOCM_QUALITY}%" \
+    -e "s%dicomAETitle=IOCM_PAT_SAFETY%dicomAETitle=${AE_TITLE_IOCM_PAT_SAFETY}%" \
+    -e "s%^dicomAETitle: IOCM_PAT_SAFETY%dicomAETitle: ${AE_TITLE_IOCM_PAT_SAFETY}%" \
+    -e "s%dicomAETitle=IOCM_WRONG_MWL%dicomAETitle=${AE_TITLE_IOCM_WRONG_MWL}%" \
+    -e "s%^dicomAETitle: IOCM_WRONG_MWL%dicomAETitle: ${AE_TITLE_IOCM_WRONG_MWL}%" \
+    -e "s%dicomAETitle=IOCM_EXPIRED%dicomAETitle=${AE_TITLE_IOCM_EXPIRED}%" \
+    -e "s%^dicomAETitle: IOCM_EXPIRED%dicomAETitle: ${AE_TITLE_IOCM_EXPIRED}%" \
+    -e "s%dicomAETitle=AS_RECEIVED%dicomAETitle=${AE_TITLE_AS_RECEIVED}%" \
+    -e "s%^dicomAETitle: AS_RECEIVED%dicomAETitle: ${AE_TITLE_AS_RECEIVED}%" \
     -e "s%archive-host%${ARCHIVE_HOST}%" \
     -e "s%dicomDeviceName=scheduledstation%dicomDeviceName=${SCHEDULED_STATION_DEVICE_NAME}%" \
     -e "s%^dicomDeviceName: scheduledstation%dicomDeviceName: ${SCHEDULED_STATION_DEVICE_NAME}%" \
