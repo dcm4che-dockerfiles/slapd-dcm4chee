@@ -133,37 +133,37 @@ Name of archive device. Default value is `dcm4chee-arc`.
 
 ### `AE_TITLE`
 
-Name of the primary Application Entity title configured to hide instances rejected for Quality Reasons.
+Title of the primary Application Entity configured to hide instances rejected for Quality Reasons.
 Default value is `DCM4CHEE`.
 
 ### `AE_TITLE_IOCM_REGULAR_USE`
 
-Name of the Application Entity title configured to show instances rejected for Quality Reasons.
+Title of the Application Entity configured to show instances rejected for Quality Reasons.
 Default value is `IOCM_REGULAR_USE`.
 
 ### `AE_TITLE_IOCM_QUALITY`
 
-Name of the Application Entity title configured to only show instances rejected for Quality Reasons.
+Title of the Application Entity configured to only show instances rejected for Quality Reasons.
 Default value is `IOCM_QUALITY`.
 
 ### `AE_TITLE_IOCM_PAT_SAFETY`
 
-Name of the Application Entity title configured to only show instances rejected for Patient Safety Reasons.
+Title of the Application Entity configured to only show instances rejected for Patient Safety Reasons.
 Default value is `IOCM_PAT_SAFETY`.
 
 ### `AE_TITLE_IOCM_WRONG_MWL`
 
-Name of the Application Entity title configured to only show instances rejected for Incorrect Modality Worklist Entry.
+Title of the Application Entity configured to only show instances rejected for Incorrect Modality Worklist Entry.
 Default value is `IOCM_WRONG_MWL`.
 
 ### `AE_TITLE_IOCM_EXPIRED`
 
-Name of the Application Entity title configured to only show instances rejected for Data Retention Expired.
+Title of the Application Entity configured to only show instances rejected for Data Retention Expired.
 Default value is `IOCM_EXPIRED`.
 
 ### `AE_TITLE_AS_RECEIVED`
 
-Name of the Application Entity title configured to retrieve instances as received.
+Title of the Application Entity configured to retrieve instances as received.
 Default value is `AS_RECEIVED`.
 
 ### `ARCHIVE_HOST`
