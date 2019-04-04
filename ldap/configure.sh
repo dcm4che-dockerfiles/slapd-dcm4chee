@@ -32,8 +32,8 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%^dicomAETitle: IOCM_EXPIRED%dicomAETitle: ${AE_TITLE_IOCM_EXPIRED}%" \
             -e "s%dicomAETitle=AS_RECEIVED%dicomAETitle=${AE_TITLE_AS_RECEIVED}%" \
             -e "s%^dicomAETitle: AS_RECEIVED%dicomAETitle: ${AE_TITLE_AS_RECEIVED}%" \
-            -e "s%^dcmWebAppName=DCM4CHEE%dcmWebAppName=${ARCHIVE_DEVICE_NAME}%" \
-            -e "s%^dcmWebAppName: DCM4CHEE%dcmWebAppName: ${ARCHIVE_DEVICE_NAME}%" \
+            -e "s%^dcmWebAppName=dcm4chee-arc%dcmWebAppName=${ARCHIVE_DEVICE_NAME}%" \
+            -e "s%^dcmWebAppName: dcm4chee-arc%dcmWebAppName: ${ARCHIVE_DEVICE_NAME}%" \
             -e "s%^dcmWebAppName=DCM4CHEE%dcmWebAppName=${AE_TITLE}%" \
             -e "s%^dcmWebAppName: DCM4CHEE%dcmWebAppName: ${AE_TITLE}%" \
             -e "s%^dcmWebServicePath: /dcm4chee-arc/aets/DCM4CHEE%dcmWebServicePath: /dcm4chee-arc/aets/${AE_TITLE}%" \
