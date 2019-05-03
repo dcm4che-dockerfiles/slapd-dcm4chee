@@ -12,7 +12,7 @@ $ docker run --name slapd \
              -v /etc/localtime:/etc/localtime \
              -v /var/local/dcm4chee-arc/ldap:/var/lib/ldap \
              -v /var/local/dcm4chee-arc/slapd.d:/etc/ldap/slapd.d \
-             -d dcm4che/slapd-dcm4chee:2.4.44-16.1
+             -d dcm4che/slapd-dcm4chee:2.4.44-17.0
 ```
 
 ## Environment Variables
