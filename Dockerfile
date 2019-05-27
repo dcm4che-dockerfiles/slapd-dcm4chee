@@ -1,4 +1,4 @@
-FROM dcm4che/slapd:2.4.44-2
+FROM dcm4che/slapd:2.4.44-3
 
 # Default configuration: can be overridden at the docker command line
 ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \

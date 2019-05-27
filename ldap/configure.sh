@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dicom.ldif
 ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4che.ldif

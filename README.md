@@ -24,33 +24,27 @@ An example of how one can set an env variable in `docker run` command is shown b
 
 ### `LDAP_BASE_DN`
 
-This environment variable sets the base domain name for LDAP. Default value is `dc=dcm4che,dc=org`.
+Base domain name for LDAP (optional, default is `dc=dcm4che,dc=org`).
 
 ### `LDAP_ORGANISATION`
 
-This environment variable sets the organisation name for LDAP. Default value is `dcm4che.org`.
+Organisation name in LDAP root node (optional, default is `dcm4che.org`).
 
 ### `LDAP_ROOTPASS`
 
-This environment variable sets the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`.
-Only effective if the file specified by `LDAP_ROOTPASS_FILE` does not exist. Default value is `secret`.
+Root DN password (bind DN: `cn=admin,${LDAP_BASE_DN}`) (optional, default is `secret`).
 
 ### `LDAP_ROOTPASS_FILE`
 
-Path to file containing the root password for accessing the LDAP data with bind DN `cn=admin,${LDAP_BASE_DN}`. 
-If the file does not exist, it will be created containing the password specified by `LDAP_ROOTPASS`. 
-Default value is `/tmp/ldap_rootpass`.
+Root DN password (bind DN: `cn=admin,${LDAP_BASE_DN}`) via file input (alternative to `LDAP_ROOTPASS`).
 
 ### `LDAP_CONFIGPASS`
 
-This environment variable sets the password for accessing the slapd configuration with bind DN `cn=config`. 
-Only effective if the file specified by `LDAP_CONFIGPASS_FILE` does not exist. Default value is `secret`.
+Config DIT password (bind DN `cn=config`) (optional, default is `secret`).
 
 ### `LDAP_CONFIGPASS_FILE`
 
-Path to file containing the password for accessing the slapd configuration with bind DN `cn=config`. 
-If the file does not exist, it will be created containing the password specified by `LDAP_CONFIGPASS`. 
-Default value is `/tmp/ldap_configpass`.
+Config DIT password (bind DN `cn=config`) via file input (alternative to `LDAP_CONFIGPASS`).
 
 ### `LDAP_URLS`
 
