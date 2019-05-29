@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. setenv.sh
+. /setenv.sh
 
 ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/schema/dicom-modify.ldif
 ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/ldap/schema/dcm4che-modify.ldif
