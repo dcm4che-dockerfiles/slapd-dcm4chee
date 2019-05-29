@@ -1,7 +1,7 @@
 #!/bin/sh
 VERSION=$1; shift
 
-LDAP_ROOTPASS=`cat $LDAP_ROOTPASS_FILE`
+. setenv.sh
 
 cd /etc/ldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
