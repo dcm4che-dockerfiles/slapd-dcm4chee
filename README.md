@@ -210,6 +210,20 @@ authentication events. Default value is `keycloak`.
 Device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
 authentication events. Default value is `127.0.0.1`. 
 
+### `AUTH_SERVER_URL`
+
+Base URL of the Keycloak server used by Web UI to request token from Keycloak server.
+Default value is `http://keycloak:8080/auth`.
+
+### `REALM_NAME`
+
+Name of the realm configured in Keycloak for securing the UI and RESTful services of the archive,
+and the Wildfly Administration Console and Management API (optional, default is `dcm4che`). 
+
+### `KEYCLOAK_CLIENT_ID`
+
+Keycloak client ID used by Web UI to request token from Keycloak server (optional, default is `dcm4chee-arc-ui`).
+
 ### `SCHEDULED_STATION_DEVICE_NAME`
 
 Name of the device referenced in default scheduled station configured in the archive device which is used  as 
