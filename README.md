@@ -123,7 +123,11 @@ timeout=1
 
 ### `ARCHIVE_DEVICE_NAME`
 
-Name of archive device. Default value is `dcm4chee-arc`.
+Name of the archive device. Default value is `dcm4chee-arc`.
+
+### `ARCHIVE_WEBAPP_NAME`
+
+Name of the Web Application associated with the archive device. Default value is `dcm4chee-arc`.
 
 ### `AE_TITLE`
 

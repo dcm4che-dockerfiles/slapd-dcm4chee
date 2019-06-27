@@ -2,6 +2,7 @@ FROM dcm4che/slapd:2.4.44-3
 
 # Default configuration: can be overridden at the docker command line
 ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
+    ARCHIVE_WEBAPP_NAME=dcm4chee-arc \
     AE_TITLE=DCM4CHEE \
     AE_TITLE_IOCM_REGULAR_USE=IOCM_REGULAR_USE \
     AE_TITLE_IOCM_QUALITY=IOCM_QUALITY \
