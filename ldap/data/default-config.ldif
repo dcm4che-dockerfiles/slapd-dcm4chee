@@ -51,7 +51,6 @@ dcmKeyStoreType: ${env.KEYSTORE_TYPE}
 dcmTrustStoreURL: file://${env.TRUSTSTORE}
 dcmRejectExpiredStudiesAETitle: DCM4CHEE
 dcmKeyStoreURL: file://${env.KEYSTORE}
-dcmAuditSpoolDirectory: ${jboss.server.data.dir}/audit-spool
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.74
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.40
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.73
@@ -72,6 +71,7 @@ dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.71
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.79.1
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.59
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.78.6
+dcmAuditSpoolDirectory: ${jboss.server.data.dir}/audit-spool
 objectClass: dicomDevice
 objectClass: dcmDevice
 objectClass: dcmArchiveDevice
@@ -103,7 +103,6 @@ dcmKeyStorePin: ${env.KEYSTORE_PASSWORD}
 dicomInstalled: TRUE
 dcmBulkDataDescriptorID: default
 dcmCompressionAETitle: DCM4CHEE
-dicomSoftwareVersion: 5.17.1
 dcmPurgeStoragePollingInterval: PT5M
 dcmRejectionNoteStorageAET: DCM4CHEE
 dcmRejectExpiredSeriesFetchSize: 10
