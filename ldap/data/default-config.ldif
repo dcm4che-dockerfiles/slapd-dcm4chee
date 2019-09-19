@@ -276,6 +276,53 @@ dcmTag: 00402400
 dcmEntity: MWL
 objectClass: dcmAttributeFilter
 
+dn: dcmEntity=UPS,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmTag: 00080005
+dcmTag: 00080016
+dcmTag: 00080018
+dcmTag: 00081080
+dcmTag: 00081084
+dcmTag: 00101023
+dcmTag: 00101024
+dcmTag: 00102000
+dcmTag: 00102110
+dcmTag: 00102180
+dcmTag: 001021A0
+dcmTag: 001021B0
+dcmTag: 001021C0
+dcmTag: 001021D0
+dcmTag: 00102203
+dcmTag: 0020000D
+dcmTag: 00321066
+dcmTag: 00321067
+dcmTag: 00380010
+dcmTag: 00380014
+dcmTag: 00380050
+dcmTag: 00380100
+dcmTag: 00380101
+dcmTag: 00380500
+dcmTag: 00380502
+dcmTag: 00404005
+dcmTag: 00404008
+dcmTag: 00404011
+dcmTag: 00404018
+dcmTag: 00404021
+dcmTag: 00404025
+dcmTag: 00404026
+dcmTag: 00404027
+dcmTag: 00404034
+dcmTag: 00404041
+dcmTag: 00404070
+dcmTag: 0040A370
+dcmTag: 00741200
+dcmTag: 00741202
+dcmTag: 00741204
+dcmTag: 00741210
+dcmTag: 00741216
+dcmTag: 00741224
+dcmEntity: UPS
+objectClass: dcmAttributeFilter
+
 dn: dcmEntity=MPPS,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmTag: 00080005
 dcmTag: 00080060
@@ -411,9 +458,13 @@ dcmTag: 00080005
 dcmTag: 00100010
 dcmTag: 00100020
 dcmTag: 00100021
+dcmTag: 00100022
 dcmTag: 00100024
 dcmTag: 00100030
 dcmTag: 00100032
+dcmTag: 00100033
+dcmTag: 00100034
+dcmTag: 00100035
 dcmTag: 00100040
 dcmTag: 00100050
 dcmTag: 00100101
@@ -425,6 +476,7 @@ dcmTag: 00101060
 dcmTag: 00101080
 dcmTag: 00101081
 dcmTag: 00101090
+dcmTag: 00101100
 dcmTag: 00102150
 dcmTag: 00102152
 dcmTag: 00102154
@@ -1484,9 +1536,13 @@ dcmTag: 00082218
 dcmTag: 00100010
 dcmTag: 00100020
 dcmTag: 00100021
+dcmTag: 00100022
 dcmTag: 00100024
 dcmTag: 00100030
 dcmTag: 00100032
+dcmTag: 00100033
+dcmTag: 00100034
+dcmTag: 00100035
 dcmTag: 00100040
 dcmTag: 00100050
 dcmTag: 00100101
@@ -1505,6 +1561,7 @@ dcmTag: 00101060
 dcmTag: 00101080
 dcmTag: 00101081
 dcmTag: 00101090
+dcmTag: 00101100
 dcmTag: 00102000
 dcmTag: 00102110
 dcmTag: 00102150
@@ -2043,6 +2100,24 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Encapsulated STL Storage SCU
+
+dn: cn=RT Radiation Set Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.12
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Storage SCP
+
+dn: cn=RT Radiation Set Storage SCU,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.12
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Storage SCU
 
 dn: cn=RT Structure Set Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.3
@@ -4653,6 +4728,24 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Standalone PET Curve Storage (Retired) SCU
+
+dn: cn=C-Arm Photon-Electron Radiation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.13
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: C-Arm Photon-Electron Radiation Storage SCP
+
+dn: cn=C-Arm Photon-Electron Radiation Storage SCU,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.13
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: C-Arm Photon-Electron Radiation Storage SCU
 
 dn: cn=CT Performed Procedure Protocol Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.200.2
@@ -7298,6 +7391,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Encapsulated STL Storage SCU
 
+dn: cn=RT Radiation Set Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.12
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Storage SCU
+
 dn: cn=RT Structure Set Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.3
 dicomTransferRole: SCU
@@ -8602,6 +8704,15 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Standalone PET Curve Storage (Retired) SCU
+
+dn: cn=C-Arm Photon-Electron Radiation Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.13
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: C-Arm Photon-Electron Radiation Storage SCU
 
 dn: cn=CT Performed Procedure Protocol Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.200.2
@@ -10205,6 +10316,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Encapsulated STL Storage SCU
 
+dn: cn=RT Radiation Set Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.12
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Storage SCU
+
 dn: cn=RT Structure Set Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.3
 dicomTransferRole: SCU
@@ -11509,6 +11629,15 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Standalone PET Curve Storage (Retired) SCU
+
+dn: cn=C-Arm Photon-Electron Radiation Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.13
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: C-Arm Photon-Electron Radiation Storage SCU
 
 dn: cn=CT Performed Procedure Protocol Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.200.2
