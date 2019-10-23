@@ -21,6 +21,14 @@ An example of how one can set an env variable in `docker run` command is shown b
 
     -e LDAP_ROOTPASS=mypass
 
+### `LDAP_USER_ID`
+
+`uid` of the ldap user running `slapd` inside the container (optional, default is `1021`).
+
+### `LDAP_GROUP_ID`
+
+`gid` of the ldap user running `slapd` inside the container (optional, default is `1021`).
+
 ### `LDAP_BASE_DN`
 
 Base domain name for LDAP (optional, default is `dc=dcm4che,dc=org`).
