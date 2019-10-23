@@ -9,10 +9,9 @@ It extends the [dcm4che slapd image](https://hub.docker.com/r/dcm4che/slapd/).
 ```
 $ docker run --name slapd \
              -p 389:389 \
-             -v /etc/localtime:/etc/localtime \
-             -v /var/local/dcm4chee-arc/ldap:/var/lib/ldap \
-             -v /var/local/dcm4chee-arc/slapd.d:/etc/ldap/slapd.d \
-             -d dcm4che/slapd-dcm4chee:2.4.44-17.0
+             -v /var/local/dcm4chee-arc/ldap:/var/lib/openldap/openldap-data \
+             -v /var/local/dcm4chee-arc/slapd.d:/etc/openldap/slapd.d \
+             -d dcm4che/slapd-dcm4chee:2.4.48-19.1
 ```
 
 ## Environment Variables

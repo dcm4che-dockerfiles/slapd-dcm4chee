@@ -1,4 +1,4 @@
-FROM dcm4che/slapd:2.4.44-3
+FROM dcm4che/slapd:2.4.48
 
 # Default configuration: can be overridden at the docker command line
 ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
@@ -30,7 +30,7 @@ ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     EXT_INIT_CONFIG= \
     IMPORT_LDIF=
 
-COPY ldap /etc/ldap
+COPY ldap /etc/openldap
 COPY bin /usr/bin
 
 ENV DCM4CHE_VERSION=master \
@@ -39,7 +39,7 @@ ENV DCM4CHE_VERSION=master \
 ENV DCM4CHE_LDAP_SCHEMA_URL=https://raw.githubusercontent.com/dcm4che/dcm4che/$DCM4CHE_VERSION/dcm4che-conf/dcm4che-conf-ldap-schema/src/main/resources/ldap/slapd \
     DCM4CHEE_ARC_LDAP_SCHEMA_URL=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/$DCM4CHEE_ARC_VERSION/dcm4chee-arc-assembly/src/main/resources/ldap/slapd
 
-RUN cd /etc/ldap/schema && wget -nd \
+RUN cd /etc/openldap/schema && wget -nd \
     $DCM4CHE_LDAP_SCHEMA_URL/dicom.ldif \
     $DCM4CHE_LDAP_SCHEMA_URL/dicom-modify.ldif \
     $DCM4CHE_LDAP_SCHEMA_URL/dcm4che.ldif \

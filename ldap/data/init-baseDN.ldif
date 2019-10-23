@@ -1,0 +1,6 @@
+version: 1
+
+dn: dc=dcm4che,dc=org
+objectClass: dcObject
+objectClass: organization
+o: dcm4che.org

@@ -1,13 +1,16 @@
-#!/bin/bash
+#!/bin/sh
 
-ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dicom.ldif
-ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4che.ldif
-ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive.ldif
-ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dcm4chee-archive-ui.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dicom.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4che.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4chee-archive.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4chee-archive-ui.ldif
 
-cd /etc/ldap/data
+cd /etc/openldap/data
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%dcm4che.org%${LDAP_ORGANISATION}%" \
+    init-baseDN.ldif  | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN}
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
-    for f in default-config.ldif add-vendor-data.ldif init-ui-config.ldif default-ui-config.ldif default-users.ldif $EXT_INIT_CONFIG; do
+    for f in default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif $EXT_INIT_CONFIG; do
         sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
             -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
@@ -73,12 +76,12 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
             -e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
             -e "s%^dcmuiElasticsearchURL: http://localhost:9200%dcmuiElasticsearchURL: ${ELASTICSEARCH_URL}%" \
-            $f | ldapadd -Y EXTERNAL -H ldapi:///
+            $f | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN}
     done
 fi
 
 if [ -n "$IMPORT_LDIF" ]; then
     for f in $IMPORT_LDIF; do
-        ldapadd -Y EXTERNAL -H ldapi:/// -f $f
+        ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -f $f
     done
 fi

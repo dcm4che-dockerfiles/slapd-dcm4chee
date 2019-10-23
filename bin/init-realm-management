@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 
 . /setenv.sh
 
-sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" /etc/ldap/data/realm-management.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" /etc/openldap/data/realm-management.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}

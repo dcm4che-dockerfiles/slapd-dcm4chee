@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 VERSION=$1; shift
 
 . /setenv.sh
 
-cd /etc/ldap/data/
+cd /etc/openldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
     -e "s%^dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
