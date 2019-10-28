@@ -73,6 +73,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%^dicomDeviceName: logstash%dicomDeviceName: ${SYSLOG_DEVICE_NAME}%" \
             -e "s%syslog-host%${SYSLOG_HOST}%" \
             -e "s%514%${SYSLOG_PORT}%" \
+            -e "s%6514%${SYSLOG_TLS_PORT}%" \
             -e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
             -e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
             -e "s%^dcmuiElasticsearchURL: http://localhost:9200%dcmuiElasticsearchURL: ${ELASTICSEARCH_URL}%" \

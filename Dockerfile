@@ -24,6 +24,7 @@ ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     SYSLOG_HOST=127.0.0.1 \
     SYSLOG_PORT=514 \
     SYSLOG_PROTOCOL=UDP \
+    SYSLOG_TLS_PORT=6514 \
     STORAGE_DIR=/opt/wildfly/standalone/data/fs1 \
     ELASTICSEARCH_URL=http://localhost:9200 \
     SKIP_INIT_CONFIG=false \

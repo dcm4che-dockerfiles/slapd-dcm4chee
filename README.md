@@ -211,6 +211,10 @@ Port number on which the audit record repository is listening. Default value is 
 Protocol used to emit audit messages to the audit record repository. Enumerated values: `UDP` or `TCP`.
 Default value is `UDP`. 
 
+### `SYSLOG_TLS_PORT`
+
+Pre-configured syslog-tls port of the audit record repository. Default value is `6514`. 
+
 ### `KEYCLOAK_DEVICE_NAME`
 
 Device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
