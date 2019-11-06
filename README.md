@@ -47,11 +47,11 @@ Root DN password (bind DN: `cn=admin,${LDAP_BASE_DN}`) via file input (alternati
 
 ### `LDAP_CONFIGPASS`
 
-Config DIT password (bind DN `cn=config`) (optional, default is `secret`).
+Config DIT password (bind DN `cn=admin,cn=config`) (optional, default is `secret`).
 
 ### `LDAP_CONFIGPASS_FILE`
 
-Config DIT password (bind DN `cn=config`) via file input (alternative to `LDAP_CONFIGPASS`).
+Config DIT password (bind DN `cn=admin,cn=config`) via file input (alternative to `LDAP_CONFIGPASS`).
 
 ### `LDAP_URLS`
 
