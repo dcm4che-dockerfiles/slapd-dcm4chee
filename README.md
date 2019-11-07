@@ -251,6 +251,16 @@ Application Entity title of the device referenced in default scheduled station c
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `SCHEDULEDSTATION`. 
 
+### `IID_PATIENT_URL`
+
+URL to launch external Image Display for a Patient. {} will be replaced by the Patient ID formatted as HL7 CX data type.
+E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={}`.
+
+### `IID_STUDY_URL`
+
+URL to launch external Image Display for a Study. {} will be replaced by the Study Instance UID.
+E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}`.
+
 ### `ELASTICSEARCH_URL`
 
 Base URL of Elasticsearch used by [dcm4che-pro](http://web.j4care.com/dcm4chepro) version of the UI. Default value

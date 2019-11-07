@@ -10,8 +10,20 @@ sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dcm4che.org%${LDAP_ORGANISATION}%" \
     init-baseDN.ldif  | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN}
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
+    if [ -n "$IID_PATIENT_URL" ]; then
+      dcmInvokeImageDisplayPatientURL="s%^dcmInvokeImageDisplayPatientURL: x%dcmInvokeImageDisplayPatientURL: ${IID_PATIENT_URL}%"
+    else
+      dcmInvokeImageDisplayPatientURL="/^dcmInvokeImageDisplayPatientURL: x/d"
+    fi
+    if [ -n "$IID_STUDY_URL" ]; then
+      dcmInvokeImageDisplayStudyURL="s%^dcmInvokeImageDisplayStudyURL: x%dcmInvokeImageDisplayStudyURL: ${IID_STUDY_URL}%"
+    else
+      dcmInvokeImageDisplayStudyURL="/^dcmInvokeImageDisplayStudyURL: x/d"
+    fi
     for f in default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif $EXT_INIT_CONFIG; do
-        sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+        sed -e "${dcmInvokeImageDisplayPatientURL}" \
+            -e "${dcmInvokeImageDisplayStudyURL}" \
+            -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
             -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
             -e "s%dicomAETitle=DCM4CHEE%dicomAETitle=${AE_TITLE}%" \

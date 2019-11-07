@@ -72,6 +72,7 @@ dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.71
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.79.1
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.88.59
 dcmWadoSupportedSRClasses: 1.2.840.10008.5.1.4.1.1.78.6
+dcmInvokeImageDisplayStudyURL: x
 objectClass: dicomDevice
 objectClass: dcmDevice
 objectClass: dcmArchiveDevice
@@ -94,6 +95,7 @@ dcmPurgeStgCmtCompletedDelay: P1D
 dicomManufacturer: dcm4che.org
 dcmExternalRetrieveAEDestination: DCM4CHEE
 hl7ScheduleProcedureTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/hl7-order2dcm.xsl
+dcmInvokeImageDisplayPatientURL: x
 dcmTrustStorePin: ${env.TRUSTSTORE_PASSWORD}
 dcmAuditRecordRepositoryURL: http://kibana:5601
 dcmXDSiImagingDocumentSourceAETitle: DCM4CHEE
