@@ -11,14 +11,14 @@ sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     init-baseDN.ldif  | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN}
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
     if [ -n "$IID_PATIENT_URL" ]; then
-      dcmInvokeImageDisplayPatientURL="s%^dcmInvokeImageDisplayPatientURL: x%dcmInvokeImageDisplayPatientURL: ${IID_PATIENT_URL}%"
+      dcmInvokeImageDisplayPatientURL="s%^dcmProperty: IID_PATIENT_URL=%dcmProperty: IID_PATIENT_URL=${IID_PATIENT_URL}%"
     else
-      dcmInvokeImageDisplayPatientURL="/^dcmInvokeImageDisplayPatientURL: x/d"
+      dcmInvokeImageDisplayPatientURL="/^dcmProperty: IID_PATIENT_URL=/d"
     fi
     if [ -n "$IID_STUDY_URL" ]; then
-      dcmInvokeImageDisplayStudyURL="s%^dcmInvokeImageDisplayStudyURL: x%dcmInvokeImageDisplayStudyURL: ${IID_STUDY_URL}%"
+      dcmInvokeImageDisplayStudyURL="s%^dcmProperty: IID_STUDY_URL=%dcmProperty: IID_STUDY_URL=${IID_STUDY_URL}%"
     else
-      dcmInvokeImageDisplayStudyURL="/^dcmInvokeImageDisplayStudyURL: x/d"
+      dcmInvokeImageDisplayStudyURL="/^dcmProperty: IID_STUDY_URL=/d"
     fi
     for f in default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif $EXT_INIT_CONFIG; do
         sed -e "${dcmInvokeImageDisplayPatientURL}" \
