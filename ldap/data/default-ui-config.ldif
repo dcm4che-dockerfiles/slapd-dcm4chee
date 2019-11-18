@@ -23,7 +23,43 @@ dcmuiActionParam: visible
 objectClass: dcmuiPermission
 dcmAcceptedUserRole: admin
 dcmAcceptedUserRole: user
-dcmuiAction: menu-studies
+dcmuiAction: menu-study
+
+dn: dcmuiPermissionName=Tab - Study - Study,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmuiPermissionName: Tab - Study - Study
+dcmuiActionParam: accessible
+dcmuiActionParam: visible
+objectClass: dcmuiPermission
+dcmAcceptedUserRole: admin
+dcmAcceptedUserRole: user
+dcmuiAction: tab-study-study
+
+dn: dcmuiPermissionName=Tab - Study - Patient,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmuiPermissionName: Tab - Study - Patient
+dcmuiActionParam: accessible
+dcmuiActionParam: visible
+objectClass: dcmuiPermission
+dcmAcceptedUserRole: admin
+dcmAcceptedUserRole: user
+dcmuiAction: tab-study-patient
+
+dn: dcmuiPermissionName=Tab - Study - Mwl,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmuiPermissionName: Tab - Study - Mwl
+dcmuiActionParam: accessible
+dcmuiActionParam: visible
+objectClass: dcmuiPermission
+dcmAcceptedUserRole: admin
+dcmAcceptedUserRole: user
+dcmuiAction: tab-study-mwl
+
+dn: dcmuiPermissionName=Tab - Study - Diff,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmuiPermissionName: Tab - Study - Diff
+dcmuiActionParam: accessible
+dcmuiActionParam: visible
+objectClass: dcmuiPermission
+dcmAcceptedUserRole: admin
+dcmAcceptedUserRole: user
+dcmuiAction: tab-study-diff
 
 dn: dcmuiPermissionName=Menu - Monitoring,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmuiPermissionName: Menu - Monitoring
@@ -70,6 +106,7 @@ dcmuiPermissionName: Action - Studies - Count
 dcmuiActionParam: visible
 objectClass: dcmuiPermission
 dcmAcceptedUserRole: admin
+dcmAcceptedUserRole: user
 dcmuiAction: action-studies-count
 
 dn: dcmuiPermissionName=Tab - Monitoring Control,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
