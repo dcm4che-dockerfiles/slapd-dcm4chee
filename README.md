@@ -102,6 +102,8 @@ replication over TLS with the provided default server certificate will not work.
 This environment variable specifies a space separated list of LDAP URLs to activate
 [N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication).
 The list must contain the own container host name. Other host names of other servers must be resolvable by the container.
+The order of LDAP URLs must be the same for each server.
+
 After startup you have to invoke
 ```
 docker exec <ldap-container-name> prepare-replication
