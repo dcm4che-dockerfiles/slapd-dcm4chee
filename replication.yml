@@ -1,0 +1,23 @@
+version: "3"
+services:
+  ldap1:
+    image: dcm4che/slapd-dcm4chee:2.4.48-19.1
+    environment:
+      LDAP_URLS: "ldap://ldap1:388/"
+      LDAP_REPLICATION_HOSTS: "ldap://ldap1:388/ ldap://ldap2:399/"
+    ports:
+      - "388:388"
+    volumes:
+      - /var/local/dcm4chee-arc/ldap1:/var/lib/openldap/openldap-data
+      - /var/local/dcm4chee-arc/slapd1.d:/etc/openldap/slapd.d
+  ldap2:
+    image: dcm4che/slapd-dcm4chee:2.4.48-19.1
+    environment:
+      LDAP_URLS: "ldap://ldap2:399/"
+      LDAP_REPLICATION_HOSTS: "ldap://ldap1:388/ ldap://ldap2:399/"
+      SKIP_INIT_CONFIG: "true"
+    ports:
+      - "399:399"
+    volumes:
+      - /var/local/dcm4chee-arc/ldap2:/var/lib/openldap/openldap-data
+      - /var/local/dcm4chee-arc/slapd2.d:/etc/openldap/slapd.d

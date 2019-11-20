@@ -5,4 +5,4 @@
 cd /etc/openldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
-    default-ui-config.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN}
+    default-ui-config.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS

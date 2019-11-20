@@ -2,4 +2,4 @@
 
 . /setenv.sh
 
-ldapsearch -LL -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -b ou=users,$LDAP_BASE_DN | unldif.sed
+ldapsearch -LL -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS -b ou=users,$LDAP_BASE_DN | unldif.sed

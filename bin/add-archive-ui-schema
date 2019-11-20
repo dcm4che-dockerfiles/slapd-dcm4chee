@@ -2,4 +2,4 @@
 
 . /setenv.sh
 
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4chee-archive-ui.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4chee-archive-ui.ldif

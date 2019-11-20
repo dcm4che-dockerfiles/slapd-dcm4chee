@@ -2,7 +2,7 @@
 
 . /setenv.sh
 
-ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dicom-modify.ldif
-ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4che-modify.ldif
-ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4chee-archive-modify.ldif
-ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -f /etc/openldap/schema/dcm4chee-archive-ui-modify.ldif
+ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dicom-modify.ldif
+ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4che-modify.ldif
+ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4chee-archive-modify.ldif
+ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4chee-archive-ui-modify.ldif
