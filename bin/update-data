@@ -69,4 +69,4 @@ sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%^dicomPort: 6514%dicomPort: ${SYSLOG_TLS_PORT}%" \
     -e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
     -e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
-    update-config-${VERSION}.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS $@
+    update-config-${VERSION}.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@
