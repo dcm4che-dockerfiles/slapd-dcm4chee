@@ -58,6 +58,8 @@ Config DIT password (bind DN `cn=admin,cn=config`) via file input (alternative t
 Space separated list of LDAP URLs to serve.
 Set to `"ldap:///"` by default (LDAP over TCP on all interfaces on default LDAP port).
 The default `ldap://` port is `389` and the default `ldaps://` port is `636`.
+Required if configuring [N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication)
+by [LDAP_REPLICATION_HOSTS](#ldap_replication_hosts).
 
 ### `LDAP_TLS_CACERT`
 
