@@ -1,14 +1,14 @@
 #!/bin/sh
 
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dicom.ldif
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4che.ldif
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4chee-archive.ldif
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/schema/dcm4chee-archive-ui.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dicom.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4che.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4chee-archive.ldif
+ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4chee-archive-ui.ldif
 
 cd /etc/openldap/data
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dcm4che.org%${LDAP_ORGANISATION}%" \
-    init-baseDN.ldif  | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS
+    init-baseDN.ldif  | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
 if [ "$SKIP_INIT_CONFIG" != "true" ]; then
     if [ -n "$IID_PATIENT_URL" ]; then
       dcmInvokeImageDisplayPatientURL="s%^dcmProperty: IID_PATIENT_URL=%dcmProperty: IID_PATIENT_URL=${IID_PATIENT_URL}%"
@@ -89,12 +89,12 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
             -e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
             -e "s%^dcmuiElasticsearchURL: http://localhost:9200%dcmuiElasticsearchURL: ${ELASTICSEARCH_URL}%" \
-            $f | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS
+            $f | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
     done
 fi
 
 if [ -n "$IMPORT_LDIF" ]; then
     for f in $IMPORT_LDIF; do
-        ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS -f $f
+        ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" -f $f
     done
 fi

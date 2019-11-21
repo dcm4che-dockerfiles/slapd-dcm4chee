@@ -2,6 +2,6 @@
 
 . /setenv.sh
 
-ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H $LDAP_URLS -f /etc/openldap/data/fix-access-control.ldif
+ldapmodify -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/data/fix-access-control.ldif
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" /etc/openldap/data/default-users.ldif \
-| ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H $LDAP_URLS
+| ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
