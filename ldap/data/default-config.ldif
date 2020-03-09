@@ -2465,6 +2465,8 @@ dcmWebServiceClass: UPS_RS
 dcmWebServiceClass: MWL_RS
 dcmWebServiceClass: QIDO_COUNT
 dcmWebServiceClass: DCM4CHEE_ARC_AET
+dcmProperty: IID_STUDY_URL=
+dcmProperty: IID_PATIENT_URL=
 objectClass: dcmWebApp
 dicomAETitle: DCM4CHEE
 dcmWebAppName: DCM4CHEE
