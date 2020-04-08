@@ -1,6 +1,7 @@
 #!/bin/sh
 
-. /setenv.sh
+. setenv.sh
+. merge-vendor-data.sh
 
 cd /etc/openldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \

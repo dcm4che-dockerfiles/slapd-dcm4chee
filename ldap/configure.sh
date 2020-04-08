@@ -5,6 +5,8 @@ ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openl
 ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4chee-archive.ldif
 ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4chee-archive-ui.ldif
 
+. merge-vendor-data.sh
+
 cd /etc/openldap/data
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dcm4che.org%${LDAP_ORGANISATION}%" \

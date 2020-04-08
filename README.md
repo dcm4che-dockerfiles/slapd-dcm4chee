@@ -310,3 +310,8 @@ Only effective if `SKIP_INIT_CONFIG=false`. Not set by default.
 Space separated LDIF files to be imported verbatim at first LDAP startup. May be used together with
 `SKIP_INIT_CONFIG=true` to initialize LDAP from customized or backed-up LDIF file(s) instead of using
 the default initial configuration.
+
+### `EXT_VENDOR_DATA_PATH`
+
+Space separated paths to directories or ZIP files merged with default vendor data, effective on first LDAP startup,
+invoke of `update-data <version>` or `replace-vendor-data`.
