@@ -7,10 +7,11 @@ if [ ! -f /etc/openldap/data/vendor-data.zip ]; then
       if [ ! -d $f ]; then
         mkdir /tmp/$f
         unzip $f -d /tmp/$f
-        f = /tmp/$f
+        cd /tmp/$f
+      else
+        cd $f;
       fi
-      cd $f;
       zip -r /etc/openldap/data/vendor-data.zip .
     done
-  done
+  fi
 fi
