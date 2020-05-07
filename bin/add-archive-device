@@ -1,0 +1,4 @@
+#!/bin/sh
+
+. setenv.sh
+. sed+ldap add archive-device.ldif $@

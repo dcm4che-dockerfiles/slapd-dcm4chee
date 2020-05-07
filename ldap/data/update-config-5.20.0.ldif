@@ -1,15 +1,7 @@
 version: 1
 
-dn: cn=http,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-changetype: delete
-
-dn: cn=https,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-changetype: delete
-
 dn: dcmWebAppName=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: STOW_RS
@@ -19,8 +11,6 @@ dcmWebServiceClass: DCM4CHEE_ARC_AET
 
 dn: dcmWebAppName=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: QIDO_RS
@@ -29,8 +19,6 @@ dcmWebServiceClass: DCM4CHEE_ARC_AET
 
 dn: dcmWebAppName=IOCM_EXPIRED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: QIDO_RS
@@ -39,8 +27,6 @@ dcmWebServiceClass: DCM4CHEE_ARC_AET
 
 dn: dcmWebAppName=IOCM_QUALITY,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: QIDO_RS
@@ -57,8 +43,6 @@ delete: dicomNetworkConnectionReference
 
 dn: dcmWebAppName=IOCM_WRONG_MWL,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: QIDO_RS
@@ -67,8 +51,6 @@ dcmWebServiceClass: DCM4CHEE_ARC_AET
 
 dn: dcmWebAppName=IOCM_PAT_SAFETY,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: QIDO_RS
@@ -81,8 +63,6 @@ delete: dicomNetworkConnectionReference
 
 dn: dcmWebAppName=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 changetype: modify
-delete: dicomNetworkConnectionReference
--
 replace: dcmWebServiceClass
 dcmWebServiceClass: WADO_RS
 dcmWebServiceClass: QIDO_RS
