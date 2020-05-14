@@ -29,6 +29,30 @@ An example of how one can set an env variable in `docker run` command is shown b
 
 `gid` of the ldap user running `slapd` inside the container (optional, default is `1021`).
 
+### `LDAP_DEBUG`
+
+Debug-level specified as bit string, with each bit corresponding to a different kind of debugging information:
+
+Component | bit string
+-- | --
+Any | (-1, 0xffffffff)
+Trace | (1, 0x1)
+Packets | (2, 0x2)
+Args | (4, 0x4)
+Conns | (8, 0x8)
+BER | (16, 0x10)
+Filter | (32, 0x20)
+Config | (64, 0x40)
+ACL | (128, 0x80)
+Stats | (256, 0x100)
+Stats2 | (512, 0x200)
+Shell | (1024, 0x400)
+Parse | (2048, 0x800)
+Sync | (16384, 0x4000)
+None | (32768, 0x8000)
+
+Set to `32768` by default.
+
 ### `LDAP_BASE_DN`
 
 Base domain name for LDAP (optional, default is `dc=dcm4che,dc=org`).
