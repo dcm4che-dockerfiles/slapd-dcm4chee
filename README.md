@@ -281,13 +281,20 @@ are received by the archive. Default value is `SCHEDULEDSTATION`.
 
 ### `IID_PATIENT_URL`
 
-URL to launch external Image Display for a Patient. `{}` will be replaced by the Patient ID formatted as HL7 CX data type. `&` has to be escaped by `\&`.
-E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT\&patientID={}`.
+URL to launch external Image Display for a Patient. `{{patientID}}` will be replaced by the Patient ID formatted as
+HL7 CX data type. `&` has to be escaped by `\&`.
+E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT\&patientID={{patientID}}`.
 
 ### `IID_STUDY_URL`
 
-URL to launch external Image Display for a Study. `{}` will be replaced by the Study Instance UID. `&` has to be escaped by `\&`.
-E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY\&studyUID={}`.
+URL to launch external Image Display for a Study. `{{studyUID}}` will be replaced by the Study Instance UID.
+`&` has to be escaped by `\&`.
+E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY\&studyUID={{studyUID}}`.
+
+### `IID_URL_TARGET`
+
+Window/target name applied to Invoke Image Display URL to launch external Image Display for a Patient or Study.
+Use `_self` to suppress opening a new window.
 
 ### `ELASTICSEARCH_URL`
 
