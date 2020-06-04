@@ -23,13 +23,14 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
       dcmInvokeImageDisplayStudyURL="/^dcmProperty: IID_STUDY_URL=/d"
     fi
     if [ -n "$IID_URL_TARGET" ]; then
-      dcmInvokeImageDisplayStudyURL="s%^dcmProperty: IID_URL_TARGET=%dcmProperty: IID_URL_TARGET=${IID_URL_TARGET}%"
+      dcmInvokeImageDisplayURLTarget="s%^dcmProperty: IID_URL_TARGET=%dcmProperty: IID_URL_TARGET=${IID_URL_TARGET}%"
     else
-      dcmInvokeImageDisplayStudyURL="/^dcmProperty: IID_URL_TARGET=/d"
+      dcmInvokeImageDisplayURLTarget="/^dcmProperty: IID_URL_TARGET=/d"
     fi
     for f in default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif $EXT_INIT_CONFIG; do
         sed -e "${dcmInvokeImageDisplayPatientURL}" \
             -e "${dcmInvokeImageDisplayStudyURL}" \
+            -e "${dcmInvokeImageDisplayURLTarget}" \
             -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
             -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
