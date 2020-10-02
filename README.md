@@ -53,6 +53,18 @@ None | (32768, 0x8000)
 
 Set to `32768` by default.
 
+### `LDAP_INIT_SCHEMA`
+
+Space separated list of schema definition LDIF files applied at first LDAP startup.
+Relative file paths are resolved against `/etc/openldap/schema/`.
+`dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif` by default.
+
+### `LDAP_UPDATE_SCHEMA`
+
+Space separated list of schema definition update LDIF files applied by script `update-schema`.
+Relative file paths are resolved against `/etc/openldap/schema/`.
+`dicom-modify.ldif dcm4che-modify.ldif dcm4chee-archive-modify.ldif dcm4chee-archive-ui-modify.ldif` by default.
+
 ### `LDAP_BASE_DN`
 
 Base domain name for LDAP (optional, default is `dc=dcm4che,dc=org`).
@@ -303,38 +315,15 @@ is `http://localhost:9200`.
 
 ### `SKIP_INIT_CONFIG`
 
-Skip the default initial configuration (required by archive device) at first LDAP startup. Default value is set to `false`.
+Skip the default initial configuration (required by archive device) at first LDAP startup. Default value is `false`.
 
-### `EXT_INIT_CONFIG`
+### `LDAP_INIT_CONFIG`
+            
+Space separated list of LDIF files to be imported at first LDAP startup.
+Relative file paths are resolved against `/etc/openldap/data/`.
+`default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif` by default.
 
-Space separated LDIF files to be imported additionally at first LDAP startup
-
-replacing | by
--- | --
-`dc=dcm4che,dc=org` | `${LDAP_BASE_DN}`
-`dcm4chee-arc` | `${ARCHIVE_DEVICE_NAME}`
-`DCM4CHEE` | `${AE_TITLE}`
-`IOCM_REGULAR_USE` | `${AE_TITLE_IOCM_REGULAR_USE}`
-`IOCM_QUALITY` | `${AE_TITLE_IOCM_QUALITY}`
-`IOCM_PAT_SAFETY` | `${AE_TITLE_IOCM_PAT_SAFETY}`
-`IOCM_WRONG_MWL` | `${AE_TITLE_IOCM_WRONG_MWL}`
-`IOCM_EXPIRED` | `${AE_TITLE_IOCM_EXPIRED}`
-`AS_RECEIVED` | `${AE_TITLE_AS_RECEIVED}`
-`archive-host` | `${ARCHIVE_HOST}`
-`scheduledstation` | `${SCHEDULED_STATION_DEVICE_NAME}`
-`SCHEDULEDSTATION` | `${SCHEDULED_STATION_AE_TITLE}`
-`keycloak` | `${KEYCLOAK_DEVICE_NAME}`
-`keycloak-host` | `${KEYCLOAK_HOST}`
-`11112` | `${DICOM_PORT}`
-`2575` | `${HL7_PORT}`
-`logstash` | `${SYSLOG_DEVICE_NAME}`
-`syslog-host` | `${SYSLOG_HOST}`
-`514` | `${SYSLOG_PORT}`
-`SYSLOG_UDP` | `SYSLOG_${SYSLOG_PROTOCOL}`
-`${jboss.server.data.url}/fs1` | `file://${STORAGE_DIR}`
-`http://localhost:9200` | `${ELASTICSEARCH_URL}`
-
-Only effective if `SKIP_INIT_CONFIG=false`. Not set by default.
+Not effective if `SKIP_INIT_CONFIG=true`.
 
 ### `IMPORT_LDIF`
 

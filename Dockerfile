@@ -1,7 +1,10 @@
 FROM dcm4che/slapd:2.4.50
 
 # Default configuration: can be overridden at the docker command line
-ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
+ENV LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif" \
+    LDAP_UPDATE_SCHEMA="dicom-modify.ldif dcm4che-modify.ldif dcm4chee-archive-modify.ldif dcm4chee-archive-ui-modify.ldif" \
+    LDAP_INIT_CONFIG="default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif" \
+    ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     ARCHIVE_WEBAPP_NAME=dcm4chee-arc \
     AE_TITLE=DCM4CHEE \
     AE_TITLE_IOCM_REGULAR_USE=IOCM_REGULAR_USE \
@@ -26,10 +29,7 @@ ENV ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     SYSLOG_PROTOCOL=UDP \
     SYSLOG_TLS_PORT=6514 \
     STORAGE_DIR=/opt/wildfly/standalone/data/fs1 \
-    ELASTICSEARCH_URL=http://localhost:9200 \
-    SKIP_INIT_CONFIG=false \
-    EXT_INIT_CONFIG= \
-    IMPORT_LDIF=
+    ELASTICSEARCH_URL=http://localhost:9200
 
 COPY ldap /etc/openldap
 COPY bin /usr/bin

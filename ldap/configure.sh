@@ -1,9 +1,9 @@
 #!/bin/sh
 
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dicom.ldif
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4che.ldif
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4chee-archive.ldif
-ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f /etc/openldap/schema/dcm4chee-archive-ui.ldif
+cd /etc/openldap/schema
+for f in $LDAP_INIT_SCHEMA; do
+    ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f $f
+done
 
 . merge-vendor-data.sh
 
@@ -27,7 +27,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
     else
       dcmInvokeImageDisplayURLTarget="/^dcmProperty: IID_URL_TARGET=/d"
     fi
-    for f in default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif $EXT_INIT_CONFIG; do
+    for f in $LDAP_INIT_CONFIG; do
         sed -e "${dcmInvokeImageDisplayPatientURL}" \
             -e "${dcmInvokeImageDisplayStudyURL}" \
             -e "${dcmInvokeImageDisplayURLTarget}" \
