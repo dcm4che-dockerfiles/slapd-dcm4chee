@@ -1,0 +1,3 @@
+#!/bin/sh
+. merge-vendor-data.sh
+. update-comp dev $@

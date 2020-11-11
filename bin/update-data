@@ -1,6 +1,4 @@
 #!/bin/sh
-VERSION=$1; shift
-
-. setenv.sh
-. merge-vendor-data.sh
-. sed+ldap modify update-config-${VERSION}.ldif $@
+. update-dev $@
+. update-aes $@
+. update-comp storescp $@
