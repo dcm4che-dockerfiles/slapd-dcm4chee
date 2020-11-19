@@ -1,0 +1,4 @@
+#!/bin/sh
+
+. setenv.sh
+. sed+ldap modify add-https-conn.ldif $@
