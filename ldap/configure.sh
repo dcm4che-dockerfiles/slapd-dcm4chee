@@ -88,7 +88,9 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%^dicomDeviceName: keycloak%dicomDeviceName: ${KEYCLOAK_DEVICE_NAME}%" \
             -e "s%keycloak-host%${KEYCLOAK_HOST}%" \
             -e "s%11112%${DICOM_PORT}%" \
+            -e "s%2762%${DICOM_TLS_PORT}%" \
             -e "s%2575%${HL7_PORT}%" \
+            -e "s%12575%${HL7_TLS_PORT}%" \
             -e "s%dicomDeviceName=logstash%dicomDeviceName=${SYSLOG_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: logstash%dicomDeviceName: ${SYSLOG_DEVICE_NAME}%" \
             -e "s%syslog-host%${SYSLOG_HOST}%" \
@@ -96,7 +98,6 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%^dicomPort: 6514%dicomPort: ${SYSLOG_TLS_PORT}%" \
             -e "s%SYSLOG_UDP%SYSLOG_${SYSLOG_PROTOCOL}%" \
             -e "s%\${jboss.server.data.url}/fs1%file://${STORAGE_DIR}%" \
-            -e "s%^dcmuiElasticsearchURL: http://localhost:9200%dcmuiElasticsearchURL: ${ELASTICSEARCH_URL}%" \
             $f | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
     done
 fi

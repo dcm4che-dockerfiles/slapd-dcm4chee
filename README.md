@@ -221,9 +221,17 @@ HL7 port to initiate TCP connections to the Archive. Default value is `127.0.0.1
 
 Port number on which the Archive is listening for DICOM connections. Default value is `11112`.
 
+### `DICOM_TLS_PORT`
+
+Port number on which the Archive is listening for DICOM TLS connections. Default value is `2762`.
+
 ### `HL7_PORT`
 
 Port number on which the HL7 receiver of the Archive is listening. Default value is `2575`.
+
+### `HL7_TLS_PORT`
+
+Port number on which the HL7 TLS receiver of the Archive is listening. Default value is `12575`.
 
 ### `STORAGE_DIR`
 
@@ -244,7 +252,7 @@ disabled.
 
 ### `SYSLOG_PORT`
 
-Port number on which the audit record repository is listening. Default value is `8514`. 
+Port number on which the audit record repository is listening. Default value is `514`. 
 
 ### `SYSLOG_PROTOCOL`
 
@@ -264,11 +272,6 @@ authentication events. Default value is `keycloak`.
 
 Device name of the Keycloak Authentication Server. It specifies the emission of audit messages for
 authentication events. Default value is `127.0.0.1`. 
-
-### `AUTH_SERVER_URL`
-
-Base URL of the Keycloak server used by Web UI to request token from Keycloak server.
-Default value is `http://keycloak:8080/auth`.
 
 ### `REALM_NAME`
 
@@ -307,11 +310,6 @@ E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=S
 
 Window/target name applied to Invoke Image Display URL to launch external Image Display for a Patient or Study.
 Use `_self` to suppress opening a new window.
-
-### `ELASTICSEARCH_URL`
-
-Base URL of Elasticsearch used by [dcm4che-pro](http://web.j4care.com/dcm4chepro) version of the UI. Default value
-is `http://localhost:9200`. 
 
 ### `SKIP_INIT_CONFIG`
 

@@ -18,18 +18,18 @@ ENV LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-arc
     SCHEDULED_STATION_AE_TITLE=SCHEDULEDSTATION \
     KEYCLOAK_DEVICE_NAME=keycloak \
     KEYCLOAK_HOST=127.0.0.1 \
-    AUTH_SERVER_URL=http://keycloak:8080/auth \
     REALM_NAME=dcm4che \
     KEYCLOAK_CLIENT_ID=dcm4chee-arc-ui \
     DICOM_PORT=11112 \
+    DICOM_TLS_PORT=2762 \
     HL7_PORT=2575 \
+    HL7_TLS_PORT=12575 \
     SYSLOG_DEVICE_NAME=logstash \
     SYSLOG_HOST=127.0.0.1 \
     SYSLOG_PORT=514 \
     SYSLOG_PROTOCOL=UDP \
     SYSLOG_TLS_PORT=6514 \
-    STORAGE_DIR=/opt/wildfly/standalone/data/fs1 \
-    ELASTICSEARCH_URL=http://localhost:9200
+    STORAGE_DIR=/opt/wildfly/standalone/data/fs1
 
 COPY ldap /etc/openldap
 COPY bin /usr/bin
