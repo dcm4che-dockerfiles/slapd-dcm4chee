@@ -42,48 +42,6 @@ objectClass: groupOfNames
 cn: ADMINISTRATOR
 member: uid=admin,ou=users,dc=dcm4che,dc=org
 
-dn: ou=account,dc=dcm4che,dc=org
-objectClass: organizationalUnit
-objectClass: top
-ou: account
-
-dn: cn=delete-account,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: delete-account
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-
-dn: cn=manage-account,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: manage-account
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-member: uid=user,ou=users,dc=dcm4che,dc=org
-
-dn: cn=manage-account-links,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: manage-account-links
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-
-dn: cn=manage-consent,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: manage-consent
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-
-dn: cn=view-applications,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: view-applications
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-
-dn: cn=view-consent,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: view-consent
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-
-dn: cn=view-profile,ou=account,dc=dcm4che,dc=org
-objectClass: groupOfNames
-cn: view-profile
-member: uid=admin,ou=users,dc=dcm4che,dc=org
-member: uid=user,ou=users,dc=dcm4che,dc=org
-
 dn: ou=realm-management,dc=dcm4che,dc=org
 objectClass: top
 objectClass: organizationalUnit
