@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /setenv.sh
+. setenv.sh
 
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \

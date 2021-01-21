@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. /setenv.sh
+. setenv.sh
 
 cd /etc/openldap/schema
 for f in $LDAP_UPDATE_SCHEMA; do

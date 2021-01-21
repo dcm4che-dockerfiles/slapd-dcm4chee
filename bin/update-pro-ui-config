@@ -3,7 +3,7 @@ VERSION=$1; shift
 FILE=update-config-pro-${VERSION}.ldif
 
 if [ -f ${FILE} ]; then
-  . /setenv.sh
+  . setenv.sh
 
   cd /etc/openldap/data/
   sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \

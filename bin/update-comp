@@ -4,6 +4,6 @@ VERSION=$1; shift
 FILE=update-${COMP}-${VERSION}.ldif
 
 if [ -f /etc/openldap/data/${FILE} ]; then
-  . /setenv.sh
+  . setenv.sh
   . sed+ldap modify $FILE $@
 fi
