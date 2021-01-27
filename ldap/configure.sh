@@ -87,10 +87,10 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%dicomDeviceName=keycloak%dicomDeviceName=${KEYCLOAK_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: keycloak%dicomDeviceName: ${KEYCLOAK_DEVICE_NAME}%" \
             -e "s%keycloak-host%${KEYCLOAK_HOST}%" \
-            -e "s%11112%${DICOM_PORT}%" \
-            -e "s%2762%${DICOM_TLS_PORT}%" \
-            -e "s%2575%${HL7_PORT}%" \
-            -e "s%12575%${HL7_TLS_PORT}%" \
+            -e "s%dicomPort: 11112%dicomPort: ${DICOM_PORT}%" \
+            -e "s%dicomPort: 2762%dicomPort: ${DICOM_TLS_PORT}%" \
+            -e "s%dicomPort: 2575%dicomPort: ${HL7_PORT}%" \
+            -e "s%dicomPort: 12575%dicomPort: ${HL7_TLS_PORT}%" \
             -e "s%dicomDeviceName=logstash%dicomDeviceName=${SYSLOG_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: logstash%dicomDeviceName: ${SYSLOG_DEVICE_NAME}%" \
             -e "s%syslog-host%${SYSLOG_HOST}%" \
