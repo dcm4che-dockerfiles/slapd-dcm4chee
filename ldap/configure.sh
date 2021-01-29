@@ -32,6 +32,8 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "${dcmInvokeImageDisplayStudyURL}" \
             -e "${dcmInvokeImageDisplayURLTarget}" \
             -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+            -e "s%dcmAcceptedUserRole: user%s%dcmAcceptedUserRole: ${AUTH_USER_ROLE}%" \
+            -e "s%dcmAcceptedUserRole: admin%s%dcmAcceptedUserRole: ${SUPER_USER_ROLE}%" \
             -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
             -e "s%dicomAETitle=DCM4CHEE%dicomAETitle=${AE_TITLE}%" \
