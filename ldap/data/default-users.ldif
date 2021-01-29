@@ -11,7 +11,7 @@ objectClass: inetOrgPerson
 objectClass: organizationalPerson
 sn:: IA==
 cn:: IA==
-userPassword:: YWRtaW4=
+userPassword:: Y2hhbmdlaXQ=
 
 dn: uid=user,ou=users,dc=dcm4che,dc=org
 uid: user
@@ -19,7 +19,7 @@ objectClass: inetOrgPerson
 objectClass: organizationalPerson
 sn:: IA==
 cn:: IA==
-userPassword:: dXNlcg==
+userPassword:: Y2hhbmdlaXQ=
 
 dn: uid=keycloak-admin,ou=users,dc=dcm4che,dc=org
 uid: keycloak-admin
@@ -27,7 +27,7 @@ objectClass: inetOrgPerson
 objectClass: organizationalPerson
 sn:: IA==
 cn:: IA==
-userPassword:: a2V5Y2xvYWstYWRtaW4=
+userPassword:: Y2hhbmdlaXQ=
 
 dn: uid=wildfly-admin,ou=users,dc=dcm4che,dc=org
 uid: wildfly-admin
@@ -35,7 +35,7 @@ objectClass: inetOrgPerson
 objectClass: organizationalPerson
 sn:: IA==
 cn:: IA==
-userPassword:: d2lsZGZseS1hZG1pbg==
+userPassword:: Y2hhbmdlaXQ=
 
 dn: cn=admin,ou=users,dc=dcm4che,dc=org
 objectClass: groupOfNames

@@ -3,7 +3,14 @@ FROM dcm4che/slapd:2.4.56
 # Default configuration: can be overridden at the docker command line
 ENV LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif" \
     LDAP_UPDATE_SCHEMA="dicom-modify.ldif dcm4che-modify.ldif dcm4chee-archive-modify.ldif dcm4chee-archive-ui-modify.ldif" \
-    LDAP_INIT_CONFIG="default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif" \
+    LDAP_INIT_CONFIG="default-config.ldif add-vendor-data.ldif default-ui-config.ldif" \
+    LDAP_INIT_USERS="default-users.ldif" \
+    AUTH_USER=user \
+    AUTH_USER_ROLE=user \
+    SUPER_USER=admin \
+    SUPER_USER_ROLE=admin \
+    KEYCLOAK_ADMIN_USER=keycloak-admin \
+    WILDFLY_ADMIN_USER=wildfly-admin \
     ARCHIVE_DEVICE_NAME=dcm4chee-arc \
     ARCHIVE_WEBAPP_NAME=dcm4chee-arc \
     AE_TITLE=DCM4CHEE \

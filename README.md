@@ -168,6 +168,35 @@ retry="5 5 300 +" \
 timeout=1
 ```
 
+### `AUTH_USER`
+
+Created user with password `user` with assigned Realm Role specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE),
+to access the UI and RESTful services of the Archive (optional, default is `user`).
+
+### `AUTH_USER_ROLE`
+
+Created user role required to access the UI and RESTful services of the Archive (optional, default is `user`).
+
+### `SUPER_USER`
+
+Created user with password `admin` with assigned Realm Roles specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE) and
+[SUPER_USER_ROLE](#SUPER_USER_ROLE), to access the UI without verification of user permissions (optional, default is `admin`).
+
+### `SUPER_USER_ROLE`
+
+User role to identify super users, which have unrestricted access to all UI functions of the Archive, bypassing the
+verification of user permissions (optional, default is `admin`).
+
+### `KEYCLOAK_ADMIN_USER`
+
+Created user with password `keycloak-admin` with assigned all Client Roles for `realm-management`,
+enabling access to Keycloak Realm Management Console (optional, default is `keycloak-admin`).
+
+### `WILDFLY_ADMIN_USER`
+
+Created user with password `wildfly-admin` with assigned Realm Role `ADMINSTRATOR`,
+enabling access to Wildfly Console (optional, default is `wildfly-admin`).
+
 ### `ARCHIVE_DEVICE_NAME`
 
 Name of the archive device. Default value is `dcm4chee-arc`.
@@ -308,9 +337,17 @@ Skip the default initial configuration (required by archive device) at first LDA
 
 ### `LDAP_INIT_CONFIG`
             
-Space separated list of LDIF files to be imported at first LDAP startup.
+Space separated list of LDIF files to be imported at first LDAP startup initializing configuration.
 Relative file paths are resolved against `/etc/openldap/data/`.
-`default-config.ldif add-vendor-data.ldif default-ui-config.ldif default-users.ldif` by default.
+`default-config.ldif add-vendor-data.ldif default-ui-config.ldif` by default.
+
+Not effective if `SKIP_INIT_CONFIG=true`.
+
+### `LDAP_INIT_USERS`
+
+Space separated list of LDIF files to be imported at first LDAP startup initializing Keycloak User Federation.
+Relative file paths are resolved against `/etc/openldap/data/`.
+`default-users.ldif` by default.
 
 Not effective if `SKIP_INIT_CONFIG=true`.
 

@@ -7,7 +7,7 @@ objectClass: inetOrgPerson
 objectClass: organizationalPerson
 sn:: IA==
 cn:: IA==
-userPassword:: a2V5Y2xvYWstYWRtaW4=
+userPassword:: Y2hhbmdlaXQ=
 
 dn: uid=wildfly-admin,ou=users,dc=dcm4che,dc=org
 changetype: add
@@ -16,7 +16,7 @@ objectClass: inetOrgPerson
 objectClass: organizationalPerson
 sn:: IA==
 cn:: IA==
-userPassword:: d2lsZGZseS1hZG1pbg==
+userPassword:: Y2hhbmdlaXQ=
 
 dn: cn=user,ou=users,dc=dcm4che,dc=org
 changetype: modify
