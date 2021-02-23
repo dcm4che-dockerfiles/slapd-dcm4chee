@@ -1,0 +1,8 @@
+#!/bin/sh
+
+. setenv.sh
+
+cd /etc/openldap/schema
+for f in $@; do
+    ldapadd -xw $LDAP_CONFIGPASS -D cn=admin,cn=config -H "$LDAP_URLS" -f $f
+done
