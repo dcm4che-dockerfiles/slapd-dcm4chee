@@ -2,3 +2,4 @@
 . update-dev $@
 . update-aes $@
 . update-comp storescp $@
+. update-comp stowrsd $@
