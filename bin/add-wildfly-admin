@@ -1,0 +1,18 @@
+#!/bin/sh
+if [ "$#" -lt 2 ]; then
+    echo "Usage: add-wildfly-admin <user> <passwd> [options]"
+    exit
+fi
+
+WILDFLY_ADMIN_USER=$1; shift
+WILDFLY_ADMIN_PASS=$(echo -n $1 | base64); shift
+
+. setenv.sh
+
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%cn=user%cn=${AUTH_USER_ROLE}%" \
+    -e "s%uid=wildfly-admin%uid=${WILDFLY_ADMIN_USER}%" \
+    -e "s%uid: wildfly-admin%uid: ${WILDFLY_ADMIN_USER}%" \
+    -e "s%userPassword:: Y2hhbmdlaXQ=%userPassword:: ${WILDFLY_ADMIN_PASS}%" \
+    /etc/openldap/data/add-wildfly-admin.ldif \
+| ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@

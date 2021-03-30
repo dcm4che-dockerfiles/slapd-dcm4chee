@@ -187,16 +187,6 @@ Created user with password `admin` with assigned Realm Roles specified by [AUTH_
 User role to identify super users, which have unrestricted access to all UI functions of the Archive, bypassing the
 verification of user permissions (optional, default is `admin`).
 
-### `KEYCLOAK_ADMIN_USER`
-
-Created user with password `keycloak-admin` with assigned all Client Roles for `realm-management`,
-enabling access to Keycloak Realm Management Console (optional, default is `keycloak-admin`).
-
-### `WILDFLY_ADMIN_USER`
-
-Created user with password `wildfly-admin` with assigned Realm Role `ADMINSTRATOR`,
-enabling access to Wildfly Console (optional, default is `wildfly-admin`).
-
 ### `ARCHIVE_DEVICE_NAME`
 
 Name of the archive device. Default value is `dcm4chee-arc`.

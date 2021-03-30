@@ -112,10 +112,6 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%uid: admin%uid: ${SUPER_USER}%" \
             -e "s%cn=admin%cn=${SUPER_USER_ROLE}%" \
             -e "s%cn: admin%cn: ${SUPER_USER_ROLE}%" \
-            -e "s%uid=keycloak-admin%uid=${KEYCLOAK_ADMIN_USER}%" \
-            -e "s%uid: keycloak-admin%uid: ${KEYCLOAK_ADMIN_USER}%" \
-            -e "s%uid=wildfly-admin%uid=${WILDFLY_ADMIN_USER}%" \
-            -e "s%uid: wildfly-admin%uid: ${WILDFLY_ADMIN_USER}%" \
             $f | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
     done
 fi

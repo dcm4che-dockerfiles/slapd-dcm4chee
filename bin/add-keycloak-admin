@@ -1,19 +1,18 @@
 #!/bin/sh
+if [ "$#" -lt 2 ]; then
+    echo "Usage: add-keycloak-admin <user> <passwd> [options]"
+    exit
+fi
+
+KEYCLOAK_ADMIN_USER=$1; shift
+KEYCLOAK_ADMIN_PASS=$(echo -n $1 | base64); shift
 
 . setenv.sh
 
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
-    -e "s%uid=user%uid=${AUTH_USER}%" \
-    -e "s%uid: user%uid: ${AUTH_USER}%" \
     -e "s%cn=user%cn=${AUTH_USER_ROLE}%" \
-    -e "s%cn: user%cn: ${AUTH_USER_ROLE}%" \
-    -e "s%uid=admin%uid=${SUPER_USER}%" \
-    -e "s%uid: admin%uid: ${SUPER_USER}%" \
-    -e "s%cn=admin%cn=${SUPER_USER_ROLE}%" \
-    -e "s%cn: admin%cn: ${SUPER_USER_ROLE}%" \
     -e "s%uid=keycloak-admin%uid=${KEYCLOAK_ADMIN_USER}%" \
     -e "s%uid: keycloak-admin%uid: ${KEYCLOAK_ADMIN_USER}%" \
-    -e "s%uid=wildfly-admin%uid=${WILDFLY_ADMIN_USER}%" \
-    -e "s%uid: wildfly-admin%uid: ${WILDFLY_ADMIN_USER}%" \
+    -e "s%userPassword:: Y2hhbmdlaXQ=%userPassword:: ${KEYCLOAK_ADMIN_PASS}%" \
     /etc/openldap/data/add-keycloak-admin.ldif \
 | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@
