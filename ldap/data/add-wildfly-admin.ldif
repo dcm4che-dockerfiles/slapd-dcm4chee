@@ -18,3 +18,13 @@ dn: cn=ADMINISTRATOR,ou=users,dc=dcm4che,dc=org
 changetype: modify
 add: member
 member: uid=wildfly-admin,ou=users,dc=dcm4che,dc=org
+
+dn: cn=view-profile,ou=account,dc=dcm4che,dc=org
+changetype: modify
+add: member
+member: uid=wildfly-admin,ou=users,dc=dcm4che,dc=org
+
+dn: cn=manage-account,ou=account,dc=dcm4che,dc=org
+changetype: modify
+add: member
+member: uid=wildfly-admin,ou=users,dc=dcm4che,dc=org
