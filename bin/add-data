@@ -1,0 +1,6 @@
+#!/bin/sh
+
+FILE=$1; shift
+
+. setenv.sh
+. sed+ldap add $FILE.ldif $@
