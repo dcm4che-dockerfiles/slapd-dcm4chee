@@ -603,7 +603,7 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Private Philips MR Cardio Analysis Storage (Retired) SCP
 
-n: cn=Private ERAD Practice Builder Report Dictation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dn: cn=Private ERAD Practice Builder Report Dictation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.826.0.1.3680043.293.1.0.2
 dicomTransferRole: SCP
 dicomTransferSyntax: 1.2.840.10008.1.2
