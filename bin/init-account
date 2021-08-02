@@ -1,6 +1,16 @@
 #!/bin/sh
+if [ "$#" -lt 2 ]; then
+    echo "Usage: init-account <admin> <user> [options]"
+    exit
+fi
+
+ADMIN=$1; shift
+USER=$1; shift
 
 . setenv.sh
 
-sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" /etc/openldap/data/account.ldif \
-| ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
+cd /etc/openldap/data/
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%uid=admin%uid=${$ADMIN}%" \
+    -e "s%uid=user%uid=${$USER}%" \
+    account.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@
