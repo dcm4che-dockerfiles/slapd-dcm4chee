@@ -11,7 +11,7 @@ $ docker run --name slapd \
              -p 389:389 \
              -v /var/local/dcm4chee-arc/ldap:/var/lib/openldap/openldap-data \
              -v /var/local/dcm4chee-arc/slapd.d:/etc/openldap/slapd.d \
-             -d dcm4che/slapd-dcm4chee:2.4.48-19.1
+             -d dcm4che/slapd-dcm4chee:2.4.57-24.1
 ```
 
 ## Environment Variables
