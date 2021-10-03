@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. setenv.sh
+ldapsearch -LLL -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" -s one \
+-b "dcmuiConfigName=default,dicomDeviceName=${ARCHIVE_DEVICE_NAME},cn=Devices,cn=DICOM Configuration,${LDAP_BASE_DN}" dn \
+| unldif.sed | sed '/^dn: /a changetype: delete' | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
+
+echo "dn: dcmuiConfigName=default,dicomDeviceName=${ARCHIVE_DEVICE_NAME},cn=Devices,cn=DICOM Configuration,${LDAP_BASE_DN}
+changetype: delete" | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
