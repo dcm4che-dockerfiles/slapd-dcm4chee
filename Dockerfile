@@ -1,4 +1,4 @@
-FROM dcm4che/slapd:2.4.57
+FROM dcm4che/slapd:2.4.58
 
 # Default configuration: can be overridden at the docker command line
 ENV LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif" \
