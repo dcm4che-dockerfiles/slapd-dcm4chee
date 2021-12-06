@@ -1,0 +1,18 @@
+#!/bin/sh
+if [ "$#" -lt 2 ]; then
+    echo "Usage: add-root-user <user> <passwd> [options]"
+    exit
+fi
+
+ROOT_USER=$1; shift
+ROOT_PASS=$(echo -n $1 | base64); shift
+
+. setenv.sh
+
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%cn=user%cn=${AUTH_USER_ROLE}%" \
+    -e "s%uid=root%uid=${ROOT_USER}%" \
+    -e "s%uid: root%uid: ${ROOT_USER}%" \
+    -e "s%userPassword:: Y2hhbmdlaXQ=%userPassword:: ${ROOT_PASS}%" \
+    /etc/openldap/data/add-root-user.ldif \
+| ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@

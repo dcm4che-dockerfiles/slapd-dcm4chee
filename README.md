@@ -170,17 +170,28 @@ timeout=1
 
 ### `AUTH_USER`
 
-Created user with password `user` with assigned Realm Role specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE),
-to access the UI and RESTful services of the Archive (optional, default is `user`).
+Created user with password `changeit` with assigned Realm Role specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE),
+to access non-adminstrative functions of the UI and RESTful services of the Archive (optional, default is `user`).
 
 ### `AUTH_USER_ROLE`
 
-Created user role required to access the UI and RESTful services of the Archive (optional, default is `user`).
+Created user role required to access non-adminstrative functions of the UI and RESTful services of the Archive
+(optional, default is `user`).
+
+### `ADMIN_USER`
+
+Created user with password `changeit` with assigned Realm Role specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE) and
+[ADMIN_USER_ROLE](#ADMIN_USER_ROLE), to access (including adminstrative) functions of the UI and RESTful services
+of the Archive (optional, default is `admin`).
+
+### `ADMIN_USER_ROLE`
+
+Created user role required to access adminstrative functions of the UI (optional, default is `admin`).
 
 ### `SUPER_USER`
 
-Created user with password `admin` with assigned Realm Roles specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE) and
-[SUPER_USER_ROLE](#SUPER_USER_ROLE), to access the UI without verification of user permissions (optional, default is `admin`).
+Created user with password `changeit` with assigned Realm Roles specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE) and
+[SUPER_USER_ROLE](#SUPER_USER_ROLE), to access the UI without verification of user permissions (optional, default is `root`).
 
 ### `SUPER_USER_ROLE`
 

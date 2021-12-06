@@ -33,7 +33,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "${dcmInvokeImageDisplayURLTarget}" \
             -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
             -e "s%dcmAcceptedUserRole: user%dcmAcceptedUserRole: ${AUTH_USER_ROLE}%" \
-            -e "s%dcmAcceptedUserRole: admin%dcmAcceptedUserRole: ${SUPER_USER_ROLE}%" \
+            -e "s%dcmAcceptedUserRole: admin%dcmAcceptedUserRole: ${SUPER_ADMIN_ROLE}%" \
             -e "s%dicomDeviceName=dcm4chee-arc%dicomDeviceName=${ARCHIVE_DEVICE_NAME}%" \
             -e "s%^dicomDeviceName: dcm4chee-arc%dicomDeviceName: ${ARCHIVE_DEVICE_NAME}%" \
             -e "s%dicomAETitle=DCM4CHEE%dicomAETitle=${AE_TITLE}%" \
@@ -108,10 +108,14 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
             -e "s%uid: user%uid: ${AUTH_USER}%" \
             -e "s%cn=user%cn=${AUTH_USER_ROLE}%" \
             -e "s%cn: user%cn: ${AUTH_USER_ROLE}%" \
-            -e "s%uid=admin%uid=${SUPER_USER}%" \
-            -e "s%uid: admin%uid: ${SUPER_USER}%" \
-            -e "s%cn=admin%cn=${SUPER_USER_ROLE}%" \
-            -e "s%cn: admin%cn: ${SUPER_USER_ROLE}%" \
+            -e "s%uid=admin%uid=${ADMIN_USER}%" \
+            -e "s%uid: admin%uid: ${ADMIN_USER}%" \
+            -e "s%cn=admin%cn=${ADMIN_USER_ROLE}%" \
+            -e "s%cn: admin%cn: ${ADMIN_USER_ROLE}%" \
+            -e "s%uid=root%uid=${SUPER_USER}%" \
+            -e "s%uid: root%uid: ${SUPER_USER}%" \
+            -e "s%cn=root%cn=${SUPER_USER_ROLE}%" \
+            -e "s%cn: root%cn: ${SUPER_USER_ROLE}%" \
             $f | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
     done
 fi
