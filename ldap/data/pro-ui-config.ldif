@@ -24,13 +24,6 @@ dcmAcceptedUserRole: admin
 dcmuiActionParam: visible
 dcmuiActionParam: accessible
 
-dn: dcmuiPermissionName=Menu - Monitoring,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmuiPermission
-dcmuiAction: menu-monitoring
-dcmuiPermissionName: Menu - Monitoring
-dcmAcceptedUserRole: admin
-dcmuiActionParam: visible
-
 dn: dcmuiPermissionName=Menu - Navigation,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 objectClass: dcmuiPermission
 dcmuiAction: menu-study
@@ -600,14 +593,3 @@ dcmTag: 0020000D
 dcmuiTemplateName: MWL cd upload
 dcmuiDialog: mwl
 dicomDescription: MWL cd upload template
-
-dn: dcmuiTemplateName=MWL default,dcmuiConfigName=default,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmuiCreateDialogTemplate
-dcmTemplateTag: 00400001
-dcmTemplateTag: 0020000D
-dcmTemplateTag: 00400009
-dcmTemplateTag: 00080050
-dcmTemplateTag: 00401001
-dcmuiTemplateName: MWL default
-dcmuiDialog: mwl
-dcmuiTemplateDescription: MWL default attribute template
