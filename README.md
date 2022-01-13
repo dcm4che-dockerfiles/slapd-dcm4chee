@@ -94,8 +94,12 @@ Config DIT password (bind DN `cn=admin,cn=config`) via file input (alternative t
 Space separated list of LDAP URLs to serve.
 Set to `"ldap:///"` by default (LDAP over TCP on all interfaces on default LDAP port).
 The default `ldap://` port is `389` and the default `ldaps://` port is `636`.
-Required if configuring [N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication)
+Required if configuring [N-Way Multi-Provider Replication](https://www.openldap.org/doc/admin26/replication.html#N-Way%20Multi-Provider%20Replication)
 by [LDAP_REPLICATION_HOSTS](#ldap_replication_hosts).
+
+### `LDAP_EXTRA_HOST`
+
+Add mapping of specified hostname to `$(hostname -i)` to `/etc/hosts`.
 
 ### `LDAP_TLS_CACERT`
 
@@ -138,7 +142,7 @@ replication over TLS with the provided default server certificate will not work.
 ### `LDAP_REPLICATION_HOSTS`
 
 This environment variable specifies a space separated list of LDAP URLs to activate
-[N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication).
+[N-Way Multi-Provider Replication](https://www.openldap.org/doc/admin26/replication.html#N-Way%20Multi-Provider%20Replication).
 The list must contain the own container host name. Other host names of other servers must be resolvable by the container.
 The order of LDAP URLs must be the same for each server.
 
@@ -155,7 +159,7 @@ on each container.
 ### `LDAP_REPLICATION_DB_SYNCPROV`
 
 This environment variable specifies parameters used for
-[N-Way Multi-Master replication](http://www.openldap.org/doc/admin24/replication.html#N-Way%20Multi-Master%20replication)
+[N-Way Multi-Provider Replication](https://www.openldap.org/doc/admin26/replication.html#N-Way%20Multi-Provider%20Replication)
 activated by `LDAP_REPLICATION_HOSTS`. Default value is
 ```
 binddn="cn=admin,$LDAP_BASE_DN" \
