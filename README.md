@@ -99,7 +99,11 @@ by [LDAP_REPLICATION_HOSTS](#ldap_replication_hosts).
 
 ### `LDAP_EXTRA_HOST`
 
-Add mapping of specified hostname to `$(hostname -i)` to `/etc/hosts`.
+Add mapping of specified hostname to `$(hostname -i)` or particular container IP with `LDAP_EXTRA_HOST_IP_PREFIX` to `/etc/hosts`.
+
+#### `LDAP_EXTRA_HOST_IP_PREFIX`
+
+Prefix used to select particular container IP to map to `LDAP_EXTRA_HOST` (optional, map `$(hostname -i)` by default).
 
 ### `LDAP_TLS_CACERT`
 
