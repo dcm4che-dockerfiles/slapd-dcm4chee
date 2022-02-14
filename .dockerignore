@@ -1,0 +1,7 @@
+.git
+.gitattributes
+.gitignore
+*.iml
+*.md
+docker-compose.yml
+docker-compose.env
