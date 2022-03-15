@@ -1880,6 +1880,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Digital X-Ray Image Storage - For Processing SCP
 
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCP,dicomAETitle=STORESCP,dicomDeviceName=storescp,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCP
+
 dn: cn=Grayscale Softcopy Presentation State Storage SCP,dicomAETitle=STORESCP,dicomDeviceName=storescp,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
 dicomTransferRole: SCP
@@ -8080,6 +8089,24 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Instance Availability Notification SOP Class SCU
 
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCP
+
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCU,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCU
+
 dn: cn=Grayscale Softcopy Presentation State Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
 dicomTransferRole: SCP
@@ -11818,6 +11845,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Digital X-Ray Image Storage - For Processing SCU
 
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCU
+
 dn: cn=Grayscale Softcopy Presentation State Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
 dicomTransferRole: SCU
@@ -14949,6 +14985,15 @@ dicomTransferSyntax: 1.2.840.10008.1.2
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Instance Availability Notification SOP Class SCU
+
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCU
 
 dn: cn=Grayscale Softcopy Presentation State Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
