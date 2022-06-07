@@ -352,6 +352,11 @@ Relative file paths are resolved against `/etc/openldap/data/`.
 
 Not effective if `SKIP_INIT_CONFIG=true`.
 
+### `LDAP_INIT_CONFIG_CMD`
+
+Specifies the command invoked for importing LDIF files specified by `LDAP_INIT_CONFIG` at first LDAP startup.
+`sed+ldapadd` by default.
+
 ### `LDAP_INIT_USERS`
 
 Space separated list of LDIF files to be imported at first LDAP startup initializing Keycloak User Federation.
