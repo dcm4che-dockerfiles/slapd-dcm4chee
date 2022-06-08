@@ -1,7 +1,8 @@
 FROM dcm4che/slapd:2.6.2
 
 # Default configuration: can be overridden at the docker command line
-ENV LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif" \
+ENV LDAP_INIT_CMDS=/etc/openldap/configure.sh \
+    LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif" \
     LDAP_UPDATE_SCHEMA="dicom-modify.ldif dcm4che-modify.ldif dcm4chee-archive-modify.ldif dcm4chee-archive-ui-modify.ldif" \
     LDAP_INIT_CONFIG="default-config.ldif add-vendor-data.ldif default-ui-config.ldif" \
     LDAP_INIT_USERS="default-users.ldif" \

@@ -340,6 +340,15 @@ E.g.: `http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=S
 Window/target name applied to Invoke Image Display URL to launch external Image Display for a Patient or Study.
 Use `_self` to suppress opening a new window.
 
+### `LDAP_INIT_CMDS`
+
+Space separated list of scripts invoked on each LDAP startup. `/etc/openldap/configure.sh` by default.
+
+### `LDAP_INIT_CONFIG_CMD`
+
+Specifies the command invoked for importing LDIF files specified by `LDAP_INIT_CONFIG` at first LDAP startup.
+`sed+ldapadd` by default.
+
 ### `SKIP_INIT_CONFIG`
 
 Skip the default initial configuration (required by archive device) at first LDAP startup. Default value is `false`.
@@ -351,11 +360,6 @@ Relative file paths are resolved against `/etc/openldap/data/`.
 `default-config.ldif add-vendor-data.ldif default-ui-config.ldif` by default.
 
 Not effective if `SKIP_INIT_CONFIG=true`.
-
-### `LDAP_INIT_CONFIG_CMD`
-
-Specifies the command invoked for importing LDIF files specified by `LDAP_INIT_CONFIG` at first LDAP startup.
-`sed+ldapadd` by default.
 
 ### `LDAP_INIT_USERS`
 
