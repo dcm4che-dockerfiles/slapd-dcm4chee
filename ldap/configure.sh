@@ -28,7 +28,7 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
       dcmInvokeImageDisplayURLTarget="/^dcmProperty: IID_URL_TARGET=/d"
     fi
     for f in $LDAP_INIT_CONFIG; do
-      . ${LDAP_INIT_CONFIG_CMD:-sed+ldapadd}
+      cat $f | . ${LDAP_INIT_CONFIG_SED:-sed-init-config} | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS"
     done
     for f in $LDAP_INIT_USERS; do
         sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
