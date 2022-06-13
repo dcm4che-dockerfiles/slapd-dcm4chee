@@ -1,0 +1,15 @@
+#!/bin/sh
+if [ "$#" -lt 2 ]; then
+    echo "Usage: add-account (admin|user) <user> [options]"
+    exit
+fi
+
+TYPE=$1; shift
+USER=$1; shift
+
+. setenv.sh
+
+cd /etc/openldap/data/
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%uid=user%uid=${USER}%" \
+    add-${TYPE}-account.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@

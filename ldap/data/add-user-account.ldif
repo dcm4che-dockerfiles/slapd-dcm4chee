@@ -1,0 +1,9 @@
+version: 1
+
+dn: cn=view-profile,ou=account,dc=dcm4che,dc=org
+add: member
+member: uid=user,ou=users,dc=dcm4che,dc=org
+
+dn: cn=manage-account,ou=account,dc=dcm4che,dc=org
+add: member
+member: uid=user,ou=users,dc=dcm4che,dc=org
