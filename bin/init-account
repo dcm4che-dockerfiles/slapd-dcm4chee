@@ -1,16 +1,24 @@
 #!/bin/sh
-if [ "$#" -lt 2 ]; then
-    echo "Usage: init-account <admin> <user> [options]"
+if [ "$#" -lt 1 ]; then
+    echo \
+"Usage: init-account USER [OPTIONS]
+
+init-account initiate persisted Role Mappings for Keycloaks Account Management,
+assigning USER roles for managing it account.
+
+OPTIONS:
+       -n     Show what would be done, but don't actually add entries.  Useful for debugging in conjunction with -v.
+       -v     Use verbose mode, with many diagnostics written to standard output.
+       -c     Continuous operation mode.  Errors are reported, but init-account will continue with modifications.  The default is to exit after
+              reporting an error."
     exit
 fi
 
-ADMIN=$1; shift
 USER=$1; shift
 
 . setenv.sh
 
 cd /etc/openldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
-    -e "s%uid=admin%uid=${ADMIN}%" \
     -e "s%uid=user%uid=${USER}%" \
     init-account.ldif | ldapadd -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@

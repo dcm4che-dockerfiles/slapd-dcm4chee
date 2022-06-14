@@ -1,10 +1,19 @@
 #!/bin/sh
-if [ "$#" -lt 2 ]; then
+if [ "$#" -lt 1 ]; then
     echo "Usage: add-account (admin|user) <user> [options]"
+    echo \
+"Usage: add-account USER [OPTIONS]
+
+add-account updates persisted Role Mappings for Keycloaks Account Management, assigning USER required roles for managing it accounts.
+
+OPTIONS:
+       -n     Show what would be done, but don't actually modify entries.  Useful for debugging in conjunction with -v.
+       -v     Use verbose mode, with many diagnostics written to standard output.
+       -c     Continuous operation mode.  Errors are reported, but add-account will continue with modifications.  The default is to exit after
+              reporting an error."
     exit
 fi
 
-TYPE=$1; shift
 USER=$1; shift
 
 . setenv.sh
@@ -12,4 +21,4 @@ USER=$1; shift
 cd /etc/openldap/data/
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%uid=user%uid=${USER}%" \
-    add-${TYPE}-account.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@
+    add-account.ldif | ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@
