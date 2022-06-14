@@ -1,6 +1,5 @@
 #!/bin/sh
 if [ "$#" -lt 1 ]; then
-    echo "Usage: add-account (admin|user) <user> [options]"
     echo \
 "Usage: add-account USER [OPTIONS]
 
