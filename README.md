@@ -346,8 +346,8 @@ Space separated list of scripts invoked on each LDAP startup. `/etc/openldap/con
 
 ### `LDAP_INIT_CONFIG_SED`
 
-Specifies the command to apply environment variables on importing LDIF files specified by `LDAP_INIT_CONFIG` at first LDAP startup.
-`sed-init-config` by default.
+Specifies the command to apply environment variables on importing LDIF files specified by `LDAP_INIT_CONFIG` at first LDAP startup
+and by script `add-device <device-name>`. `sed-init-config` by default.
 
 ### `SKIP_INIT_CONFIG`
 
@@ -357,7 +357,7 @@ Skip the default initial configuration (required by archive device) at first LDA
             
 Space separated list of LDIF files to be imported at first LDAP startup initializing configuration.
 Relative file paths are resolved against `/etc/openldap/data/`.
-`default-config.ldif add-vendor-data.ldif default-ui-config.ldif` by default.
+`init-config.ldif dcm4chee-arc.ldif keycloak.ldif logstash.ldif storescp.ldif stowrsd.ldif scheduledstation.ldif add-vendor-data.ldif default-ui-config.ldif` by default.
 
 Not effective if `SKIP_INIT_CONFIG=true`.
 

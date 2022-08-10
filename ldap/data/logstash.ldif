@@ -1,0 +1,34 @@
+version: 1
+
+dn: dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomInstalled: TRUE
+dicomDeviceName: logstash
+objectClass: dicomDevice
+objectClass: dcmDevice
+dicomPrimaryDeviceType: LOG
+
+dn: cn=syslog,dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomHostname: syslog-host
+dicomPort: 514
+objectClass: dicomNetworkConnection
+objectClass: dcmNetworkConnection
+dcmProtocol: SYSLOG_UDP
+cn: syslog
+
+dn: cn=syslog-tls,dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomInstalled: FALSE
+dicomHostname: syslog-host
+dicomPort: 6514
+objectClass: dicomNetworkConnection
+objectClass: dcmNetworkConnection
+dicomTLSCipherSuite: TLS_RSA_WITH_AES_128_CBC_SHA
+dicomTLSCipherSuite: SSL_RSA_WITH_3DES_EDE_CBC_SHA
+dcmProtocol: SYSLOG_TLS
+cn: syslog-tls
+
+dn: cn=Audit Record Repository,dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmAuditRecordRepository
+dicomNetworkConnectionReference: cn=syslog,dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomNetworkConnectionReference: cn=syslog-tls,dicomDeviceName=logstash,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+cn: Audit Record Repository
+

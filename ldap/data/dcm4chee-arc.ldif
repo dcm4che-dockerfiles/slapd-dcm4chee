@@ -1,5 +1,93 @@
 version: 1
 
+dn: dicomAETitle=DCM4CHEE,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: DCM4CHEE
+
+dn: dicomAETitle=AS_RECEIVED,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: AS_RECEIVED
+
+dn: dicomAETitle=IOCM_EXPIRED,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: IOCM_EXPIRED
+
+dn: dicomAETitle=IOCM_QUALITY,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: IOCM_QUALITY
+
+dn: dicomAETitle=IOCM_WRONG_MWL,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: IOCM_WRONG_MWL
+
+dn: dicomAETitle=IOCM_PAT_SAFETY,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: IOCM_PAT_SAFETY
+
+dn: dicomAETitle=IOCM_REGULAR_USE,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dicomUniqueAETitle
+dicomAETitle: IOCM_REGULAR_USE
+
+dn: dcmWebAppName=DCM4CHEE,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: DCM4CHEE
+
+dn: dcmWebAppName=AS_RECEIVED,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: AS_RECEIVED
+
+dn: dcmWebAppName=IOCM_EXPIRED,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_EXPIRED
+
+dn: dcmWebAppName=IOCM_QUALITY,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_QUALITY
+
+dn: dcmWebAppName=dcm4chee-arc,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: dcm4chee-arc
+
+dn: dcmWebAppName=DCM4CHEE-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: DCM4CHEE-WADO
+
+dn: dcmWebAppName=IOCM_WRONG_MWL,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_WRONG_MWL
+
+dn: dcmWebAppName=IOCM_PAT_SAFETY,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_PAT_SAFETY
+
+dn: dcmWebAppName=AS_RECEIVED-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: AS_RECEIVED-WADO
+
+dn: dcmWebAppName=IOCM_REGULAR_USE,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_REGULAR_USE
+
+dn: dcmWebAppName=IOCM_EXPIRED-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_EXPIRED-WADO
+
+dn: dcmWebAppName=IOCM_QUALITY-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_QUALITY-WADO
+
+dn: dcmWebAppName=IOCM_WRONG_MWL-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_WRONG_MWL-WADO
+
+dn: dcmWebAppName=IOCM_PAT_SAFETY-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_PAT_SAFETY-WADO
+
+dn: dcmWebAppName=IOCM_REGULAR_USE-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
+objectClass: dcmUniqueWebAppName
+dcmWebAppName: IOCM_REGULAR_USE-WADO
+
 dn: dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmSendPendingCMoveInterval: PT5S
 dcmDeleteUPSCanceledDelay: P7D
@@ -48,6 +136,11 @@ dcmUPSProcessingPollingInterval: PT1M
 dcmStorageVerificationAETitle: DCM4CHEE
 dcmWadoSR2HtmlTemplateURI: ${jboss.server.temp.url}/dcm4chee-arc/dsr2html.xsl
 dicomManufacturerModelName: dcm4chee-arc
+dcmHideSPSWithStatusFromMWLRS: STARTED
+dcmHideSPSWithStatusFromMWLRS: DEPARTED
+dcmHideSPSWithStatusFromMWLRS: CANCELED
+dcmHideSPSWithStatusFromMWLRS: DISCONTINUED
+dcmHideSPSWithStatusFromMWLRS: COMPLETED
 dcmOverwritePolicy: SAME_SOURCE
 dcmDiffTaskProgressUpdateInterval: PT10S
 dcmDeleteUPSCompletedDelay: P1D
@@ -405,13 +498,14 @@ dcmTag: 00321066
 dcmTag: 00321067
 dcmTag: 00380010
 dcmTag: 00380014
+dcmTag: 00380016
 dcmTag: 00380060
 dcmTag: 00380062
 dcmTag: 00380064
 dcmTag: 00380500
 dcmEntity: Study
 objectClass: dcmAttributeFilter
-dcmAttributeUpdatePolicy: MERGE
+dcmAttributeUpdatePolicy: SUPPLEMENT
 
 dn: dcmEntity=Series,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmTag: 00080005
@@ -437,11 +531,13 @@ dcmTag: 00200011
 dcmTag: 00200060
 dcmTag: 00400244
 dcmTag: 00400245
+dcmTag: 00400250
+dcmTag: 00400251
 dcmTag: 00400260
 dcmTag: 00400275
 dcmEntity: Series
 objectClass: dcmAttributeFilter
-dcmAttributeUpdatePolicy: MERGE
+dcmAttributeUpdatePolicy: SUPPLEMENT
 
 dn: dcmStorageID=fs1,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmProperty: pathFormat={now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}
@@ -561,6 +657,16 @@ dcmTag: 00700084
 dcmEntity: Instance
 objectClass: dcmAttributeFilter
 
+dn: dcmQueueName=Export,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmPurgeQueueMessageCompletedDelay: P1D
+dcmRetryDelay: PT30S
+dcmMaxRetries: 10
+dicomDescription: Export Tasks
+dcmQueueName: Export
+objectClass: dcmQueue
+dcmRetryDelayMultiplier: 200
+dcmMaxRetryDelay: PT10M
+
 dn: dcmQueueName=IANSCU,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeQueueMessageCompletedDelay: P1D
 dcmRetryDelay: PT30S
@@ -570,105 +676,6 @@ dcmQueueName: IANSCU
 objectClass: dcmQueue
 dcmRetryDelayMultiplier: 200
 dcmMaxRetryDelay: PT10M
-
-dn: dcmQueueName=Export1,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Export Tasks
-dcmQueueName: Export1
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export2,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: WADO Export Tasks
-dcmQueueName: Export2
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export3,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: XDS-I Export Tasks
-dcmQueueName: Export3
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export4,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Export4
-dcmQueueName: Export4
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export5,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Nearline Storage Export Tasks
-dcmQueueName: Export5
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export6,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Export6
-dcmQueueName: Export6
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export7,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Export7
-dcmQueueName: Export7
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export8,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Export8
-dcmQueueName: Export8
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Export9,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Export9
-dcmQueueName: Export9
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
 
 dn: dcmQueueName=HL7Send,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeQueueMessageCompletedDelay: P1D
@@ -725,17 +732,6 @@ hl7AcceptedMessageType: SIU^S13
 hl7AcceptedMessageType: SIU^S15
 hl7ApplicationName: *
 
-dn: dcmQueueName=Export10,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Export10
-dcmQueueName: Export10
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
 dn: dcmQueueName=RSClient,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeQueueMessageCompletedDelay: P1D
 dcmRetryDelay: PT30S
@@ -746,23 +742,35 @@ objectClass: dcmQueue
 dcmRetryDelayMultiplier: 200
 dcmMaxRetryDelay: PT10M
 
+dn: dcmQueueName=Retrieve,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dcmPurgeQueueMessageCompletedDelay: P1D
+dcmRetryDelay: PT30S
+dcmMaxRetries: 10
+dicomDescription: Dicom Retrieve Tasks
+dcmQueueName: Retrieve
+objectClass: dcmQueue
+dcmRetryDelayMultiplier: 200
+dcmMaxRetryDelay: PT10M
+
 dn: dcmSPSStatus=CANCELED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmSPSStatus: CANCELED
 hl7OrderControlStatus: CA_CA
 objectClass: hl7OrderSPSStatus
 
 dn: dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomAssociationInitiator: TRUE
-dicomDescription: Hide instances rejected for Quality Reasons
-dcmObjectStorageID: fs1
+dicomNetworkConnectionReference: cn=dicom,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomNetworkConnectionReference: cn=dicom-tls,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmQueryRetrieveViewID: hideRejected
+dicomDescription: Hide instances rejected for Quality Reasons
+dicomAssociationInitiator: TRUE
+dcmObjectStorageID: fs1
+dicomAssociationAcceptor: TRUE
+dicomAETitle: DCM4CHEE
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
 objectClass: dcmArchiveNetworkAE
-dicomNetworkConnectionReference: cn=dicom,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomNetworkConnectionReference: cn=dicom-tls,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomAETitle: DCM4CHEE
-dicomAssociationAcceptor: TRUE
+dcmAcceptedUserRole: admin
+dcmAcceptedUserRole: user
 
 dn: dcmQueueName=DiffTasks,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeQueueMessageCompletedDelay: P1D
@@ -783,105 +791,6 @@ dcmQueueName: Rejection
 objectClass: dcmQueue
 dcmRetryDelayMultiplier: 200
 dcmMaxRetryDelay: PT10M
-
-dn: dcmQueueName=Retrieve1,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 1
-dcmQueueName: Retrieve1
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve2,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 2
-dcmQueueName: Retrieve2
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve3,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 3
-dcmQueueName: Retrieve3
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve4,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 4
-dcmQueueName: Retrieve4
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve5,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 5
-dcmQueueName: Retrieve5
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve6,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 6
-dcmQueueName: Retrieve6
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve7,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 7
-dcmQueueName: Retrieve7
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve8,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 8
-dcmQueueName: Retrieve8
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve9,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 9
-dcmQueueName: Retrieve9
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
 
 dn: dcmQueueName=StgCmtSCP,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeQueueMessageCompletedDelay: P1D
@@ -943,50 +852,6 @@ dn: cn=Image Writer Factory,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Con
 objectClass: dcmImageWriterFactory
 cn: Image Writer Factory
 
-dn: dcmQueueName=Retrieve10,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 10
-dcmQueueName: Retrieve10
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve11,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 11
-dcmQueueName: Retrieve11
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve12,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 12
-dcmQueueName: Retrieve12
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
-dn: dcmQueueName=Retrieve13,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomInstalled: FALSE
-dicomDescription: Dicom Retrieve Tasks 13
-dcmQueueName: Retrieve13
-dcmMaxRetries: 10
-dcmRetryDelayMultiplier: 200
-dcmRetryDelay: PT30S
-objectClass: dcmQueue
-dcmMaxRetryDelay: PT10M
-dcmPurgeQueueMessageCompletedDelay: P1D
-
 dn: dcmQueueName=StgVerTasks,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dcmPurgeQueueMessageCompletedDelay: P1D
 dcmRetryDelay: PT30S
@@ -1000,6 +865,7 @@ dcmMaxRetryDelay: PT10M
 dn: dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
 dicomDescription: Retrieve instances as received
+dcmAcceptedUserRole: admin
 dcmQueryRetrieveViewID: regularUse
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
@@ -1029,6 +895,7 @@ dcmWebServicePath: /dcm4chee-arc/aets/AS_RECEIVED/rs
 dn: dicomAETitle=IOCM_EXPIRED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
 dicomDescription: Only show instances rejected for Data Retention Expired
+dcmAcceptedUserRole: admin
 dcmQueryRetrieveViewID: dataRetentionPolicyExpired
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
@@ -1041,6 +908,7 @@ dicomAssociationAcceptor: TRUE
 dn: dicomAETitle=IOCM_QUALITY,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
 dicomDescription: Only show instances rejected for Quality Reasons
+dcmAcceptedUserRole: admin
 dcmQueryRetrieveViewID: rejectedForQualityReasons
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
@@ -1098,6 +966,7 @@ dcmWebServicePath: /dcm4chee-arc/aets/DCM4CHEE/wado
 dn: dicomAETitle=IOCM_WRONG_MWL,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
 dicomDescription: Only show instances rejected for Incorrect Modality Worklist Entry
+dcmAcceptedUserRole: admin
 dcmQueryRetrieveViewID: incorrectModalityWorklistEntry
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
@@ -1138,6 +1007,7 @@ dcmWebServicePath: /dcm4chee-arc/aets/IOCM_WRONG_MWL/rs
 dn: dicomAETitle=IOCM_PAT_SAFETY,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
 dicomDescription: Only show instances rejected for Patient Safety Reasons
+dcmAcceptedUserRole: admin
 dcmQueryRetrieveViewID: rejectedForPatientSafetyReasons
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
@@ -1169,6 +1039,7 @@ dcmWebServicePath: /dcm4chee-arc/aets/IOCM_PAT_SAFETY/rs
 dn: dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomAssociationInitiator: TRUE
 dicomDescription: Show instances rejected for Quality Reasons
+dcmAcceptedUserRole: admin
 dcmQueryRetrieveViewID: regularUse
 objectClass: dicomNetworkAE
 objectClass: dcmNetworkAE
@@ -1651,6 +1522,7 @@ dcmTag: 00321066
 dcmTag: 00321067
 dcmTag: 00380010
 dcmTag: 00380014
+dcmTag: 00380016
 dcmTag: 00380050
 dcmTag: 00380060
 dcmTag: 00380062
@@ -1660,6 +1532,8 @@ dcmTag: 00380500
 dcmTag: 00380502
 dcmTag: 00400244
 dcmTag: 00400245
+dcmTag: 00400250
+dcmTag: 00400251
 dcmTag: 00400260
 dcmTag: 00400275
 dcmTag: 00400512
@@ -3631,6 +3505,24 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Robotic Radiation Record Storage SCU
+
+dn: cn=RT Treatment Preparation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.22
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Treatment Preparation Storage SCP
+
+dn: cn=RT Treatment Preparation Storage SCU,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.22
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Treatment Preparation Storage SCU
 
 dn: cn=Simplified Adult Echo SR Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.88.72
@@ -6044,6 +5936,24 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Instance Availability Notification SOP Class SCU
 
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCP
+
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCU,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCU
+
 dn: cn=Grayscale Softcopy Presentation State Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
 dicomTransferRole: SCP
@@ -6153,6 +6063,24 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1.99
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Radiopharmaceutical Radiation Dose SR Storage SCU
+
+dn: cn=RT Radiation Set Delivery Instruction Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.21
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Delivery Instruction Storage SCP
+
+dn: cn=RT Radiation Set Delivery Instruction Storage SCU,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.21
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Delivery Instruction Storage SCU
 
 dn: cn=C-Arm Photon-Electron Radiation Record Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.19
@@ -8593,6 +8521,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Robotic Radiation Record Storage SCU
 
+dn: cn=RT Treatment Preparation Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.22
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Treatment Preparation Storage SCU
+
 dn: cn=Simplified Adult Echo SR Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.88.72
 dicomTransferRole: SCU
@@ -9755,6 +9692,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Digital X-Ray Image Storage - For Processing SCU
 
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCU
+
 dn: cn=Grayscale Softcopy Presentation State Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
 dicomTransferRole: SCU
@@ -9809,6 +9755,15 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1.99
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Radiopharmaceutical Radiation Dose SR Storage SCU
+
+dn: cn=RT Radiation Set Delivery Instruction Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.21
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Delivery Instruction Storage SCU
 
 dn: cn=C-Arm Photon-Electron Radiation Record Storage SCU,dicomAETitle=AS_RECEIVED,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.19
@@ -11699,6 +11654,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Robotic Radiation Record Storage SCU
 
+dn: cn=RT Treatment Preparation Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.22
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Treatment Preparation Storage SCU
+
 dn: cn=Simplified Adult Echo SR Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.88.72
 dicomTransferRole: SCU
@@ -12869,6 +12833,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Instance Availability Notification SOP Class SCU
 
+dn: cn=Private Dcm4che Encapsulated Genozip Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.40.0.13.1.5.1.4.1.1.104.1
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Private Dcm4che Encapsulated Genozip Storage SCU
+
 dn: cn=Grayscale Softcopy Presentation State Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.1
 dicomTransferRole: SCU
@@ -12923,6 +12896,15 @@ dicomTransferSyntax: 1.2.840.10008.1.2.1.99
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Radiopharmaceutical Radiation Dose SR Storage SCU
+
+dn: cn=RT Radiation Set Delivery Instruction Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.21
+dicomTransferRole: SCU
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Delivery Instruction Storage SCU
 
 dn: cn=C-Arm Photon-Electron Radiation Record Storage SCU,dicomAETitle=IOCM_REGULAR_USE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.19
@@ -13628,92 +13610,4 @@ dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Intravascular Optical Coherence Tomography Image Storage - For Presentation SCU
-
-dn: dicomAETitle=DCM4CHEE,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: DCM4CHEE
-
-dn: dicomAETitle=AS_RECEIVED,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: AS_RECEIVED
-
-dn: dicomAETitle=IOCM_EXPIRED,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: IOCM_EXPIRED
-
-dn: dicomAETitle=IOCM_QUALITY,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: IOCM_QUALITY
-
-dn: dicomAETitle=IOCM_WRONG_MWL,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: IOCM_WRONG_MWL
-
-dn: dicomAETitle=IOCM_PAT_SAFETY,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: IOCM_PAT_SAFETY
-
-dn: dicomAETitle=IOCM_REGULAR_USE,cn=Unique AE Titles Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dicomUniqueAETitle
-dicomAETitle: IOCM_REGULAR_USE
-
-dn: dcmWebAppName=DCM4CHEE,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: DCM4CHEE
-
-dn: dcmWebAppName=AS_RECEIVED,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: AS_RECEIVED
-
-dn: dcmWebAppName=IOCM_EXPIRED,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_EXPIRED
-
-dn: dcmWebAppName=IOCM_QUALITY,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_QUALITY
-
-dn: dcmWebAppName=dcm4chee-arc,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: dcm4chee-arc
-
-dn: dcmWebAppName=DCM4CHEE-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: DCM4CHEE-WADO
-
-dn: dcmWebAppName=IOCM_WRONG_MWL,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_WRONG_MWL
-
-dn: dcmWebAppName=IOCM_PAT_SAFETY,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_PAT_SAFETY
-
-dn: dcmWebAppName=AS_RECEIVED-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: AS_RECEIVED-WADO
-
-dn: dcmWebAppName=IOCM_REGULAR_USE,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_REGULAR_USE
-
-dn: dcmWebAppName=IOCM_EXPIRED-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_EXPIRED-WADO
-
-dn: dcmWebAppName=IOCM_QUALITY-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_QUALITY-WADO
-
-dn: dcmWebAppName=IOCM_WRONG_MWL-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_WRONG_MWL-WADO
-
-dn: dcmWebAppName=IOCM_PAT_SAFETY-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_PAT_SAFETY-WADO
-
-dn: dcmWebAppName=IOCM_REGULAR_USE-WADO,cn=Unique Web Application Names Registry,cn=DICOM Configuration,dc=dcm4che,dc=org
-objectClass: dcmUniqueWebAppName
-dcmWebAppName: IOCM_REGULAR_USE-WADO
 

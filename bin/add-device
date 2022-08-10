@@ -1,0 +1,12 @@
+#!/bin/sh
+if [ "$#" -lt 1 ]; then
+    echo "Usage: add-device <device-name> [options]"
+    exit
+fi
+
+DEVICE_NAME=$1; shift
+
+. setenv.sh
+. setenv-sed-iid
+cd /etc/openldap/data/
+cat ${DEVICE_NAME}.ldif | . ${LDAP_INIT_CONFIG_SED:-sed-init-config} | ldapadd -xw $LDAP_ROOTPASS -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@

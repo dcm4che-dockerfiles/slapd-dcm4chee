@@ -4,7 +4,7 @@ FROM dcm4che/slapd:2.6.2
 ENV LDAP_INIT_CMDS=/etc/openldap/configure.sh \
     LDAP_INIT_SCHEMA="dicom.ldif dcm4che.ldif dcm4chee-archive.ldif dcm4chee-archive-ui.ldif" \
     LDAP_UPDATE_SCHEMA="dicom-modify.ldif dcm4che-modify.ldif dcm4chee-archive-modify.ldif dcm4chee-archive-ui-modify.ldif" \
-    LDAP_INIT_CONFIG="default-config.ldif add-vendor-data.ldif default-ui-config.ldif" \
+    LDAP_INIT_CONFIG="init-config.ldif dcm4chee-arc.ldif keycloak.ldif logstash.ldif storescp.ldif stowrsd.ldif scheduledstation.ldif add-vendor-data.ldif default-ui-config.ldif" \
     LDAP_INIT_USERS="default-users.ldif" \
     AUTH_USER=user \
     AUTH_USER_ROLE=user \

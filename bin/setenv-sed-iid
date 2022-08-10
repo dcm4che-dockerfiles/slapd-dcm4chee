@@ -1,0 +1,16 @@
+#!/bin/sh
+if [ -n "$IID_PATIENT_URL" ]; then
+  dcmInvokeImageDisplayPatientURL="s%^dcmProperty: IID_PATIENT_URL=%dcmProperty: IID_PATIENT_URL=${IID_PATIENT_URL}%"
+else
+  dcmInvokeImageDisplayPatientURL="/^dcmProperty: IID_PATIENT_URL=/d"
+fi
+if [ -n "$IID_STUDY_URL" ]; then
+  dcmInvokeImageDisplayStudyURL="s%^dcmProperty: IID_STUDY_URL=%dcmProperty: IID_STUDY_URL=${IID_STUDY_URL}%"
+else
+  dcmInvokeImageDisplayStudyURL="/^dcmProperty: IID_STUDY_URL=/d"
+fi
+if [ -n "$IID_URL_TARGET" ]; then
+  dcmInvokeImageDisplayURLTarget="s%^dcmProperty: IID_URL_TARGET=%dcmProperty: IID_URL_TARGET=${IID_URL_TARGET}%"
+else
+  dcmInvokeImageDisplayURLTarget="/^dcmProperty: IID_URL_TARGET=/d"
+fi
