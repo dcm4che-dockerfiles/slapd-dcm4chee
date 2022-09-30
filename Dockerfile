@@ -1,4 +1,4 @@
-FROM dcm4che/slapd:2.6.2
+FROM dcm4che/slapd:2.6.3
 
 # Default configuration: can be overridden at the docker command line
 ENV LDAP_INIT_CMDS=/etc/openldap/configure.sh \
@@ -40,18 +40,12 @@ ENV LDAP_INIT_CMDS=/etc/openldap/configure.sh \
 COPY ldap /etc/openldap
 COPY bin /usr/bin
 
-ENV DCM4CHE_VERSION=master \
-    DCM4CHEE_ARC_VERSION=master
-
-ENV DCM4CHE_LDAP_SCHEMA_URL=https://raw.githubusercontent.com/dcm4che/dcm4che/$DCM4CHE_VERSION/dcm4che-conf/dcm4che-conf-ldap-schema/src/main/resources/ldap/slapd \
-    DCM4CHEE_ARC_LDAP_SCHEMA_URL=https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/$DCM4CHEE_ARC_VERSION/dcm4chee-arc-assembly/src/main/resources/ldap/slapd
-
 RUN cd /etc/openldap/schema && wget -nd \
-    $DCM4CHE_LDAP_SCHEMA_URL/dicom.ldif \
-    $DCM4CHE_LDAP_SCHEMA_URL/dicom-modify.ldif \
-    $DCM4CHE_LDAP_SCHEMA_URL/dcm4che.ldif \
-    $DCM4CHE_LDAP_SCHEMA_URL/dcm4che-modify.ldif \
-    $DCM4CHEE_ARC_LDAP_SCHEMA_URL/dcm4chee-archive.ldif \
-    $DCM4CHEE_ARC_LDAP_SCHEMA_URL/dcm4chee-archive-modify.ldif \
-    $DCM4CHEE_ARC_LDAP_SCHEMA_URL/dcm4chee-archive-ui.ldif \
-    $DCM4CHEE_ARC_LDAP_SCHEMA_URL/dcm4chee-archive-ui-modify.ldif
+    https://raw.githubusercontent.com/dcm4che/dcm4che/master/dcm4che-conf/dcm4che-conf-ldap-schema/src/main/resources/ldap/slapd/dicom.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4che/master/dcm4che-conf/dcm4che-conf-ldap-schema/src/main/resources/ldap/slapd/dicom-modify.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4che/master/dcm4che-conf/dcm4che-conf-ldap-schema/src/main/resources/ldap/slapd/dcm4che.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4che/master/dcm4che-conf/dcm4che-conf-ldap-schema/src/main/resources/ldap/slapd/dcm4che-modify.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-assembly/src/main/resources/ldap/slapd/dcm4chee-archive.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-assembly/src/main/resources/ldap/slapd/dcm4chee-archive-modify.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-assembly/src/main/resources/ldap/slapd/dcm4chee-archive-ui.ldif \
+    https://raw.githubusercontent.com/dcm4che/dcm4chee-arc-light/master/dcm4chee-arc-assembly/src/main/resources/ldap/slapd/dcm4chee-archive-ui-modify.ldif
