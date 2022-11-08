@@ -1,5 +1,6 @@
 #!/bin/sh
 . update-comp DCM4CHEE $@
+. update-comp WORKLIST $@
 . update-comp AS_RECEIVED $@
 . update-comp IOCM_REGULAR_USE $@
 . update-comp IOCM_QUALITY $@

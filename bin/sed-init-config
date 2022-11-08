@@ -17,6 +17,8 @@ sed -e "${dcmInvokeImageDisplayPatientURL}" \
     -e "s%^dcmRejectionNoteStorageAET: DCM4CHEE%dcmRejectionNoteStorageAET: ${AE_TITLE}%" \
     -e "s%^dcmAuditUserID: DCM4CHEE%dcmAuditUserID: ${AE_TITLE}%" \
     -e "s%^dcmuiCountAET: DCM4CHEE%dcmuiCountAET: ${AE_TITLE}%" \
+    -e "s%dicomAETitle=WORKLIST%dicomAETitle=${AE_TITLE_WORKLIST}%" \
+    -e "s%^dicomAETitle: WORKLIST%dicomAETitle: ${AE_TITLE_WORKLIST}%" \
     -e "s%dicomAETitle=IOCM_REGULAR_USE%dicomAETitle=${AE_TITLE_IOCM_REGULAR_USE}%" \
     -e "s%^dicomAETitle: IOCM_REGULAR_USE%dicomAETitle: ${AE_TITLE_IOCM_REGULAR_USE}%" \
     -e "s%dicomAETitle=IOCM_QUALITY%dicomAETitle=${AE_TITLE_IOCM_QUALITY}%" \
@@ -34,6 +36,9 @@ sed -e "${dcmInvokeImageDisplayPatientURL}" \
     -e "s%dcmWebAppName=DCM4CHEE%dcmWebAppName=${AE_TITLE}%" \
     -e "s%^dcmWebAppName: DCM4CHEE%dcmWebAppName: ${AE_TITLE}%" \
     -e "s%^dcmWebServicePath: /dcm4chee-arc/aets/DCM4CHEE%dcmWebServicePath: /dcm4chee-arc/aets/${AE_TITLE}%" \
+    -e "s%dcmWebAppName=WORKLIST%dcmWebAppName=${AE_TITLE_WORKLIST}%" \
+    -e "s%^dcmWebAppName: WORKLIST%dcmWebAppName: ${AE_TITLE_WORKLIST}%" \
+    -e "s%^dcmWebServicePath: /dcm4chee-arc/aets/WORKLIST%dcmWebServicePath: /dcm4chee-arc/aets/${AE_TITLE_WORKLIST}%" \
     -e "s%dcmWebAppName=IOCM_REGULAR_USE%dcmWebAppName=${AE_TITLE_IOCM_REGULAR_USE}%" \
     -e "s%^dcmWebAppName: IOCM_REGULAR_USE%dcmWebAppName: ${AE_TITLE_IOCM_REGULAR_USE}%" \
     -e "s%^dcmWebServicePath: /dcm4chee-arc/aets/IOCM_REGULAR_USE%dcmWebServicePath: /dcm4chee-arc/aets/${AE_TITLE_IOCM_REGULAR_USE}%" \
