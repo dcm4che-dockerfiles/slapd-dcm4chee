@@ -349,10 +349,11 @@ Use `_self` to suppress opening a new window.
 
 Space separated list of scripts invoked on each LDAP startup. `/etc/openldap/configure.sh` by default.
 
-### `LDAP_INIT_CONFIG_SED`
+### `LDAP_CONFIG_SED`
 
-Specifies the command to apply environment variables on importing LDIF files specified by `LDAP_INIT_CONFIG` at first LDAP startup
-and by script `add-device <device-name>`. `sed-init-config` by default.
+Specifies the command to apply environment variables on importing LDIF files specified by `LDAP_INIT_CONFIG`
+at first LDAP startup and by script `add-device <device-name>`. as on LDIF files used to modify the LDAP data
+on upgrading the Archive version by script `updata-data <archive-version>`; `sed-config` by default.
 
 ### `SKIP_INIT_CONFIG`
 
