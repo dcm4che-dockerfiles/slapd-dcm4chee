@@ -533,6 +533,7 @@ dcmTag: 00080082
 dcmTag: 00080201
 dcmTag: 00081010
 dcmTag: 0008103E
+dcmTag: 0008103F
 dcmTag: 00081040
 dcmTag: 00081041
 dcmTag: 00081050
@@ -639,8 +640,10 @@ dcmTag: 00080033
 dcmTag: 00080201
 dcmTag: 00081115
 dcmTag: 00082218
+dcmTag: 00082228
 dcmTag: 0018A001
 dcmTag: 00200013
+dcmTag: 00200062
 dcmTag: 00200242
 dcmTag: 00209161
 dcmTag: 00280008
@@ -653,6 +656,7 @@ dcmTag: 00400515
 dcmTag: 00400551
 dcmTag: 00400554
 dcmTag: 00400562
+dcmTag: 00409220
 dcmTag: 0040A032
 dcmTag: 0040A043
 dcmTag: 0040A073
@@ -665,6 +669,7 @@ dcmTag: 0040A504
 dcmTag: 0040A525
 dcmTag: 00420010
 dcmTag: 00420012
+dcmTag: 00620002
 dcmTag: 00700080
 dcmTag: 00700081
 dcmTag: 00700082
@@ -1464,6 +1469,7 @@ dcmTag: 00081010
 dcmTag: 00081030
 dcmTag: 00081032
 dcmTag: 0008103E
+dcmTag: 0008103F
 dcmTag: 00081040
 dcmTag: 00081041
 dcmTag: 00081048
@@ -1474,6 +1480,7 @@ dcmTag: 00081090
 dcmTag: 00081111
 dcmTag: 00081115
 dcmTag: 00082218
+dcmTag: 00082228
 dcmTag: 00100010
 dcmTag: 00100020
 dcmTag: 00100021
@@ -1553,6 +1560,7 @@ dcmTag: 00200010
 dcmTag: 00200011
 dcmTag: 00200013
 dcmTag: 00200060
+dcmTag: 00200062
 dcmTag: 00200242
 dcmTag: 00209161
 dcmTag: 00280008
@@ -1584,6 +1592,7 @@ dcmTag: 00400551
 dcmTag: 00400554
 dcmTag: 00400562
 dcmTag: 00403001
+dcmTag: 00409220
 dcmTag: 0040A032
 dcmTag: 0040A043
 dcmTag: 0040A073
@@ -1596,6 +1605,7 @@ dcmTag: 0040A504
 dcmTag: 0040A525
 dcmTag: 00420010
 dcmTag: 00420012
+dcmTag: 00620002
 dcmTag: 00700080
 dcmTag: 00700081
 dcmTag: 00700082
