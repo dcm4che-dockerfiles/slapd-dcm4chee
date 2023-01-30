@@ -217,12 +217,12 @@ Name of the Web Application associated with the archive device. Default value is
 ### `AE_TITLE`
 
 Title of the primary Application Entity configured to hide instances rejected for Quality Reasons.
-Default value is `DCM4CHEE`.
+Default value is `DCM4CHEE`. Value shall be different from [AE_TITLE_WORKLIST](#AE_TITLE_WORKLIST).
 
 ### `AE_TITLE_WORKLIST`
 
 Title of the Application Entity providing Modality Worklist and Unified Worklist Services.
-Default value is `WORKLIST`.
+Default value is `WORKLIST`. Value shall be different from [AE_TITLE](#AE_TITLE).
 
 ### `AE_TITLE_IOCM_REGULAR_USE`
 
