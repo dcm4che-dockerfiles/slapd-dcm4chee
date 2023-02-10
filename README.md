@@ -217,42 +217,63 @@ Name of the Web Application associated with the archive device. Default value is
 ### `AE_TITLE`
 
 Title of the primary Application Entity configured to hide instances rejected for Quality Reasons.
-Default value is `DCM4CHEE`. Value shall be different from [AE_TITLE_WORKLIST](#AE_TITLE_WORKLIST).
-
-### `AE_TITLE_WORKLIST`
-
-Title of the Application Entity providing Modality Worklist and Unified Worklist Services.
-Default value is `WORKLIST`. Value shall be different from [AE_TITLE](#AE_TITLE).
+Value shall be different from any other configured `AE_TITLE_XY`.
+Default value is `DCM4CHEE`.
 
 ### `AE_TITLE_IOCM_REGULAR_USE`
 
 Title of the Application Entity configured to show instances rejected for Quality Reasons.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`.
 Default value is `IOCM_REGULAR_USE`.
 
 ### `AE_TITLE_IOCM_QUALITY`
 
 Title of the Application Entity configured to only show instances rejected for Quality Reasons.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`.
 Default value is `IOCM_QUALITY`.
 
 ### `AE_TITLE_IOCM_PAT_SAFETY`
 
 Title of the Application Entity configured to only show instances rejected for Patient Safety Reasons.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`.
 Default value is `IOCM_PAT_SAFETY`.
 
 ### `AE_TITLE_IOCM_WRONG_MWL`
 
 Title of the Application Entity configured to only show instances rejected for Incorrect Modality Worklist Entry.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`.
 Default value is `IOCM_WRONG_MWL`.
 
 ### `AE_TITLE_IOCM_EXPIRED`
 
 Title of the Application Entity configured to only show instances rejected for Data Retention Expired.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`.
 Default value is `IOCM_EXPIRED`.
 
 ### `AE_TITLE_AS_RECEIVED`
 
 Title of the Application Entity configured to retrieve instances as received.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`
 Default value is `AS_RECEIVED`.
+
+### `AE_TITLE_WORKLIST`
+
+Title of the Application Entity providing Modality Worklist and Unified Worklist Services.
+Value shall be different from [AE_TITLE](#AE_TITLE) and any other configured `AE_TITLE_XY`.
+Default value is `WORKLIST`.
+To provide Modality Worklist and Unified Worklist Services also by the primary Application Entity configured by
+[AE_TITLE](#AE_TITLE), you may invoke provided script `add-mwl-ups` in the running container:
+```console
+$ docker exec {ldap-container-id-or-name} add-mwl-ups
+ldapmodify -f add-mwl-ups.ldif
+modifying entry "dcmWebAppName=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+adding new entry "cn=Unified Procedure Step - Pull SOP Class SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+adding new entry "cn=Unified Procedure Step - Push SOP Class SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+adding new entry "cn=Unified Procedure Step - Event SOP Class SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+adding new entry "cn=Unified Procedure Step - Query SOP Class SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+adding new entry "cn=Unified Procedure Step - Watch SOP Class SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+adding new entry "cn=Modality Worklist Information Model - FIND SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org"
+```
 
 ### `ARCHIVE_HOST`
 
