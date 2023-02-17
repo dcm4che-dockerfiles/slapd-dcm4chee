@@ -349,6 +349,22 @@ Application Entity title of the device referenced in default scheduled station c
 a fallback option for populating the Scheduled Station AE title in the Modality Worklist attributes when HL7 order messages 
 are received by the archive. Default value is `SCHEDULEDSTATION`. 
 
+### `STORESCP_DEVICE_NAME`
+
+Name of the device of external C-STORE SCP with limited Transfer Capabilities in default configuration. Default value is `storescp`. 
+
+### `STORESCP_AE_TITLE`
+
+Application Entity title of external C-STORE SCP with limited Transfer Capabilities in default configuration. Default value is `STORESCP`. 
+
+### `STORESCP_HOST`
+
+Device name of external C-STORE SCP with limited Transfer Capabilities in default configuration. Default value is `storescp`.
+
+### `STORESCP_PORT`
+
+Port number of external C-STORE SCP with limited Transfer Capabilities in default configuration. Default value is `11117`.
+
 ### `IID_PATIENT_URL`
 
 URL to launch external Image Display for a Patient. `{{patientID}}` will be replaced by the Patient ID formatted as

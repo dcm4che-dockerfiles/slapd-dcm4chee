@@ -55,6 +55,12 @@ sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
     -e "s%^dcmWebAppName: AS_RECEIVED%dcmWebAppName: ${AE_TITLE_AS_RECEIVED}%" \
     -e "s%^dcmWebServicePath: /dcm4chee-arc/aets/AS_RECEIVED%dcmWebServicePath: /dcm4chee-arc/aets/${AE_TITLE_AS_RECEIVED}%" \
     -e "s%archive-host%${ARCHIVE_HOST}%" \
+    -e "s%dicomDeviceName=storescp%dicomDeviceName=${STORESCP_DEVICE_NAME}%" \
+    -e "s%^dicomDeviceName: storescp%dicomDeviceName: ${STORESCP_DEVICE_NAME}%" \
+    -e "s%dicomAETitle=STORESCP%dicomAETitle=${STORESCP_AE_TITLE}%" \
+    -e "s%^dicomAETitle: STORESCP%dicomAETitle: ${STORESCP_AE_TITLE}%" \
+    -e "s%storescp-host%${STORESCP_HOST}%" \
+    -e "s%dicomPort: 11117%dicomPort: ${STORESCP_PORT}%" \
     -e "s%dicomDeviceName=scheduledstation%dicomDeviceName=${SCHEDULED_STATION_DEVICE_NAME}%" \
     -e "s%^dicomDeviceName: scheduledstation%dicomDeviceName: ${SCHEDULED_STATION_DEVICE_NAME}%" \
     -e "s%dicomAETitle=SCHEDULEDSTATION%dicomAETitle=${SCHEDULED_STATION_AE_TITLE}%" \

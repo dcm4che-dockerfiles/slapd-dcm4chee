@@ -11,8 +11,8 @@ objectClass: dicomDevice
 objectClass: dcmDevice
 
 dn: cn=dicom,dicomDeviceName=storescp,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
-dicomHostname: localhost
-dicomPort: 104
+dicomHostname: storescp-host
+dicomPort: 11117
 objectClass: dicomNetworkConnection
 objectClass: dcmNetworkConnection
 cn: dicom
