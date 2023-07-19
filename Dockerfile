@@ -1,4 +1,4 @@
-FROM dcm4che/slapd:2.6.3
+FROM dcm4che/slapd:2.6.5
 
 # Default configuration: can be overridden at the docker command line
 ENV LDAP_INIT_CMDS=/etc/openldap/configure.sh \
