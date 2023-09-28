@@ -695,6 +695,7 @@ dcmTag: 0040A491
 dcmTag: 0040A493
 dcmTag: 0040A504
 dcmTag: 0040A525
+dcmTag: 0040E001
 dcmTag: 00420010
 dcmTag: 00420012
 dcmTag: 00620002
@@ -1632,6 +1633,7 @@ dcmTag: 0040A491
 dcmTag: 0040A493
 dcmTag: 0040A504
 dcmTag: 0040A525
+dcmTag: 0040E001
 dcmTag: 00420010
 dcmTag: 00420012
 dcmTag: 00620002
