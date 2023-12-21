@@ -10,7 +10,7 @@ WILDFLY_ADMIN_PASS=$(echo -n $1 | base64); shift
 . setenv.sh
 
 sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
-    -e "s%cn=user%cn=${AUTH_USER_ROLE}%" \
+    -e "s%cn=auth%cn=${AUTH_USER_ROLE}%" \
     -e "s%uid=wildfly-admin%uid=${WILDFLY_ADMIN_USER}%" \
     -e "s%uid: wildfly-admin%uid: ${WILDFLY_ADMIN_USER}%" \
     -e "s%userPassword:: Y2hhbmdlaXQ=%userPassword:: ${WILDFLY_ADMIN_PASS}%" \

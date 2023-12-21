@@ -15,7 +15,7 @@ objectClass: groupOfNames
 cn: root
 member: uid=root,ou=users,dc=dcm4che,dc=org
 
-dn: cn=user,ou=users,dc=dcm4che,dc=org
+dn: cn=auth,ou=users,dc=dcm4che,dc=org
 changetype: modify
 add: member
 member: uid=root,ou=users,dc=dcm4che,dc=org

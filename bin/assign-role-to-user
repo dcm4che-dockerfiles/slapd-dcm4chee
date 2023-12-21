@@ -1,0 +1,16 @@
+#!/bin/sh
+if [ "$#" -lt 2 ]; then
+    echo "Usage: assign-role-to-user <role> <user> [options]"
+    exit
+fi
+
+USER_ROLE=$1; shift
+USER_NAME=$1; shift
+
+. setenv.sh
+
+sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
+    -e "s%cn=role%cn=${USER_ROLE}%" \
+    -e "s%uid=user%uid=${USER_NAME}%" \
+    /etc/openldap/data/assign-role-to-user.ldif \
+| ldapmodify -xw ${LDAP_ROOTPASS} -D cn=admin,${LDAP_BASE_DN} -H "$LDAP_URLS" $@

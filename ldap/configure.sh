@@ -23,10 +23,12 @@ if [ "$SKIP_INIT_CONFIG" != "true" ]; then
     done
     for f in $LDAP_INIT_USERS; do
         sed -e "s%dc=dcm4che,dc=org%${LDAP_BASE_DN}%" \
-            -e "s%uid=user%uid=${AUTH_USER}%" \
-            -e "s%uid: user%uid: ${AUTH_USER}%" \
-            -e "s%cn=user%cn=${AUTH_USER_ROLE}%" \
-            -e "s%cn: user%cn: ${AUTH_USER_ROLE}%" \
+            -e "s%cn=auth%cn=${AUTH_USER_ROLE}%" \
+            -e "s%cn: auth%cn: ${AUTH_USER_ROLE}%" \
+            -e "s%uid=user%uid=${REGULAR_USER}%" \
+            -e "s%uid: user%uid: ${REGULAR_USER}%" \
+            -e "s%cn=user%cn=${REGULAR_USER_ROLE}%" \
+            -e "s%cn: user%cn: ${REGULAR_USER_ROLE}%" \
             -e "s%uid=admin%uid=${ADMIN_USER}%" \
             -e "s%uid: admin%uid: ${ADMIN_USER}%" \
             -e "s%cn=admin%cn=${ADMIN_USER_ROLE}%" \

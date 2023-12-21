@@ -176,12 +176,17 @@ retry="5 5 300 +" \
 timeout=1
 ```
 
-### `AUTH_USER`
-
-Created user with password `changeit` with assigned Realm Role specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE),
-to access non-adminstrative functions of the UI and RESTful services of the Archive (optional, default is `user`).
-
 ### `AUTH_USER_ROLE`
+
+User role required to access the UI and RESTful services of the Archive (optional, default is `auth`).
+
+### `REGULAR_USER`
+
+Created user with password `changeit` with assigned Realm Role specified by [AUTH_USER_ROLE](#AUTH_USER_ROLE) and
+[REGULAR_USER_ROLE](#REGULAR_USER_ROLE), to access non-adminstrative functions of the UI and RESTful services of
+the Archive (optional, default is `user`).
+
+### `REGULAR_USER_ROLE`
 
 Created user role required to access non-adminstrative functions of the UI and RESTful services of the Archive
 (optional, default is `user`).

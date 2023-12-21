@@ -29,6 +29,13 @@ sn:: IA==
 cn:: IA==
 userPassword:: Y2hhbmdlaXQ=
 
+dn: cn=auth,ou=users,dc=dcm4che,dc=org
+objectClass: groupOfNames
+cn: auth
+member: uid=root,ou=users,dc=dcm4che,dc=org
+member: uid=admin,ou=users,dc=dcm4che,dc=org
+member: uid=user,ou=users,dc=dcm4che,dc=org
+
 dn: cn=root,ou=users,dc=dcm4che,dc=org
 objectClass: groupOfNames
 cn: root
@@ -42,8 +49,6 @@ member: uid=admin,ou=users,dc=dcm4che,dc=org
 dn: cn=user,ou=users,dc=dcm4che,dc=org
 objectClass: groupOfNames
 cn: user
-member: uid=root,ou=users,dc=dcm4che,dc=org
-member: uid=admin,ou=users,dc=dcm4che,dc=org
 member: uid=user,ou=users,dc=dcm4che,dc=org
 
 dn: cn=auditlog,ou=users,dc=dcm4che,dc=org
@@ -168,9 +173,24 @@ member: uid=root,ou=users,dc=dcm4che,dc=org
 member: uid=admin,ou=users,dc=dcm4che,dc=org
 member: uid=user,ou=users,dc=dcm4che,dc=org
 
+dn: cn=delete-account,ou=account,dc=dcm4che,dc=org
+objectClass: groupOfNames
+cn: delete-account
+member: uid=root,ou=users,dc=dcm4che,dc=org
+
 dn: cn=manage-account,ou=account,dc=dcm4che,dc=org
 objectClass: groupOfNames
 cn: manage-account
 member: uid=root,ou=users,dc=dcm4che,dc=org
 member: uid=admin,ou=users,dc=dcm4che,dc=org
 member: uid=user,ou=users,dc=dcm4che,dc=org
+
+dn: cn=manage-consent,ou=account,dc=dcm4che,dc=org
+objectClass: groupOfNames
+cn: manage-consent
+member: uid=root,ou=users,dc=dcm4che,dc=org
+
+dn: cn=view-applications,ou=account,dc=dcm4che,dc=org
+objectClass: groupOfNames
+cn: view-applications
+member: uid=root,ou=users,dc=dcm4che,dc=org
