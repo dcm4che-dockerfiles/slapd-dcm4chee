@@ -31,6 +31,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -49,6 +52,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -76,6 +82,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -271,6 +280,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -289,6 +301,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -307,10 +322,34 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Enhanced MR Image Storage SCP
+
+dn: cn=Enhanced RT Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.23
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.50
+dicomTransferSyntax: 1.2.840.10008.1.2.4.51
+dicomTransferSyntax: 1.2.840.10008.1.2.4.70
+dicomTransferSyntax: 1.2.840.10008.1.2.4.57
+dicomTransferSyntax: 1.2.840.10008.1.2.4.80
+dicomTransferSyntax: 1.2.840.10008.1.2.4.81
+dicomTransferSyntax: 1.2.840.10008.1.2.4.90
+dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
+dicomTransferSyntax: 1.2.840.10008.1.2.5
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Enhanced RT Image Storage SCP
 
 dn: cn=Enhanced XA Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.12.1.1
@@ -325,6 +364,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -361,6 +403,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -379,6 +424,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -397,6 +445,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -422,6 +473,27 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Comprehensive 3D SR Storage SCP
 
+dn: cn=Photoacoustic Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.6.3
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.50
+dicomTransferSyntax: 1.2.840.10008.1.2.4.51
+dicomTransferSyntax: 1.2.840.10008.1.2.4.70
+dicomTransferSyntax: 1.2.840.10008.1.2.4.57
+dicomTransferSyntax: 1.2.840.10008.1.2.4.80
+dicomTransferSyntax: 1.2.840.10008.1.2.4.81
+dicomTransferSyntax: 1.2.840.10008.1.2.4.90
+dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
+dicomTransferSyntax: 1.2.840.10008.1.2.5
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Photoacoustic Image Storage SCP
+
 dn: cn=RT Physician Intent Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.10
 dicomTransferRole: SCP
@@ -444,6 +516,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -536,6 +611,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -572,6 +650,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -609,6 +690,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -623,6 +707,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: General Audio Waveform Storage SCP
 
+dn: cn=Label Map Segmentation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.66.7
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Label Map Segmentation Storage SCP
+
 dn: cn=Nuclear Medicine Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.20
 dicomTransferRole: SCP
@@ -636,6 +729,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -646,12 +742,21 @@ dicomSOPClass: 1.2.840.10008.5.1.4.1.1.77.1.1.1
 dicomTransferRole: SCP
 dicomTransferSyntax: 1.2.840.10008.1.2.4.50
 dicomTransferSyntax: 1.2.840.10008.1.2.4.100
+dicomTransferSyntax: 1.2.840.10008.1.2.4.100.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.101
+dicomTransferSyntax: 1.2.840.10008.1.2.4.101.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.103
+dicomTransferSyntax: 1.2.840.10008.1.2.4.103.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.102
+dicomTransferSyntax: 1.2.840.10008.1.2.4.102.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.104
+dicomTransferSyntax: 1.2.840.10008.1.2.4.104.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.105
+dicomTransferSyntax: 1.2.840.10008.1.2.4.105.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.106
+dicomTransferSyntax: 1.2.840.10008.1.2.4.106.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.107
+dicomTransferSyntax: 1.2.840.10008.1.2.4.108
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Video Endoscopic Image Storage SCP
@@ -701,6 +806,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Enhanced MR Color Image Storage SCP
 
+dn: cn=Height Map Segmentation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.66.8
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Height Map Segmentation Storage SCP
+
 dn: cn=Lensometry Measurements Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.78.1
 dicomTransferRole: SCP
@@ -732,6 +846,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -742,12 +859,21 @@ dicomSOPClass: 1.2.840.10008.5.1.4.1.1.77.1.2.1
 dicomTransferRole: SCP
 dicomTransferSyntax: 1.2.840.10008.1.2.4.50
 dicomTransferSyntax: 1.2.840.10008.1.2.4.100
+dicomTransferSyntax: 1.2.840.10008.1.2.4.100.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.101
+dicomTransferSyntax: 1.2.840.10008.1.2.4.101.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.103
+dicomTransferSyntax: 1.2.840.10008.1.2.4.103.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.102
+dicomTransferSyntax: 1.2.840.10008.1.2.4.102.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.104
+dicomTransferSyntax: 1.2.840.10008.1.2.4.104.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.105
+dicomTransferSyntax: 1.2.840.10008.1.2.4.105.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.106
+dicomTransferSyntax: 1.2.840.10008.1.2.4.106.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.107
+dicomTransferSyntax: 1.2.840.10008.1.2.4.108
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Video Microscopic Image Storage SCP
@@ -793,6 +919,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -816,6 +945,14 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Robotic Radiation Record Storage SCP
 
+dn: cn=RT Treatment Preparation Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.22
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Treatment Preparation Storage SCP
 
 dn: cn=Simplified Adult Echo SR Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.88.72
@@ -841,12 +978,21 @@ dicomSOPClass: 1.2.840.10008.5.1.4.1.1.77.1.4.1
 dicomTransferRole: SCP
 dicomTransferSyntax: 1.2.840.10008.1.2.4.50
 dicomTransferSyntax: 1.2.840.10008.1.2.4.100
+dicomTransferSyntax: 1.2.840.10008.1.2.4.100.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.101
+dicomTransferSyntax: 1.2.840.10008.1.2.4.101.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.103
+dicomTransferSyntax: 1.2.840.10008.1.2.4.103.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.102
+dicomTransferSyntax: 1.2.840.10008.1.2.4.102.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.104
+dicomTransferSyntax: 1.2.840.10008.1.2.4.104.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.105
+dicomTransferSyntax: 1.2.840.10008.1.2.4.105.1
 dicomTransferSyntax: 1.2.840.10008.1.2.4.106
+dicomTransferSyntax: 1.2.840.10008.1.2.4.106.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.107
+dicomTransferSyntax: 1.2.840.10008.1.2.4.108
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Video Photographic Image Storage SCP
@@ -864,10 +1010,34 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: X-Ray Angiographic Image Storage SCP
+
+dn: cn=Confocal Microscopy Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.77.1.8
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.50
+dicomTransferSyntax: 1.2.840.10008.1.2.4.51
+dicomTransferSyntax: 1.2.840.10008.1.2.4.70
+dicomTransferSyntax: 1.2.840.10008.1.2.4.57
+dicomTransferSyntax: 1.2.840.10008.1.2.4.80
+dicomTransferSyntax: 1.2.840.10008.1.2.4.81
+dicomTransferSyntax: 1.2.840.10008.1.2.4.90
+dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
+dicomTransferSyntax: 1.2.840.10008.1.2.5
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Confocal Microscopy Image Storage SCP
 
 dn: cn=Electrooculogram Waveform Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.9.7.3
@@ -955,6 +1125,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -973,6 +1146,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1018,6 +1194,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1045,6 +1224,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1068,6 +1250,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Detail SR Storage - Trial (Retired) SCP
 
+dn: cn=General 32-bit ECG Waveform Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.9.1.4
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: General 32-bit ECG Waveform Storage SCP
+
 dn: cn=Ophthalmic Tomography Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.77.1.5.4
 dicomTransferRole: SCP
@@ -1081,6 +1272,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1117,6 +1311,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1135,10 +1332,34 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: X-Ray 3D Craniofacial Image Storage SCP
+
+dn: cn=Enhanced Continuous RT Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.24
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.50
+dicomTransferSyntax: 1.2.840.10008.1.2.4.51
+dicomTransferSyntax: 1.2.840.10008.1.2.4.70
+dicomTransferSyntax: 1.2.840.10008.1.2.4.57
+dicomTransferSyntax: 1.2.840.10008.1.2.4.80
+dicomTransferSyntax: 1.2.840.10008.1.2.4.81
+dicomTransferSyntax: 1.2.840.10008.1.2.4.90
+dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
+dicomTransferSyntax: 1.2.840.10008.1.2.5
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Enhanced Continuous RT Image Storage SCP
 
 dn: cn=Standalone Overlay Storage (Retired) SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.8
@@ -1171,6 +1392,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1189,6 +1413,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1263,6 +1490,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1317,6 +1547,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1354,6 +1587,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1426,6 +1662,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1444,6 +1683,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1480,6 +1722,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1498,6 +1743,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1525,6 +1773,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1543,6 +1794,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1588,6 +1842,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1612,6 +1869,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Radiopharmaceutical Radiation Dose SR Storage SCP
 
+dn: cn=RT Radiation Set Delivery Instruction Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.21
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Radiation Set Delivery Instruction Storage SCP
+
 dn: cn=C-Arm Photon-Electron Radiation Record Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.19
 dicomTransferRole: SCP
@@ -1634,6 +1900,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1652,6 +1921,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1670,6 +1942,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1688,6 +1963,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1731,6 +2009,27 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Pseudo-Color Softcopy Presentation State Storage SCP
 
+dn: cn=Confocal Microscopy Tiled Pyramidal Image Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.77.1.9
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+dicomTransferSyntax: 1.2.840.10008.1.2.4.50
+dicomTransferSyntax: 1.2.840.10008.1.2.4.51
+dicomTransferSyntax: 1.2.840.10008.1.2.4.70
+dicomTransferSyntax: 1.2.840.10008.1.2.4.57
+dicomTransferSyntax: 1.2.840.10008.1.2.4.80
+dicomTransferSyntax: 1.2.840.10008.1.2.4.81
+dicomTransferSyntax: 1.2.840.10008.1.2.4.90
+dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
+dicomTransferSyntax: 1.2.840.10008.1.2.5
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Confocal Microscopy Tiled Pyramidal Image Storage SCP
+
 dn: cn=Performed Imaging Agent Administration SR Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.88.75
 dicomTransferRole: SCP
@@ -1750,6 +2049,15 @@ objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Routine Scalp Electroencephalogram Waveform Storage SCP
 
+dn: cn=RT Patient Position Acquisition Instruction Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.481.25
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: RT Patient Position Acquisition Instruction Storage SCP
+
 dn: cn=X-Ray Angiographic Bi-Plane Image Storage (Retired) SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.12.3
 dicomTransferRole: SCP
@@ -1763,6 +2071,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1799,6 +2110,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1826,6 +2140,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1853,6 +2170,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1871,6 +2191,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1889,6 +2212,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1916,10 +2242,22 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
 cn: Digital Intra-Oral X-Ray Image Storage - For Presentation SCP
+
+dn: cn=Variable Modality LUT Softcopy Presentation State Storage SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
+dicomSOPClass: 1.2.840.10008.5.1.4.1.1.11.12
+dicomTransferRole: SCP
+dicomTransferSyntax: 1.2.840.10008.1.2
+dicomTransferSyntax: 1.2.840.10008.1.2.1
+objectClass: dicomTransferCapability
+objectClass: dcmTransferCapability
+cn: Variable Modality LUT Softcopy Presentation State Storage SCP
 
 dn: cn=Digital Mammography X-Ray Image Storage - For Presentation SCP,dicomAETitle=DCM4CHEE,dicomDeviceName=dcm4chee-arc,cn=Devices,cn=DICOM Configuration,dc=dcm4che,dc=org
 dicomSOPClass: 1.2.840.10008.5.1.4.1.1.1.2
@@ -1934,6 +2272,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1961,6 +2302,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -1979,6 +2323,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -2006,6 +2353,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -2033,6 +2383,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -2069,6 +2422,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -2087,6 +2443,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -2105,6 +2464,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
@@ -2123,6 +2485,9 @@ dicomTransferSyntax: 1.2.840.10008.1.2.4.80
 dicomTransferSyntax: 1.2.840.10008.1.2.4.81
 dicomTransferSyntax: 1.2.840.10008.1.2.4.90
 dicomTransferSyntax: 1.2.840.10008.1.2.4.91
+dicomTransferSyntax: 1.2.840.10008.1.2.4.201
+dicomTransferSyntax: 1.2.840.10008.1.2.4.202
+dicomTransferSyntax: 1.2.840.10008.1.2.4.203
 dicomTransferSyntax: 1.2.840.10008.1.2.5
 objectClass: dicomTransferCapability
 objectClass: dcmTransferCapability
