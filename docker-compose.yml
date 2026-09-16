@@ -1,6 +1,6 @@
 services:
   ldap:
-    image: dcm4che/slapd-dcm4chee:2.6.13-35.0
+    image: dcm4che/slapd-dcm4chee:2.6.14-35.2
     environment:
       LDAP_URLS: "ldap:/// ldaps:///"
     ports:
